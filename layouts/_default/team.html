@@ -1,0 +1,38 @@
+{{- define "main" }} {{ $team := (index .Site.Data.teams.Teams .Params.team) }}
+<header class="page-header">
+  <h1>{{$team.Name}} Team</h1>
+  <div class="underline"></div>
+</header>
+
+<p>{{$team.Description}}</p>
+<div class="team-members">
+  {{- range $team.Members }} {{ $member := index $.Site.Data.teams.Members . }}
+  <div class="team-members__member">
+    <a class="team-members__member__profile" href="https://github.com/{{$member.Github}}">
+      <img class="team-members__member__image" src="https://avatars.githubusercontent.com/{{$member.Github}}" />
+    </a>
+    <div class="team-members__member__details">
+      <h3 class="mt-5 mb-10">{{.}}</h3>
+      <ul>
+        <li>
+          <i class="lni lni-github-original"></i> <a href="https://github.com/{{$member.Github}}">{{$member.Github}}</a>
+        </li>
+        <li>
+          {{- if $member.Twitter }}
+          <i class="lni lni-twitter-original"></i>
+          <a href="https://twitte.com/{{$member.Twitter}}">{{$member.Twitter}}</a>
+          {{- end}}
+        </li>
+        {{- if $member.Website }}
+        <li><i class="lni lni-link"></i> <a href="{{$member.Website}}">{{$member.Website}}</a></li>
+        {{- end}}
+      </ul>
+    </div>
+  </div>
+  {{- end }}
+</div>
+{{- if $team.Email }}
+<a class="site-button mt-15" href="mailto:{{ $team.Email }}"
+  ><i class="lni lni-envelope"></i><span>Email the {{$team.Name}} Team</span></a
+>
+{{ end }} {{ end }}

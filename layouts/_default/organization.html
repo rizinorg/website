@@ -1,0 +1,44 @@
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  <div class="underline"></div>
+</header>
+
+<div class="grid_parent">
+  <h1 class="mb-15 page-subtitle">Teams</h1>
+  <div class="teams-section">
+    {{ range $key, $value := .Site.Data.teams.Teams }}
+    <div class="team-item">
+      <div>
+        <h3><mark>{{$value.Name}}</mark></h3>
+        <p>{{$value.Description}}</p>
+      </div>
+      <div class="btn-team-members">
+        <a class="site-button btn-secondary" href="/teams/{{ $key }}">Members & Info</a>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+<header class="page-header">
+  <h1 class="mb-15 page-subtitle">Code of Conduct</h1>
+</header>
+<div>
+  <p>
+    Rizin's Code of Conduct is adapted from the Contributor Covenant. We as members, contributors, and leaders pledge to
+    make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible
+    or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience,
+    education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and
+    orientation.
+  </p>
+
+  <p>
+    We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy
+    community.
+  </p>
+  <a class="site-button btn-secondary mt-15 mb-15" href="/code-of-conduct">Read the Full Code of Conduct</a>
+</div>
+
+{{- end }}{{/* end main */}}
