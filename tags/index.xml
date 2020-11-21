@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Rizin</title>
+    <link>https://rizin.re/tags/</link>
+    <description>Recent content in Tags on Rizin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 08 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>rizin</title>
+      <link>https://rizin.re/tags/rizin/</link>
+      <pubDate>Tue, 08 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/tags/rizin/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://rizin.re/sitemap.xml

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Teams on Rizin</title>
+    <link>https://rizin.re/teams/</link>
+    <description>Recent content in Teams on Rizin</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://rizin.re/teams/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Community Team</title>
+      <link>https://rizin.re/teams/community/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/teams/community/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Core Team</title>
+      <link>https://rizin.re/teams/core/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/teams/core/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cutter Core Team</title>
+      <link>https://rizin.re/teams/cutter-core/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/teams/cutter-core/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Distributions and Packaging Team</title>
+      <link>https://rizin.re/teams/distributions-and-packaging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/teams/distributions-and-packaging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Documentation Team</title>
+      <link>https://rizin.re/teams/documentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/teams/documentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Infrastructure Team</title>
+      <link>https://rizin.re/teams/infrastructure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/teams/infrastructure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Package Manager and Plugins Team</title>
+      <link>https://rizin.re/teams/package-manager-and-plugins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/teams/package-manager-and-plugins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security Team</title>
+      <link>https://rizin.re/teams/security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/teams/security/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
