@@ -1,0 +1,14 @@
+{{- define "main" }}
+
+{{ $team := (index .Site.Data.teams .Params.team) }}
+<header class="header team">
+<h2><mark>{{$team.Name}} Team</mark></h2>
+</header>
+<p>{{$team.Description}}</p>
+<div class="btn-team-members">
+    {{- range $team.Members }}
+    <li><a href="#">{{ . }}</a></li>
+    {{- end }}
+</div>
+
+{{ end }}

@@ -1,0 +1,82 @@
+baseURL: 'https://examplesite.com'
+title: Rizin
+paginate: 10
+theme: hugo-PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: UA-123-45
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+menu:
+    main:
+      - name: Blog
+        url: /posts/
+        weight: 5
+      - name: Organization
+        url: /organization/
+        weight: 10
+      - name: Cutter
+        url: https://cutter.re
+        weight: 15
+        
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: ExampleSite
+  description: 'ExampleSites description'
+  author: Me
+  # author: ["Me", "You"] # multiple authors
+
+  images: "<link or path of image for opengraph, twitter-cards>"
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  comments: false
+  # dark, light, auto
+  defaultTheme: auto
+  disableThemeToggle : false
+  disableSpecial1stPost : false
+
+  assets:
+    favicon: '<path / external url>'
+
+  label:
+    text: "Rizin"
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: False # needs to be explicitly set
+    title: Rizin
+    subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
+    imageUrl: '/images/pineapple.png'
+    # imageTitle: my image
+    buttons:
+      - name: Blog
+        url: posts
+      - name: Tags
+        url: tags
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: Welcome to my blog
+
+  socialIcons:
+    - name: twitter
+      url: 'https://twitter.com/'
+    - name: stackoverflow
+      url: 'https://stackoverflow.com'
+    - name: github
+      url: 'https://github.com/'
+
+
+  analytics:
+    google:
+      SiteVerificationTag: "XYZabc"
