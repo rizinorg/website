@@ -7,9 +7,9 @@
 
 <div class="grid_parent">
   <h1 class="mb-15 page-subtitle">Teams</h1>
-  <div class="grid-2_3 teams">
+  <div class="teams-section">
     {{ range $key, $value := .Site.Data.teams }}
-    <div class="grid_item team">
+    <div class="team-item">
       <div>
         <h3><mark>{{$value.Name}}</mark></h3>
         <p>{{$value.Description}}</p>
