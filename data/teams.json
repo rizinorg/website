@@ -1,42 +1,50 @@
 {
-    "core": {
-        "Name": "Core",
-        "Description": "Managing the overall direction of Rizin Organization, subteam leadership, and any cross-cutting issues. Sets the priorities and release schedule of Rizin and Cutter",
-        "Members": ["Antide Petit", "Anton Kochkov", "Florian Märkl", "Giovanni Grazioli", "Itay Cohen", "Khairul Kasmiran", "Riccardo Schirone"]
-    },
-    "cutter-core": {
-        "Name": "Cutter Core",
-        "Description": "Maintainers of the Cutter project. Responsible for managing Cutter's sub-teams and work groups. Coordinating the work between Cutter's and Rizin's development.",
-        "Members": ["Antide Petit", "Florian Märkl", "Itay Cohen", "Karlis Senko"]
-    },
-    "community": {
-        "Name": "Community",
-        "Description": "Coordinating announcement, managing social media accounts, conference arrangements (with a dedicated sub-team), creating content for the different platforms, community surveys, in constant engagement with community members",
-        "Members": ["Itay Cohen"]
-    },
-    "documentation": {
-        "Name": "Documentation",
-        "Description": "Improving and moderating the quality of Rizin and Cutter's community",
-        "Members": ["Anton Kochkov", "officialcjunior"]
-    },
-    "infrastructure": {
-        "Name": "Infrastructure",
-        "Description": "Managing the infrastructure supporting Rizin's and Cutter work. This includes CI, website, automation, bridge bots form IM apps, domains",
-        "Members": ["Anton Kochkov", "Florian Märkl", "Giovanni Grazioli", "Riccardo Schirone"]
-    },
-    "distributions-and-packaging": {
-        "Name": "Distributions and Packaging",
-        "Description": "Packaging and assist the package maintainers of Rizin and Cutter for different Linux distributions",
-        "Members": ["Riccardo Schirone"]
-    },
-    "package-manager-and-plugins": {
-        "Name": "Package Manager and Plugins",
-        "Description": "Responsible for the development of Rizin Package Manager and the coordination between plugin developers and the development of the plugins toolset.",
-        "Members": ["Antide Petit", "Giovanni Grazioli", "Itay Cohen", "Karlis Senko", "Quentin Barrand"]
-    },
-    "security": {
-        "Name": "Security",
-        "Description": "Triaging and responding to incoming vulnerability reports in Rizin and Cutter",
-        "Members": ["Florian Märkl", "Giovanni Grazioli", "Itay Cohen", "Riccardo Schirone"]
-    }
+  "core": {
+    "Name": "Core",
+    "Description": "Managing the overall direction of Rizin Organization, subteam leadership, and any cross-cutting issues. Sets the priorities and release schedule of Rizin and Cutter",
+    "Members": [
+      "Antide Petit",
+      "Anton Kochkov",
+      "Florian Märkl",
+      "Giovanni Grazioli",
+      "Itay Cohen",
+      "Khairul Kasmiran",
+      "Riccardo Schirone"
+    ]
+  },
+  "cutter-core": {
+    "Name": "Cutter Core",
+    "Description": "Maintainers of the Cutter project. Responsible for managing Cutter's sub-teams and work groups. Coordinating the work between Cutter's and Rizin's development.",
+    "Members": ["Antide Petit", "Florian Märkl", "Itay Cohen", "Karlis Senko"]
+  },
+  "community": {
+    "Name": "Community",
+    "Description": "Coordinating announcement, managing social media accounts, conference arrangements (with a dedicated sub-team), creating content for the different platforms, community surveys, in constant engagement with community members",
+    "Members": ["Itay Cohen"]
+  },
+  "documentation": {
+    "Name": "Documentation",
+    "Description": "Improving and moderating the quality of Rizin and Cutter's community",
+    "Members": ["Anton Kochkov", "officialcjunior"]
+  },
+  "infrastructure": {
+    "Name": "Infrastructure",
+    "Description": "Managing the infrastructure supporting Rizin's and Cutter work. This includes CI, website, automation, bridge bots form IM apps, domains",
+    "Members": ["Anton Kochkov", "Florian Märkl", "Giovanni Grazioli", "Riccardo Schirone"]
+  },
+  "distributions-and-packaging": {
+    "Name": "Distributions and Packaging",
+    "Description": "Packaging and assist the package maintainers of Rizin and Cutter for different Linux distributions",
+    "Members": ["Riccardo Schirone"]
+  },
+  "package-manager-and-plugins": {
+    "Name": "Package Manager and Plugins",
+    "Description": "Responsible for the development of Rizin Package Manager and the coordination between plugin developers and the development of the plugins toolset.",
+    "Members": ["Antide Petit", "Giovanni Grazioli", "Itay Cohen", "Karlis Senko", "Quentin Barrand"]
+  },
+  "security": {
+    "Name": "Security",
+    "Description": "Triaging and responding to incoming vulnerability reports in Rizin and Cutter",
+    "Members": ["Florian Märkl", "Giovanni Grazioli", "Itay Cohen", "Riccardo Schirone"]
+  }
 }
