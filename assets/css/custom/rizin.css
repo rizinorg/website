@@ -177,7 +177,6 @@
 }
 
 .hero-section img {
-  /* width: 180px; */
   border-radius: 0%; /* override */
   margin: 0 auto 25px auto;
 }
@@ -225,11 +224,6 @@
 .site-button i {
   margin-right: 10px;
 }
-/*
-.site-button.primary:hover {
-  background-color: #FF9D00;
-}
-*/
 
 .main {
   background: var(--main);
@@ -374,15 +368,6 @@
   .grid_parent {
     --spacing: 1.35rem;
   }
-}
-
-/* The grid */
-[class^='grid-'] {
-  --columns: 1;
-  display: grid;
-  grid-gap: var(--spacing);
-  grid-template-columns: var(--columns);
-  grid-auto-rows: min-content;
 }
 
 .teams-section {
