@@ -415,7 +415,7 @@
   font-weight: 700;
 }
 
-.team-item mark {
+.team-item mark, .team-title mark {
   color: var(--primary);
   display: inline-block;
   font-size: 24px;
