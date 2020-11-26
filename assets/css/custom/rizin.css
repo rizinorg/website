@@ -10,7 +10,7 @@
   --radius: 8px;
   --entry: #f0f0f0;
 
-  --purple-strong: #5d37f0;
+  --purple-strong: #5e50c5;
   --theme: var(--purple-strong);
   --subtitle-color: #fad000;
   --button-primary: #281b5c;
@@ -159,7 +159,7 @@
 }
 
 .hero-section__subtitle {
-  font-weight: 300;
+  font-weight: 400;
   color: var(--subtitle-color);
   margin: 25px 0;
 }
