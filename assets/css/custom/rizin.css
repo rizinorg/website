@@ -13,11 +13,11 @@
   --purple-strong: #5d37f0;
   --theme: var(--purple-strong);
   --subtitle-color: #fad000;
-  --button-primary: #fad000;
+  --button-primary: #281b5c;
   --main: #fff;
   --main-title: #fff;
   --title-tertiary: var(--purple-strong);
-  --alternate: var(--purple-strong);
+  --alternate: #35276f;
   --mark: #ffbf59;
   --purple: #fad000;
   --footer: #fff;
@@ -27,9 +27,10 @@
   --theme: #222244;
   --main: #333160;
   --button-primary: #5d37f0;
+  /* --purple-strong: #5d37f0; */
   --subtitle-color: #fad000;
   --title-tertiary: #fff;
-  --alternate: #ff9d00;
+  --alternate: #4d30ba;
   --mark: #5d37f0;
   --footer: var(--theme);
   --entry: #41417c;
@@ -208,7 +209,7 @@
 }
 
 .site-button.btn-primary {
-  background-color: var(--purple-strong);
+  background-color: var(--button-primary);
 }
 
 .preview-section__feature .site-button {
