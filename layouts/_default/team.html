@@ -1,7 +1,9 @@
 {{- define "main" }} {{ $team := (index .Site.Data.teams .Params.team) }}
-<header class="header team-title">
-  <h2><mark>{{$team.Name}} Team</mark></h2>
+<header class="page-header">
+  <h1>{{$team.Name}} Team</h1>
+  <div class="underline"></div>
 </header>
+
 <p>{{$team.Description}}</p>
 <div class="btn-team-members">
   {{- range $team.Members }}

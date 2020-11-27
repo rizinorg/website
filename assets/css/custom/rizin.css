@@ -154,6 +154,7 @@
 
 .hero-section__title {
   font-weight: 700;
+  letter-spacing: 2px;
   margin: 0;
   color: var(--main-title);
 }
@@ -395,6 +396,7 @@
 }
 
 .page-header {
+  padding-top: 50px;
   display: inline-block;
 }
 
@@ -415,7 +417,12 @@
   font-weight: 700;
 }
 
-.team-item mark, .team-title mark {
+.team-title h2 {
+  padding-top: 50px;
+}
+
+.team-item mark,
+.team-title mark {
   color: var(--primary);
   display: inline-block;
   font-size: 24px;
