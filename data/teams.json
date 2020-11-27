@@ -3,7 +3,6 @@
     "Name": "Core",
     "Description": "Managing the overall direction of Rizin Organization, subteam leadership, and any cross-cutting issues. Sets the priorities and release schedule of Rizin and Cutter",
     "Members": [
-      "Antide Petit",
       "Anton Kochkov",
       "Florian Märkl",
       "Giovanni Grazioli",
@@ -25,7 +24,7 @@
   "documentation": {
     "Name": "Documentation",
     "Description": "Improving and moderating the quality of Rizin and Cutter's community",
-    "Members": ["Anton Kochkov", "officialcjunior"]
+    "Members": ["Anton Kochkov"]
   },
   "infrastructure": {
     "Name": "Infrastructure",
