@@ -120,11 +120,14 @@
     {{ if .IsHome }}
     <div class="hero-section">
         {{- with .Site.Params.profileMode }}
-        {{- if .imageUrl}}
-        <img src="{{ .imageUrl}}" alt="{{ .imageTitle | default "profile image" }}" />
-        {{- end}}
-        {{- end}}
-        <h1 class="hero-section__title">Rizin</h1>
+        <div class="hero-section__top">
+            {{- if .imageUrl}}
+            <img src="{{ .imageUrl}}" alt="{{ .imageTitle | default "profile image" }}" />
+            {{- end}}
+            {{- end}}
+            <h1 class="hero-section__title">rizin</h1>
+        </div>
+
         <h2 class="hero-section__subtitle">Free and Open Source Reverse Engineering Platform</h2>
         <div class="hero-section__buttons">
             <a class="site-button btn-primary" href="https://github.com/rizinorg/rizin/releases"><i class="lni lni-download"></i>Download</a>

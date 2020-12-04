@@ -1,3 +1,9 @@
+@font-face {
+  font-family: Agave;
+  src: url(/fonts/Agave-Regular.ttf);
+}
+
+
 /* ==== THEME VARIABLES ==== */
 
 :root {
@@ -152,10 +158,18 @@
   text-align: center;
 }
 
+.hero-section__top {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
 .hero-section__title {
   font-weight: 700;
   letter-spacing: 2px;
+  font-size: 100px;
   margin: 0;
+  font-family: Agave;
   color: var(--main-title);
 }
 
@@ -182,7 +196,9 @@
 
 .hero-section img {
   border-radius: 0%; /* override */
-  margin: 0 auto 25px auto;
+  margin-bottom: 25px;
+  margin-right: 25px;;
+  max-height: 150px;
 }
 
 .site-button {
