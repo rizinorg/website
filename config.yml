@@ -55,7 +55,7 @@ params:
     enabled: False # needs to be explicitly set
     title: Rizin
     subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
-    imageUrl: '/images/pineapple.png'
+    imageUrl: '/images/rizin.png'
     # imageTitle: my image
     buttons:
       - name: Blog
