@@ -3,7 +3,6 @@
   src: url(/fonts/Agave-Regular.ttf);
 }
 
-
 /* ==== THEME VARIABLES ==== */
 
 :root {
@@ -24,6 +23,7 @@
   --main-title: #edb11d;
   --title-tertiary: var(--purple-strong);
   --alternate: #35276f;
+  --alternate-strong: var(--purple-strong);
   --mark: #ffbf59;
   --purple: #fad000;
   --footer: #fff;
@@ -42,6 +42,7 @@
   --entry: #41417c;
   --code-bg: #5139b1;
   --purple: var(--purple-strong);
+  --alternate-strong: #fad000;
 }
 
 .list {
@@ -160,7 +161,7 @@
 
 .hero-section__top {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
 }
@@ -322,7 +323,7 @@
 
   .hero-section img {
     flex-direction: row;
-    margin-right: 20px;;
+    margin-right: 20px;
   }
 
   .preview-section__feature {
@@ -349,7 +350,6 @@
     display: inline-block;
     padding-bottom: 16px;
   }
-
 }
 
 .horizontal-line {
@@ -441,7 +441,7 @@
   max-width: 90vw;
   line-height: 1.6;
   border-radius: 2px;
-  background-color: var(--alternate);
+  background-color: var(--mark);
 }
 
 .team-item h3 {
@@ -463,4 +463,56 @@
 
 .btn-team-members {
   margin-top: 20px;
+}
+
+.team-members {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.team-members__member {
+  display: flex;
+  flex-direction: row;
+  width: 45%;
+  margin-bottom: 2rem;
+  background: var(--entry);
+  margin: 10px 10px 10px 0;
+  padding: 5px;
+}
+
+.team-members__member__profile {
+  width: 8rem;
+  height: 8rem;
+  flex-shrink: 0;
+}
+
+.team-members__member__image {
+  width: 100%;
+  height: 100%;
+}
+
+.team-members__member__details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 20px;
+}
+
+.team-members__member__details li {
+  list-style: none;
+  color: var(--title-tertiary);
+}
+
+.team-members__member__details li > i {
+  margin-right: 10px;
+}
+.team-members__member__details li > a {
+  border-bottom: 1px dashed;
+  padding-bottom: 2px;
+}
+
+.team-members__member__details li > a:hover {
+  color: var(--alternate-strong);
 }
