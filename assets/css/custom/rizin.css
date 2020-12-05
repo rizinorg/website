@@ -343,6 +343,13 @@
   .preview-section__feature:nth-child(2) .preview-section__feature__code {
     grid-column-start: 2;
   }
+
+  .team-item mark,
+  .team-title mark {
+    display: inline-block;
+    padding-bottom: 16px;
+  }
+  
 }
 
 .horizontal-line {
@@ -449,10 +456,8 @@
 .team-item mark,
 .team-title mark {
   color: var(--primary);
-  display: inline-block;
   font-size: 24px;
   line-height: 0.01px;
-  padding-bottom: 16px;
   background-color: var(--mark);
 }
 
