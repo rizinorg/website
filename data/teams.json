@@ -3,6 +3,7 @@
     "core": {
       "Name": "Core",
       "Description": "Managing the overall direction of Rizin Organization, subteam leadership, and any cross-cutting issues. Sets the priorities and release schedule of Rizin and Cutter",
+      "Email": "core@rizin.re",
       "Members": [
         "Itay Cohen",
         "Florian Märkl",
@@ -15,6 +16,7 @@
     "cutter-core": {
       "Name": "Cutter Core",
       "Description": "Maintainers of the Cutter project. Responsible for managing Cutter's sub-teams and work groups. Coordinating the work between Cutter's and Rizin's development.",
+      "Email": "team@cutter.re",
       "Members": [
         "Itay Cohen",
         "Antide Petit",
@@ -25,6 +27,7 @@
     "community": {
       "Name": "Community",
       "Description": "Coordinating announcements, managing social media accounts, conference arrangements (with a dedicated sub-team), creating content for the different platforms, conduct community surveys, in constant engagement with community members",
+      "Email": "community@rizin.re",
       "Members": [
         "Itay Cohen"
       ]
@@ -66,6 +69,7 @@
     "security": {
       "Name": "Security",
       "Description": "Triaging and responding to incoming vulnerability reports in Rizin and Cutter",
+      "Email": "security@rizin.re",
       "Members": [
         "Florian Märkl",
         "Giovanni Grazioli",

@@ -31,5 +31,8 @@
   </div>
   {{- end }}
 </div>
-
-{{ end }}
+{{- if $team.Email }}
+<a class="site-button mt-15" href="mailto:{{ $team.Email }}"
+  ><i class="lni lni-envelope"></i><span>Email the {{$team.Name}} Team</span></a
+>
+{{ end }} {{ end }}
