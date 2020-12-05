@@ -171,7 +171,7 @@
   font-size: 100px;
   margin: 0;
   font-family: Agave;
-  color: var(--main-title); */
+  color: var(--main-title);
 }
 
 .hero-section__subtitle {
@@ -349,7 +349,7 @@
     display: inline-block;
     padding-bottom: 16px;
   }
-  
+
 }
 
 .horizontal-line {
