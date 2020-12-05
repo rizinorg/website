@@ -162,6 +162,7 @@
   display: flex;
   align-items:center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .hero-section__title {
@@ -197,7 +198,6 @@
 .hero-section img {
   border-radius: 0%; /* override */
   margin-bottom: 25px;
-  margin-right: 20px;;
   max-height: 150px;
 }
 
@@ -314,6 +314,15 @@
 @media (min-width: 768px) {
   .hero-section {
     height: 50vh;
+  }
+
+  .hero-section__top {
+    flex-direction: row;
+  }
+
+  .hero-section img {
+    flex-direction: row;
+    margin-right: 20px;;
   }
 
   .preview-section__feature {
