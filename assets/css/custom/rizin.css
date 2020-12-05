@@ -170,7 +170,8 @@
   font-size: 100px;
   margin: 0;
   font-family: Agave;
-  color: var(--main-title);
+  /* color: var(--main-title); */
+  color: #edb11d;
 }
 
 .hero-section__subtitle {
@@ -197,7 +198,7 @@
 .hero-section img {
   border-radius: 0%; /* override */
   margin-bottom: 25px;
-  margin-right: 25px;;
+  margin-right: 20px;;
   max-height: 150px;
 }
 
