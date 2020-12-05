@@ -21,7 +21,7 @@
   --subtitle-color: #fad000;
   --button-primary: #281b5c;
   --main: #fff;
-  --main-title: #fff;
+  --main-title: #edb11d;
   --title-tertiary: var(--purple-strong);
   --alternate: #35276f;
   --mark: #ffbf59;
@@ -170,8 +170,7 @@
   font-size: 100px;
   margin: 0;
   font-family: Agave;
-  /* color: var(--main-title); */
-  color: #edb11d;
+  color: var(--main-title); */
 }
 
 .hero-section__subtitle {
