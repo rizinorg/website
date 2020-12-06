@@ -2,7 +2,7 @@
   "Teams": {
     "core": {
       "Name": "Core",
-      "Description": "Managing the overall direction of Rizin Organization, subteam leadership, and any cross-cutting issues. Sets the priorities and release schedule of Rizin and Cutter",
+      "Description": "Managing the overall direction of Rizin Organization and any cross-cutting issues. Sets the priorities and release schedule of Rizin and Cutter.",
       "Email": "core@rizin.re",
       "Members": [
         "Itay Cohen",
@@ -15,7 +15,7 @@
     },
     "cutter-core": {
       "Name": "Cutter Core",
-      "Description": "Maintainers of the Cutter project. Responsible for managing Cutter's sub-teams and work groups. Coordinating the work between Cutter's and Rizin's development.",
+      "Description": "Maintainers of the Cutter project. Responsible for managing Cutter's sub-teams and work groups. Coordinating the work between Cutter and Rizin.",
       "Email": "team@cutter.re",
       "Members": [
         "Itay Cohen",
@@ -26,7 +26,7 @@
     },
     "community": {
       "Name": "Community",
-      "Description": "Coordinating announcements, managing social media accounts, conference arrangements (with a dedicated sub-team), creating content for the different platforms, conduct community surveys, in constant engagement with community members",
+      "Description": "Coordinating announcements, managing social media accounts, creating content for the different platforms, conduct community surveys, in constant engagement with community members.",
       "Email": "community@rizin.re",
       "Members": [
         "Itay Cohen"
@@ -34,14 +34,15 @@
     },
     "documentation": {
       "Name": "Documentation",
-      "Description": "Improving and moderating the quality of Rizin and Cutter's community",
+      "Description": "Improving and moderating the quality of Rizin and Cutter's documentation.",
       "Members": [
-        "Anton Kochkov"
+        "Anton Kochkov",
+        "Itay Cohen"
       ]
     },
     "infrastructure": {
       "Name": "Infrastructure",
-      "Description": "Managing the infrastructure supporting Rizin's and Cutter work. This includes CI, website, automation, bridge bots form IM apps, domains",
+      "Description": "Managing the infrastructure supporting Rizin's and Cutter's work. This includes CI, website, servers, automation, bridge bots form IM apps and domains.",
       "Members": [
         "Anton Kochkov",
         "Florian Märkl",
@@ -51,7 +52,7 @@
     },
     "distributions-and-packaging": {
       "Name": "Distributions and Packaging",
-      "Description": "Packaging and assist the package maintainers of Rizin and Cutter for different Linux distributions",
+      "Description": "Packaging and assist the package maintainers of Rizin and Cutter for different Linux distributions.",
       "Members": [
         "Riccardo Schirone"
       ]
@@ -68,7 +69,7 @@
     },
     "security": {
       "Name": "Security",
-      "Description": "Triaging and responding to incoming vulnerability reports in Rizin and Cutter",
+      "Description": "Triaging and responding to incoming vulnerability reports in Rizin and Cutter.",
       "Email": "security@rizin.re",
       "Members": [
         "Florian Märkl",
@@ -112,8 +113,6 @@
       "Github": "xarkes"
     },
     "Karlis Senko": {
-      "Website": "https://karliss.github.io/",
-      "Twitter": "@s_karlis",
       "Github": "karliss"
     }
   }
