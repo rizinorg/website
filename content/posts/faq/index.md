@@ -2,7 +2,7 @@
 "author" = "Rizin"
 "title" = "Frequently Asked Questions"
 "date" = "2020-12-05"
-"description" = "Who are you? Why did you fork radare2? What will happen to Cutter now? Our answers to your frequently asked questions."
+"summary" = "Who are you? Why did you fork radare2? What will happen to Cutter now? Our answers to your frequently asked questions."
 "tags" = ["rizin"]
 
 "ShowToc" = true
