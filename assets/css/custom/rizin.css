@@ -301,6 +301,11 @@
   margin-right: 15px;
 }
 
+.main p > a {
+  font-weight: 600;
+  border-bottom: 2px solid var(--alternate-strong);
+}
+
 .site-footer {
   display: flex;
   justify-content: center;
