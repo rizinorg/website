@@ -436,7 +436,7 @@
 .page-header .underline {
   height: 12px;
   position: relative;
-  top: 0;
+  top: 4px;
   left: -10px;
   width: 120%;
   max-width: 90vw;
