@@ -91,7 +91,7 @@ We intend to make Rizin a stable project you can trust for your reverse engineer
 
 ## I have more questions, where can I ask?
 
-We would love to answers your question. You can send us a message on [Mattermost](im.rizin.re) or [email](mailto:core@rizin.re) us. Please note that we do not gurantee to answer all questions, as some topics are personal or we prefer to keep for ourselves.
+We would love to answers your question. You can send us a message on [Mattermost](https://im.rizin.re) or [email](mailto:core@rizin.re) us. Please note that we do not gurantee to answer all questions, as some topics are personal or we prefer to keep for ourselves.
 
 ---
 
