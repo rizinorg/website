@@ -34,7 +34,7 @@ Rizin is a new born project that was created from radare2, hence more and more c
 
 We see it as our ultimate responsibility to provide the users with a stable and usable program that they can rely on. We will put efforts on releasing stable versions of Rizin and improving our test suite.
 
-It is also in our obligation to create an environment where developers, contributors and users feel welcome and safe. For this, we put in place multiple instruments that will allow us to enforce such behavior. We adopted the Contributor Covenant Code of Conduct as we believe it is aligned with our values and with the community we want to create around Rizin. We will follow the code of conduct and enforce it on our different platforms. We started efforts of cleaning the source code from phrases that can't be part in the environment we want to create. In addition, we will put efforts in creating a more inclusive and diverse community and welcome new contributors.
+It is also in our obligation to create an environment where developers, contributors and users feel welcome and safe. For this, we put in place multiple instruments that will allow us to enforce such behavior. We adopted the Contributor Covenant [Code of Conduct](https://rizin.re/code-of-conduct/) as we believe it is aligned with our values and with the community we want to create around Rizin. We will follow the code of conduct and enforce it on our different platforms. We started efforts of cleaning the source code from phrases that can't be part in the environment we want to create. In addition, we will put efforts in creating a more inclusive and diverse community and welcome new contributors.
 
 Technically speaking, Rizin already contains many changes that do not exist in radare2. Some of them are noted below:
 
@@ -75,7 +75,7 @@ Absolutely! We are thrilled to help you start and join Rizin. Please read our in
 
 ## What actions will you make to keep Rizin a safe environment for contributors and users?
 
-The Rizin organization believe that contributors, developers and users should enjoy their time around the community and feel safe an welcome. We adopted a Code of Conduct that we believe is aligned with our values and with the community we want to create around Rizin. We will enforce it on our different platforms.
+The Rizin organization believe that contributors, developers and users should enjoy their time around the community and feel safe an welcome. We adopted a [Code of Conduct](https://rizin.re/code-of-conduct/) that we believe is aligned with our values and with the community we want to create around Rizin. We will enforce it on our different platforms.
 
 We started efforts of cleaning the source code from offensive phrases and comments. In addition, we will put efforts in creating a more inclusive and diverse community and welcome new contributors.
 
