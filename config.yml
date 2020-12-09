@@ -23,16 +23,19 @@ menu:
       - name: Cutter
         url: https://cutter.re
         weight: 15
-        
+
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Rizin
-  description: 'Rizin Is a Free and Open Source Reverse Engineering Framework'
+  description: 'Rizin is a free and Open Source Reverse Engineering Framework'
   author: Rizin
-  # author: ["Me", "You"] # multiple authors
-
-  images: 
+  images:
     - /images/rizin_preview.png
+  
+  header:
+    title: 'rizin'
+    imageUrl: '/images/rizin.svg'
+    subtitle: 'Free and Open Source Reverse Engineering Framework'
 
   ShowReadingTime: true
   ShowShareButtons: true
@@ -41,31 +44,6 @@ params:
   defaultTheme: auto
   disableThemeToggle : false
   disableSpecial1stPost : false
-
-  assets:
-    favicon: '/favicon-32x32.png'
-
-  label:
-    text: "Rizin"
-    iconHeight: 35
-
-  # profile-mode
-  profileMode:
-    enabled: False # needs to be explicitly set
-    title: Rizin
-    subtitle: "Free and Open Source Reverse Engineering Framework"
-    imageUrl: '/images/rizin.svg'
-    # imageTitle: my image
-    buttons:
-      - name: Blog
-        url: posts
-      - name: Tags
-        url: tags
-
-  # home-info mode
-  homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Free and Open Source Reverse Engineering Framework
 
   socialIcons:
     - name: twitter

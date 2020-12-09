@@ -119,16 +119,19 @@
     </nav>
     {{ if .IsHome }}
     <div class="hero-section">
-        {{- with .Site.Params.profileMode }}
+        {{- with .Site.Params.header }}
         <div class="hero-section__top">
             {{- if .imageUrl}}
-            <img src="{{ .imageUrl}}" alt="{{ .imageTitle | default "profile image" }}" />
+            <img src="{{ .imageUrl }}" alt="{{ .imageTitle | default "profile image" }}" />
             {{- end}}
-            {{- end}}
-            <h1 class="hero-section__title">rizin</h1>
+            {{- if .title}}
+            <h1 class="hero-section__title">{{.title}}</h1>
+            {{- end }}
         </div>
-
-        <h2 class="hero-section__subtitle">Free and Open Source Reverse Engineering Framework</h2>
+        {{- if .subtitle}}
+        <h2 class="hero-section__subtitle">{{ .subtitle }}</h2>
+        {{- end}}
+        {{- end}}
         <div class="hero-section__buttons">
             <a class="site-button btn-primary" href="https://github.com/rizinorg/rizin" target="_blank"><i class="lni lni-github-original"></i>Source</a>
             <a class="site-button" href="https://book.rizin.re" target="_blank"><i class="lni lni-book"></i><span>Documentation</span></a>
