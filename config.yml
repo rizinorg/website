@@ -27,7 +27,7 @@ menu:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Rizin
-  description: 'Rizin Is a Free and Open Source Reverse Engineering Platform'
+  description: 'Rizin Is a Free and Open Source Reverse Engineering Framework'
   author: Rizin
   # author: ["Me", "You"] # multiple authors
 
@@ -53,7 +53,7 @@ params:
   profileMode:
     enabled: False # needs to be explicitly set
     title: Rizin
-    subtitle: "Free and Open Source Reverse Engineering Platform"
+    subtitle: "Free and Open Source Reverse Engineering Framework"
     imageUrl: '/images/rizin.svg'
     # imageTitle: my image
     buttons:
@@ -65,7 +65,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Hi there \U0001F44B"
-    Content: Free and Open Source Reverse Engineering Platform
+    Content: Free and Open Source Reverse Engineering Framework
 
   socialIcons:
     - name: twitter
