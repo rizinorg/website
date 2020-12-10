@@ -142,8 +142,7 @@
 }
 
 .hero-section {
-  height: 90vh;
-  padding: 0 var(--site-inner-padding);
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -183,6 +182,7 @@
 }
 
 .hero-section__separator {
+  padding: 15px 5px;
   background-color: var(--purple);
   line-height: 2;
   text-align: center;
