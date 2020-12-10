@@ -37,7 +37,8 @@
       "Description": "Improving and moderating the quality of Rizin and Cutter's documentation.",
       "Members": [
         "Anton Kochkov",
-        "Itay Cohen"
+        "Itay Cohen",
+        "Surendra Kumar"
       ]
     },
     "infrastructure": {
@@ -114,6 +115,10 @@
     },
     "Karlis Senko": {
       "Github": "karliss"
+    },
+    "Surendra Kumar": {
+      "Github": "Surendrajat",
+      "Website": "https://surendrajat.xyz"
     }
   }
 }
