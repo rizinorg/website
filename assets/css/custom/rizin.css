@@ -142,7 +142,7 @@
 }
 
 .hero-section {
-  padding: 0 var(--site-inner-padding);
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
