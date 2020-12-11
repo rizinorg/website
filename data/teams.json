@@ -38,7 +38,8 @@
       "Members": [
         "Anton Kochkov",
         "Itay Cohen",
-        "Surendra Kumar"
+        "Surendra Kumar",
+        "Aswin C"
       ]
     },
     "infrastructure": {
@@ -119,6 +120,10 @@
     "Surendra Kumar": {
       "Github": "Surendrajat",
       "Website": "https://surendrajat.xyz"
+    },
+    "Aswin C": {
+      "Github": "officialcjunior",
+      "Webiste": "https://officialcjunior.github.io"
     }
   }
 }
