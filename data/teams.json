@@ -44,7 +44,7 @@
     },
     "infrastructure": {
       "Name": "Infrastructure",
-      "Description": "Managing the infrastructure supporting Rizin's and Cutter's work. This includes CI, website, servers, automation, bridge bots form IM apps and domains.",
+      "Description": "Managing the infrastructure supporting Rizin's and Cutter's work. This includes CI, website, servers, automation, bridge bots for IM apps, and domains.",
       "Members": [
         "Anton Kochkov",
         "Florian Märkl",
