@@ -416,6 +416,24 @@
   color: var(--alternate-strong);
 }
 
+.page-not-found {
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+
+  align-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+
+  flex-direction: column;
+}
+
+.page-not-found h1 {
+  font-size: 75px;
+}
+
+/* MEDIA */
+
 @media (min-width: 768px) {
   .hero-section {
     height: 50vh;
