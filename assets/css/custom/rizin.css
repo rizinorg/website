@@ -436,7 +436,7 @@
 
 @media (min-width: 768px) {
   .hero-section {
-    height: 50vh;
+    height: 480px;
   }
 
   .hero-section__top {
