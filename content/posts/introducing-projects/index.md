@@ -3,7 +3,7 @@ author: "thestr4ng3r"
 title: "Introducing Projects in Rizin"
 date: "2021-01-02"
 summary: "An overview of the new projects feature in Rizin to save and load reversing sessions. Its design, promises and future."
-tags: ["rizin"]
+tags: ["rizin", "projects"]
 ShowToc: true
 TocOpen: false
 weight: 2
