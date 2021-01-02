@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>projects on Rizin</title>
+    <link>https://rizin.re/tags/projects/</link>
+    <description>Recent content in projects on Rizin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 02 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introducing Projects in Rizin</title>
+      <link>https://rizin.re/posts/introducing-projects/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/posts/introducing-projects/</guid>
+      <description>An overview of the new projects feature in Rizin to save and load reversing sessions. Its design, promises and future.</description>
+    </item>
+    
+  </channel>
+</rss>
