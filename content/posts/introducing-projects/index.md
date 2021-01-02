@@ -1,14 +1,13 @@
-+++
-"author" = "thestr4ng3r"
-"title" = "Introducing Projects in Rizin"
-"date" = "2021-01-02"
-"summary" = "An overview of the new projects feature in Rizin to save and load reversing sessions. Its design, promises and future."
-"tags" = ["rizin"]
-
-"ShowToc" = true
-"TocOpen" = false
-"weight" = 2
-+++
+---
+author: "thestr4ng3r"
+title: "Introducing Projects in Rizin"
+date: "2021-01-02"
+summary: "An overview of the new projects feature in Rizin to save and load reversing sessions. Its design, promises and future."
+tags: ["rizin"]
+ShowToc: true
+TocOpen: false
+weight: 2
+---
 
 When manually analyzing a complex binary, possibly over the course of days, weeks or even months, it is crucial to
 be able to keep track of the gained knowledge through annotations such as comments, function and variable names.
