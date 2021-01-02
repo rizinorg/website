@@ -24,7 +24,7 @@ as well as the current limitations you should be aware of when using it right no
 * Projects are currently in **beta**, including in any `0.x.y` releases of Rizin,
   and will be considered **stable** starting with release `1.0.0`.
   * **Beta** means that all functionality is implemented and ready to use, but there is no guarantee that
-    the format itself will not furhter change slightly and thus maybe break loading a project saved right now
+    the format itself will not further change slightly and thus maybe break loading a project saved right now
 	in a future version of Rizin.
   * **Stable** means that the format is finalized and all changes inside of it will come with migrations and tests
     ensuring that all projects saved before are still be loaded correctly.
