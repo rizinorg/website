@@ -1,3 +1,11 @@
+# Our security address
 Contact: mailto:security@rizin.re
-Preferred-Languages: en, ru, hi, fr, de, he
+
+# Report security issues in any of the following languages
+Preferred-Languages: en, ru, hi, fr, it, de, he
+
+# Our security policy
+Policy: https://github.com/rizinorg/rizin/security/policy
+
+# Canonical URL
 Canonical: https://rizin.re/.well-known/security.txt
