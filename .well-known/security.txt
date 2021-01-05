@@ -1,0 +1,3 @@
+Contact: mailto:security@rizin.re
+Preferred-Languages: en, ru, hi, fr, de, he
+Canonical: https://rizin.re/.well-known/security.txt
