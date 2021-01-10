@@ -69,7 +69,7 @@ As we are forking radare2, we would stop the contribution to the original projec
 
 ## Can I take part and contribute to Rizin?
 
-Absolutely! We are thrilled to help you start and join Rizin. Please read our initial [documentation for new contributors](https://github.com/rizinorg/rizin/blob/dev/CONTRIBUTING.md). Please join our [Mattermost chat](im.rizin.re/) or [#rizindev IRC channel](https://webchat.freenode.net/?channels=#rizindev) on freenode! We hope to create better on-boarding guides for new contributors in the coming months, but for the meantime, we are here for any question you have.
+Absolutely! We are thrilled to help you start and join Rizin. Please read our initial [documentation for new contributors](https://github.com/rizinorg/rizin/blob/dev/CONTRIBUTING.md). Please join our [Mattermost chat](https://im.rizin.re/) or [#rizindev IRC channel](https://webchat.freenode.net/?channels=#rizindev) on freenode! We hope to create better on-boarding guides for new contributors in the coming months, but for the meantime, we are here for any question you have.
 
 ---
 
