@@ -227,7 +227,7 @@ Of course it's not all perfect with meson either. Right now the meson build
 system is missing some features that were only available with ACR/Make.
 
 To uninstall Rizin you have to run `ninja -C build uninstall` from the same
-build directory you used to run the `install` step, otherwise it will not
+build directory you used to run the `install` step, otherwise, it will not
 uninstall files. However if during `install` step we add any custom
 installation script (e.g. to sign your rizin binary in macOS), there is no
 counter part to actually have an uninstall script. That said, nothing
