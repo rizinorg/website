@@ -21,7 +21,7 @@ choice and the key benefits of Meson.
 # TL;DR
 
 - Meson is declarative and easy to understand
-- Meson is fast, no files are recompiled if not necessary
+- Ninja is fast, no files are recompiled if not necessary
 - Meson keeps your source directory clean with out-of-source builds
 - Meson makes it easy to build and run multiple versions of Rizin
 - Meson simplifies dependency handling and switching from internal dependencies to system-provided ones
@@ -55,6 +55,10 @@ feature-wise on par with the ACR/Make build system.
 Rizin has chosen to deprecate the use of ACR/Make and switch to Meson as the
 main build system. We believe this will make the overall build process more
 standard, easy to understand and to integrate with other tools/libraries.
+Other very valid alternatives such as CMake were considered, however we
+preferred to keep working with Meson, which was already tested and tried with
+Rizin for a long time, rather than starting completely from scratch with
+another build system.
 
 # Problems with ACR/Make
 
@@ -236,13 +240,11 @@ That said, its community is healthy and active so you can count on them to
 fix these problems as soon as possible or provide help, also thanks to the
 many big projects that have switched to meson in the last years.
 
-All in all, we hope to make it easier for us and for developers/users to
-build Rizin. We are trying to build a good Reverse Engineering Framework and
-we want to focus our efforts on this rather than dealing with the limitations
-of a niche build system.
+All in all, we hope to make it easier for our developers and users to build
+Rizin. We are trying to build a good Reverse Engineering Framework and we
+want to focus our efforts on this rather than dealing with the limitations of
+a niche build system.
 
-We hope this was a useful overview for developers to understand why we
-switched to meson. If you find issues or find particular installation setups
-difficult or missing, feel free to open a bug in GitHub and we will be happy
-to either guide you through a solution or develop the fix according to our
-roadmap.
+If you find issues or find particular installation setups difficult or
+missing, feel free to open a bug in GitHub and we will be happy to either
+guide you through a solution or develop the fix according to our roadmap.
