@@ -1,7 +1,7 @@
 +++
 "author" = "ret2libc"
 "title" = "Why we chose Meson as our build system"
-"date" = "2021-01-23"
+"date" = "2021-01-26"
 "summary" = "Why we switched to Meson/Ninja as our main build system"
 "tags" = ["dev", "rizin"]
 
@@ -131,9 +131,9 @@ include paths are right. As an example, look at this piece of `meson.build`:
   adding the proper include paths and link directives.
 
 - It is *fast*. This is extremely important for developers, as while
-developing a feature or a bug they may need to compile Rizin multiple times
-and we want this process to be as fast as possible. Meson/Ninja performs
-quite well compared to other build systems
+developing a feature or fixing a bug they may need to compile Rizin multiple
+times and we want this process to be as fast as possible. Meson/Ninja
+performs quite well compared to other build systems
 ([https://mesonbuild.com/Simple-comparison.html](https://mesonbuild.com/Simple-comparison.html)).
 It forces you to list all source files used to compile a target and it is
 able to automatically compute other dependencies between targets. In
