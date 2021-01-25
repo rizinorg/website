@@ -1,6 +1,6 @@
 +++
 "author" = "ret2libc"
-"title" = "Why Meson"
+"title" = "Why we chose Meson as our build system"
 "date" = "2021-01-23"
 "summary" = "Why we switched to Meson/Ninja as our main build system"
 "tags" = ["dev", "rizin"]
@@ -82,12 +82,12 @@ perform any sort of action, from simply compiling a C file to running `scp`,
 various scripts, and much more. Flexibility shall not be abused though.
 Otherwise, it may become hard to understand how things are actually done. For
 example, understanding how `librz_io.so` is compiled involves looking at the
-Makefile in `libr/io`, which includes `[config.mk](http://config.mk)` that
-setups some variables based on other variables defined in the Makefile and
-then it includes `rules.mk`, which uses those variables to actually compile
-the library. Inside `rules.mk` you find, hidden with various environment
-variables, the commands used to build the object files, and then the library.
-You can look at the compilation command
+Makefile in `libr/io`, which includes `config.mk` that setups some variables
+based on other variables defined in the Makefile and then it includes
+`rules.mk`, which uses those variables to actually compile the library.
+Inside `rules.mk` you find, hidden with various environment variables, the
+commands used to build the object files, and then the library. You can look
+at the compilation command
 [here](https://github.com/rizinorg/rizin/blob/b80757382caf971d8906df666fb6db1ce10b6b77/librz/rules.mk#L81),
 which we think is hard to grasp from a quick look even for people familiar
 with radare2/Rizin codebase (you may wonder where to find `config.mk`
@@ -159,15 +159,15 @@ separated in different directories.
 - Due to its declarative nature, it does not matter whether a dependency is
 in a path or another or if it comes from the system or it was bundled with
 the source code. You just define `capstone_dep` variable properly in one of
-your `[meson.build](http://meson.build)` files and you reference it wherever
-it is needed, leaving all the details to `meson` itself. This encourages
-splitting the repository into sub-projects when it makes sense, in contrast
-with the ACR/Make system where even a small change to e.g. SDB path would
-require rewriting several Makefiles. If in the future some systems will ship
-their own version of SDB, we would just need to change few lines in the
-definition of `sdb_dep` to actually take the system library instead of the
-bundled one and no other place would need to be changed to make sure
-everything is compiled/linked with the right headers/libraries.
+your `meson.build` files and you reference it wherever it is needed, leaving
+all the details to `meson` itself. This encourages splitting the repository
+into sub-projects when it makes sense, in contrast with the ACR/Make system
+where even a small change to e.g. SDB path would require rewriting several
+Makefiles. If in the future some systems will ship their own version of SDB,
+we would just need to change few lines in the definition of `sdb_dep` to
+actually take the system library instead of the bundled one and no other
+place would need to be changed to make sure everything is compiled/linked
+with the right headers/libraries.
 - In case of problems with `meson` there is a healthy community out there
 ready to help you, a nice and extensive documentation and active developers
 that improve the system with new releases. New developers who want to work on
@@ -211,8 +211,8 @@ anyway disable it by specifying `-Dlocal=false` when running meson.
 When testing a PR with a fix or comparing multiple changes, you need to have
 access to multiple versions of Rizin. Doing this with ACR/Make is of course
 possible, but it usually involves installing everything in separated
-directories and making sure your environment variables (e.g. PATH,
-LD_LIBRARY_PATH, etc.) are correctly set. With meson, you can build one
+directories and making sure your environment variables (e.g. `PATH`,
+`LD_LIBRARY_PATH`, etc.) are correctly set. With meson, you can build one
 version (e.g. from `dev` branch) with `meson --prefix=~/.local build-dev;
 ninja -C build-dev`, then switch branch with `git checkout my-other-branch`
 and build Rizin again with `meson --prefix=~/.local build-pr; ninja -C
