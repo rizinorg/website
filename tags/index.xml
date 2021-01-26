@@ -5,22 +5,31 @@
     <link>https://rizin.re/tags/</link>
     <description>Recent content in Tags on Rizin</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 02 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>projects</title>
-      <link>https://rizin.re/tags/projects/</link>
-      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      <title>dev</title>
+      <link>https://rizin.re/tags/dev/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://rizin.re/tags/projects/</guid>
+      <guid>https://rizin.re/tags/dev/</guid>
       <description></description>
     </item>
     
     <item>
       <title>rizin</title>
       <link>https://rizin.re/tags/rizin/</link>
-      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://rizin.re/tags/rizin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>projects</title>
+      <link>https://rizin.re/tags/projects/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/tags/projects/</guid>
       <description></description>
     </item>
     

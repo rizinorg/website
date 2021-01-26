@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dev on Rizin</title>
+    <link>https://rizin.re/tags/dev/</link>
+    <description>Recent content in dev on Rizin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 26 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why we chose Meson as our build system</title>
+      <link>https://rizin.re/posts/why-meson/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/posts/why-meson/</guid>
+      <description>Why we switched to Meson/Ninja as our main build system.</description>
+    </item>
+    
+  </channel>
+</rss>
