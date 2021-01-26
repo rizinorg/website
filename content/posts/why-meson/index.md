@@ -1,13 +1,12 @@
-+++
-"author" = "ret2libc"
-"title" = "Why we chose Meson as our build system"
-"date" = "2021-01-26"
-"summary" = "Why we switched to Meson/Ninja as our main build system"
-"tags" = ["dev", "rizin"]
-
-"ShowToc" = false
-"weight" = 2
-+++
+---
+author: "ret2libc"
+title: "Why we chose Meson as our build system"
+date: "2021-01-26"
+summary: "Why we switched to Meson/Ninja as our main build system."
+tags: ["dev", "rizin"]
+ShowToc: false
+weight: 2
+---
 
 As developers, we think it is essential to have a building system that eases
 our work, allows us to compile Rizin quickly on a wide range of devices, is
