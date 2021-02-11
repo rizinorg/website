@@ -23,6 +23,9 @@ menu:
       - name: Cutter
         url: https://cutter.re
         weight: 15
+      - name: Search
+        url: /search/
+        weight: 15
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -50,3 +53,9 @@ params:
       url: 'https://twitter.com/rizinorg'
     - name: github
       url: 'https://github.com/rizinorg'
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
