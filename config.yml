@@ -53,6 +53,8 @@ params:
       url: 'https://twitter.com/rizinorg'
     - name: github
       url: 'https://github.com/rizinorg'
+    
+  ShowBreadCrumbs: true
 
 outputs:
     home:
