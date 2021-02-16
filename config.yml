@@ -20,6 +20,9 @@ menu:
       - name: Organization
         url: /organization/
         weight: 10
+      - name: Community
+        url: /community/
+        weight: 15
       - name: Cutter
         url: https://cutter.re
         weight: 15
