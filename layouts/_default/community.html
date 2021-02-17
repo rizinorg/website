@@ -1,0 +1,90 @@
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  <div class="underline"></div>
+</header>
+<div class="grid_parent">
+  <p>
+    Rizin has a growing and diverse community that is welcoming to people of all skill levels.
+    Our chats are your place to have discussions about Rizin, ask questions, and get support.
+  </p>
+  <p>
+    <b>Join us on your favorite platform!</b>
+  </p>
+</div>
+<div class="grid_parent">
+  <h1 class="mb-15 page-subtitle">Connect</h1>
+  <div class="teams-section">
+    <div class="team-item">
+      <div>
+        <h3><mark>Mattermost</mark></h3>
+        <p>
+          <b>Recommended!</b> This is our main hub which is separated into channels for different teams, sub-projects, and development topics.
+        </p>
+      </div>
+      <div class="btn-team-members">
+        <a class="site-button btn-secondary" href="https://im.rizin.re/login">Join us on Mattermost</a>
+      </div>
+    </div>
+    <div class="team-item">
+      <div>
+        <h3><mark>Telegram</mark></h3>
+        <p>
+          The Telegram group is a bridge from Mattermost's #General channel to Telegram. And it is intended for user support and general discussions related to Rizin.
+        </p>
+      </div>
+      <div class="btn-team-members">
+        <a class="site-button btn-secondary" href="https://t.me/rizinorg">Join us on Telegram</a>
+      </div>
+    </div>
+    <div class="team-item">
+      <div>
+        <h3><mark>IRC</mark></h3>
+        <p>
+          On Freenode (IRC), you can join <a href="https://webchat.freenode.net/?channels=#rizin">#rizin</a> for general discussions and <a href="https://webchat.freenode.net/?channels=#rizindev">#rizindev</a> for questions and discussions related to Rizin development.
+        </p>
+        <p>
+          Both are respectively bridged to the General and Rizin Dev channels on Mattermost.
+        </p>
+      </div>
+      <div class="btn-team-members">
+        <a class="site-button btn-secondary" href="https://webchat.freenode.net/?channels=#rizin">Join us on IRC</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="grid_parent">
+  <h1 class="mb-15 page-subtitle">Social</h1>
+  <div class="teams-section">
+    <div class="team-item">
+      <div>
+        <h3><mark>Twitter</mark></h3>
+        <p> 
+          Follow us on Twitter for release announcements and much more.
+        </p>
+      </div>
+      <div class="btn-team-members">
+        <a class="site-button btn-secondary" href="https://twitter.com/rizinorg">Follow us on Twitter</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="grid_parent">
+  <h1 class="mb-15 page-subtitle">Learn</h1>
+  <div class="teams-section">
+    <div class="team-item">
+      <div>
+        <h3><mark>The Official Rizin Book</mark></h3>
+        <p>
+          For a quick getting started guide and to learn more on how to use Rizin in detail, you can read the Rizin Book.
+        </p>
+      </div>
+      <div class="btn-team-members">
+        <a class="site-button btn-secondary" href="http://book.rizin.re">Read about Rizin</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{- end }}{{/* end main */}}
