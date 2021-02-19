@@ -115,6 +115,17 @@
     </item>
     
     <item>
+      <title>GSoC 2021</title>
+      <link>https://rizin.re/gsoc/2021/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/gsoc/2021/</guid>
+      <description>TL;DR Jump to the Ideas list.
+Introduction Each year since 2015, we have participated in Google Summer of Code as the Radare2 project and accomplished many goals. You can read more on the Radare2 - GSoC 2020 page. This year we participate as a fork - Rizin, but effectively continuing the same process and the same mentors.
+Mentors Members of the Rizin and Cutter core teams have volunteered to guide students for GSoC’21.</description>
+    </item>
+    
+    <item>
       <title>Infrastructure Team</title>
       <link>https://rizin.re/teams/infrastructure/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

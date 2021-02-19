@@ -89,6 +89,10 @@
   </url>
   
   <url>
+    <loc>https://rizin.re/gsoc/2021/</loc>
+  </url>
+  
+  <url>
     <loc>https://rizin.re/teams/infrastructure/</loc>
   </url>
   
@@ -98,6 +102,10 @@
   
   <url>
     <loc>https://rizin.re/teams/package-manager-and-plugins/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rizin.re/gsoc/</loc>
   </url>
   
   <url>
