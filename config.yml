@@ -23,12 +23,12 @@ menu:
       - name: Community
         url: /community/
         weight: 15
+      - name: GSoC
+        url: /gsoc/
+        weight: 20
       - name: Cutter
         url: https://cutter.re
-        weight: 15
-      - name: Search
-        url: /search/
-        weight: 15
+        weight: 25
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
