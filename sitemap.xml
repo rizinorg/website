@@ -1,123 +1,69 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://rizin.re/posts/why-meson/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/posts/introducing-projects/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/posts/announcing-rizin/</loc>
     <lastmod>2020-12-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/posts/faq/</loc>
     <lastmod>2020-12-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/tags/dev/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/posts/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/tags/rizin/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/tags/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/tags/projects/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/archives/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/code-of-conduct/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/community/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/teams/community/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/teams/core/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/teams/cutter-core/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/teams/distributions-and-packaging/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/teams/documentation/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/gsoc/2021/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/teams/infrastructure/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/organization/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/teams/package-manager-and-plugins/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/gsoc/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/search/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/teams/security/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://rizin.re/teams/</loc>
   </url>
-  
 </urlset>
