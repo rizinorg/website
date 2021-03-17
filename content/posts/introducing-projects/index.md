@@ -77,7 +77,7 @@ Moreover, before rizin's new command parser was created, there was no formal spe
 You can see in the above example that the first `af+` command is enclosed in `"..."`, which is to account
 for cases such as the function name being `ma;in` where otherwise the `;` would be interpreted as a separator for a new
 command, similar as in an SQL injection, eventually resulting in broken project loading.
-However, this quoting scheme still falls for names such as `ma"in`.
+However, this quoting scheme still fails for names such as `ma"in`.
 As mentioned, this could have been eventually fixed using the new command parser, which has a well-defined escaping syntax,
 but it still has been the source of many bugs in the past.
 
