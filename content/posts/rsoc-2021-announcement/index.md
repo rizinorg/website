@@ -16,7 +16,7 @@ We use the experience we gathered by participating in Google Summer of Code as a
 organizing our own RSoC as part of the radare2 project.
 
 The application period continued through all of April and in its end we finally chose
-two students. Let them introduce themselves, and we wish them luck!
+two students. We wish them the best of luck and happy to give them this stage to introduce themselves.
 
 ## Heersin: Intermediate language improvements
 
