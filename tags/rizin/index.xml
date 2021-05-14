@@ -5,7 +5,16 @@
     <link>https://rizin.re/tags/rizin/</link>
     <description>Recent content in rizin on Rizin</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 26 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/rizin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/rizin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rizin Summer of Code 2021 Announcement</title>
+      <link>https://rizin.re/posts/rsoc-2021-announcement/</link>
+      <pubDate>Thu, 13 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/posts/rsoc-2021-announcement/</guid>
+      <description>An announcement of the Rizin Summer of Code 2021. Two accepted candidates.</description>
+    </item>
+    
     <item>
       <title>Why we chose Meson as our build system</title>
       <link>https://rizin.re/posts/why-meson/</link>
