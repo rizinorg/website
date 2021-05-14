@@ -10,7 +10,7 @@ weight: 2
 ---
 
 We are excited to announce RSoC 2021! Rizin Summer of Code is a summer
-internship program. [Together with the KeenLab of Tencent](https://keenlab.tencent.com/zh/2021/03/04/RSoC-keenlab-2021/) we provide an opportunity
+internship program we organize together with  [KeenLab of Tencent](https://keenlab.tencent.com/zh/2021/03/04/RSoC-keenlab-2021/). We provide an opportunity
 for students to work full-time on Rizin and RzGhidra.
 We used experience gathered by participating in Google Summer of Code as an organization and
 organizing our own RSoC as part of the radare2 project.
