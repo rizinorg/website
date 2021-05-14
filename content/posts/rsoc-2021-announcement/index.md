@@ -15,7 +15,7 @@ for students to work full-time on Rizin and RzGhidra.
 We use the experience we gathered by participating in Google Summer of Code as an organization and
 organizing our own RSoC as part of the radare2 project.
 
-The application period continued through all of April with fierce competition between candidates. Finally, we chose
+The application period continued through all of April and in its end we finally chose
 two students. Let them introduce themselves, and we wish them luck!
 
 ## Heersin: Intermediate language improvements
