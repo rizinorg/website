@@ -138,7 +138,7 @@ What you see above is already an example of how the serialization will eventuall
 It is a simple, text-based format that stores the SDB entries line by line and takes care of any necessary escaping.
 While such a text-based format may not be the most efficient representation, it turned out to be more than good enough
 for even larger projects and in addition has certain nice properties, which we will make use of further down.
-However, due to the simplicity of SDB, other file formats to store the same data are theoretically feasable too.
+However, due to the simplicity of SDB, other file formats to store the same data are theoretically feasible too.
 
 ### Versioning
 
