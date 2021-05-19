@@ -5,7 +5,16 @@
     <link>https://rizin.re/posts/</link>
     <description>Recent content in Posts on Rizin</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 13 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Summer of Code 2021 Announcement</title>
+      <link>https://rizin.re/posts/gsoc-2021-announcement/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/posts/gsoc-2021-announcement/</guid>
+      <description>An announcement of the Google Summer of Code 2021. Three accepted candidates.</description>
+    </item>
+    
     <item>
       <title>Rizin Summer of Code 2021 Announcement</title>
       <link>https://rizin.re/posts/rsoc-2021-announcement/</link>
