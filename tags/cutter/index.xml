@@ -5,7 +5,17 @@
     <link>https://rizin.re/tags/cutter/</link>
     <description>Recent content in cutter on Rizin</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 19 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/cutter/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/cutter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Summer of Code 2021 Summary</title>
+      <link>https://rizin.re/posts/gsoc-2021-summary/</link>
+      <pubDate>Mon, 06 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/posts/gsoc-2021-summary/</guid>
+      <description>Google Summer of Code 2021 Summary GSoC 2021 is officially finished and we are happy to congratulate all 3 participants for passing the program and completing the most important parts of their tasks. It brought us some long-needed code cleanup and user-visible changes in the analysis and binary/heap parsing. See what students wrote themselves:
+08A: Refactoring ELF binaries loading This summer I have been doing the GSoC for Rizin. The subject of the GSoC was to refactor and improve how elf binaries are loaded by Rizin.</description>
+    </item>
+    
     <item>
       <title>Google Summer of Code 2021 Announcement</title>
       <link>https://rizin.re/posts/gsoc-2021-announcement/</link>

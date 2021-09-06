@@ -1,0 +1,299 @@
+<!doctype html><html lang=en dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>Google Summer of Code 2021 Summary | Rizin</title>
+<meta name=keywords content="rizin,cutter,gsoc">
+<meta name=description content="Google Summer of Code 2021 Summary GSoC 2021 is officially finished and we are happy to congratulate all 3 participants for passing the program and completing the most important parts of their tasks. It brought us some long-needed code cleanup and user-visible changes in the analysis and binary/heap parsing. See what students wrote themselves:
+08A: Refactoring ELF binaries loading This summer I have been doing the GSoC for Rizin. The subject of the GSoC was to refactor and improve how elf binaries are loaded by Rizin.">
+<meta name=author content="xvilka">
+<link rel=canonical href=https://rizin.re/posts/gsoc-2021-summary/>
+<link href=/assets/css/stylesheet.min.608aafc4a643533f4ec6967b44e1560dd8623d1e10e96bc196999b8194900739.css integrity="sha256-YIqvxKZDUz9OxpZ7ROFWDdhiPR4Q6WvBlpmbgZSQBzk=" rel="preload stylesheet" as=style>
+<link rel=icon href=https://rizin.re/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=https://rizin.re/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=https://rizin.re/favicon-32x32.png>
+<link rel=apple-touch-icon href=https://rizin.re/apple-touch-icon.png>
+<link rel=mask-icon href=https://rizin.re/safari-pinned-tab.svg>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<meta name=generator content="Hugo 0.88.1">
+<link href=https://cdn.lineicons.com/2.0/LineIcons.css rel=stylesheet>
+<link rel=stylesheet href=https://rizin.re/css/custom/rizin.min.680c6ca8d9f3b3fe6721cee593c808d0d6d77b79b0770aefbed2d9161082cd87.css>
+<meta property="og:title" content="Google Summer of Code 2021 Summary">
+<meta property="og:description" content="Google Summer of Code 2021 Summary GSoC 2021 is officially finished and we are happy to congratulate all 3 participants for passing the program and completing the most important parts of their tasks. It brought us some long-needed code cleanup and user-visible changes in the analysis and binary/heap parsing. See what students wrote themselves:
+08A: Refactoring ELF binaries loading This summer I have been doing the GSoC for Rizin. The subject of the GSoC was to refactor and improve how elf binaries are loaded by Rizin.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://rizin.re/posts/gsoc-2021-summary/">
+<meta property="og:image" content="https://rizin.re/images/rizin_preview.png">
+<meta property="article:published_time" content="2021-09-06T00:00:00+00:00">
+<meta property="article:modified_time" content="2021-09-06T00:00:00+00:00"><meta property="og:site_name" content="Rizin">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://rizin.re/images/rizin_preview.png">
+<meta name=twitter:title content="Google Summer of Code 2021 Summary">
+<meta name=twitter:description content="Google Summer of Code 2021 Summary GSoC 2021 is officially finished and we are happy to congratulate all 3 participants for passing the program and completing the most important parts of their tasks. It brought us some long-needed code cleanup and user-visible changes in the analysis and binary/heap parsing. See what students wrote themselves:
+08A: Refactoring ELF binaries loading This summer I have been doing the GSoC for Rizin. The subject of the GSoC was to refactor and improve how elf binaries are loaded by Rizin.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Google Summer of Code 2021 Summary","name":"Google Summer of Code 2021 Summary","description":"Google Summer of Code 2021 Summary GSoC 2021 is officially finished and we are happy to congratulate all 3 participants for passing the program and completing the most important …","keywords":["rizin","cutter","gsoc"],"articleBody":"Google Summer of Code 2021 Summary GSoC 2021 is officially finished and we are happy to congratulate all 3 participants for passing the program and completing the most important parts of their tasks. It brought us some long-needed code cleanup and user-visible changes in the analysis and binary/heap parsing. See what students wrote themselves:\n08A: Refactoring ELF binaries loading This summer I have been doing the GSoC for Rizin. The subject of the GSoC was to refactor and improve how elf binaries are loaded by Rizin.\nI have added support for the elf hash table and gnu hash table. Those 2 data structures are used to deduct the number of dynamic symbols in the file, which replaced the old way of doing it (assuming that the data is a symbol until there is an error).\nMoreover, I have changed the source of trust used to load symbols' versions (from sections information to dynamic section’s information). So Rizin is now able to read symbols' versions even if there is no section.\n rz-bin -V bins/elf/analysis/clark WARNING: Invalid section header (check array failed). Version symbols has 9 entries: Addr: 0x080482c2 Offset: 0x000002c2 0x00000000: 0 (*local*) 0x00000001: 2 (GLIBC_2.0) 0x00000002: 2 (GLIBC_2.0) 0x00000003: 0 (*local*) 0x00000004: 2 (GLIBC_2.0) 0x00000005: 2 (GLIBC_2.0) 0x00000006: 2 (GLIBC_2.0) 0x00000007: 2 (GLIBC_2.0) 0x00000008: 1 (*global*) Version need has 1 entries: Addr: 0x080482d4 Offset: 0x000002d4 0x000002d4: Version: 1 File: libc.so.6 Cnt: 1 0x000002e4: Name: GLIBC_2.0 Flags: none Version: 2 There was a hard-coded maximum length for all string found in any elf string table. This limitation was removed and some small check of the string table integrity were added.\n rizin bins/elf/long-symbol.elf WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols... WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols... WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols... -- Add custom Have you setup your ~/.rizinrc today? [0x00001040] is~AAA 28 0x00001139 0x00001139 GLOBAL FUNC 15 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA The main problem with how symbols and imports were loaded, was their mutual dependency during the loading phase. So both processes was split and heavily refactored. As a side effect, an old bug on the symbols loading was fixed.\nThe call to the function system is correctly identified:\n rizin bins/elf/analysis/phdr-override WARNING: The segment 3 at 0x774 seems to be invalid. WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols... WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols... WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols... -- Change your fortune types with 'e cfg.fortunes.file=fun,tips' in your ~/.rizinrc [0x004003f0] s main [0x004004e6] af [0x004004e6] pdf ┌ int main (int argc, char **argv, char **envp); │ ; var int64_t var_10h @ rbp-0x10 │ ; var int64_t var_4h @ rbp-0x4 │ ; arg int argc @ rdi │ ; arg char **argv @ rsi │ 0x004004e6 push rbp │ 0x004004e7 mov rbp, rsp │ 0x004004ea sub rsp, 0x10 │ 0x004004ee mov dword [var_4h], edi ; argc │ 0x004004f1 mov qword [var_10h], rsi ; argv │ 0x004004f5 mov rax, qword [var_10h] │ 0x004004f9 add rax, 8 │ 0x004004fd mov rax, qword [rax] │ 0x00400500 mov rdi, rax │ 0x00400503 mov eax, 0 │ 0x00400508 call sym.imp.system ; int system(const char *string) │ 0x0040050d mov eax, 0 │ 0x00400512 leave └ 0x00400513 ret During the loading phase, sections and segment information checks have been added to verify the integrity of the data. Those checks are stricter than the elf loader. So 3 configurations variable were implemented to allow the user to customize how segments and sections are loaded.\n rizin bins/elf/analysis/phdr-override WARNING: The segment 3 at 0x774 seems to be invalid. WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols... WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols... WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols... -- Press 'C' in visual mode to toggle colors [0x004003f0]  rizin -e elf.checks.segments=false bins/elf/analysis/phdr-override WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols... WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols... WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols... -- Add colors to your screen with 'e scr.color=X' where 1 is 16 colors, 2 is 256 colors and 3 is 16M colors [0x004003f0] There is still a lot of work to do, specially on the elf plugin interface. If you want to follow the update on this, you can use this link: Refactoring the elf plugin interface\nIn conclusion, the GSoC was an incredible source of motivation to contribute to the Open Source community. And it helped me improve my knowledge of elf internals. I would like to thank my mentors Anton Kochkov and Florian Märkl for their help during the GSoC.\nPulak: Heap viewer for Cutter Hi, I am Pulak Malhotra. Over the past few months, I participated in GSoC with the Rizin organization. My main contributions revolve around the heap parsing code for Rizin and the GUI implementation of heap viewer for Cutter. The initial work started with improving the output format of the dmh family of commands. I made them much more readable, taking inspiration from gdb gef. I added a new command, dmhd, which prints concise information about different bins of a given arena. I also refactored and rewrote a significant part of the Glibc heap codebase, making it more modular and maintainable, including porting it to the new shell. I added new Rizin API calls and used them in Cutter to implement the GUI version of the heap viewer. Heap viewer in Cutter has many features, like getting a list of heap chunks in an arena, editing the heap chunks, getting information about bins in the arena, and visualizations for linked lists of the bins. I encourage everyone to give it a try in their next heap exploitation hack! After Glibc heap, I made some contributions towards the windows heap and windows heap widget. Some of the changes have been merged, like the Rizin API and the new shell port. I’ll try my best to ship the other modifications to production soon.\nGSoC was one of my first experiences working on a real-world project, and I learned and grew a lot. I want to give special thanks to my mentors Yossizap and Megabeets, and the Rizin community members XVilka, Ret2libc, Wargio, Gustavolcr, and Thestr4ng3r, who were always there to answer my questions and review and give feedback for my PRs.\nAswin: Support for CPU and platform profiles Hello everybody!\nI’m Aswin and this is a brief summary about the work I did on the summer of 2021 with Rizin on adding support for CPU and platform profiles. Rizin previously relied upon manually writing code for adding a new CPU or an IO port and it was a bit tedious to handle them all and it was not user friendly. Providing a level of abstraction in handling this entropy in embedded systems by adding support for editable CPU and platform profiles was the goal of this project.\nAfter getting accepted, the first thing I did was to remove the existing implementation of RzSyscallPorts - the module which took care of the architecture and CPU specefic system registers. Here, I made two new modules: RzSysregsDB and RzSysregItem to make this happen. RzSysregsDB just housed a hashtable which paired the address of the port and an RzSysregItem which contained the comment, type and all the other information related it.\nThen, I started working on CPU profiles. The whole idea of CPU profiles is to store all the CPU specefics in one file, parse it and use it at places like analysis, emulation and wherever it’s needed. Inside CPU profiles, we store information like size of the ROM, size of the RAM CPU and other things and they are parsed and stored into various data structures inside RzArchProfile, where RzArchTarget houses the name of the CPU and architecture and a pointer to RzArchProfile. Information about the CPU IO registers and Extended IO registers can also be added in CPU profiles. During the analysis loop, they are added as flags (labels) at their corresponding offsets. A feature to map the ROM as sections (iS) were also added with it.\nThis is how the IO and extended IO registers are defined in the SDB files:\nSPH=reg SPH.address=0x3e SPH.comment=Stack higher bits SP8 SP10 After that, I added support for platform profiles. Platform profiles were introduced to handle the platform specefic differences. These files contains the name, offset and a short description of each port or register, which are parsed and added as flags and comments. Support for one platforms like BCM2835, which one of the Raspberry Pi runs on, BCM2711 and OMAP 3430 were added along with the x86 IO ports were added subsequently.\nA new configuration variable asm.platform was also added to choose the platform profile. This will let the user choose the name of the profile they want to load and Rizin will load the profile based upon the CPU and the architecture that the user have previously set. For that, I added a new variable platforms to RzAsmPlugin which will hold the list of all supported platforms of that architecture.\nPlatform Profiles also follow a format similar to the CPU profiles that you saw earlier. Here’s an excerpt BCM 2835’s platform profile:\nAUX_MU_IER_REG=name AUX_MU_IER_REG.address=0x7e215044 AUX_MU_IER_REG.comment=Mini UART Interrupt Enable AUX_MU_IIR_REG=name AUX_MU_IIR_REG.address=0x7e215048 AUX_MU_IIR_REG.comment=Mini UART Interrupt Identify Then, I worked on porting uefi_r2 - a tool used to analyze UEFI modules to Rizin. This tool works by analyzing the firmware using Rizin’s RzAnalysis utilities and inspecting its functions, strings and all (For example, while searching for the UEFI guilds). Here, the tool is a Python package and all the interaction with rizin is done through rz-pipe’s Python module. Overall, this was not particularly challenging but it was indeed very informative. UEFI is insanely complex!\nLater, I continued to work on improving the SVD parser plugin I had started making during the microtask. SVD files are files containing information about a device’s peripherals, MMIO registers and other particulars. They are usually made by the manufacturer. This plugin would load the data from SVD file to Rizin mainly the registers' name, size, base address and its offset and adds them as flags and comments.\nI would like to thank my mentors xvilka and wargio for their guidance. I was regularly in touch with them and they were constantly trying make sure that everything was going smooth.\nAlso kudos to all the folks at #Rizin-dev, #gsoc-2021 and the other channels where my questions were answered.\n","wordCount":"1832","inLanguage":"en","datePublished":"2021-09-06T00:00:00Z","dateModified":"2021-09-06T00:00:00Z","author":{"@type":"Person","name":"xvilka"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://rizin.re/posts/gsoc-2021-summary/"},"publisher":{"@type":"Organization","name":"Rizin","logo":{"@type":"ImageObject","url":"https://rizin.re/favicon.ico"}}}</script>
+</head>
+<body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<noscript>
+<style type=text/css>.theme-toggle,.top-link{display:none}</style>
+</noscript>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://rizin.re/ accesskey=h>Rizin</a>
+<span class=logo-switches>
+<span class=theme-toggle>
+<a id=theme-toggle accesskey=t title="Toggle theme"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</a>
+</span>
+</span>
+</div>
+<ul class=menu id=menu onscroll=menu_on_scroll()>
+<li>
+<a href=https://rizin.re/posts/>
+<span>
+Blog
+</span>
+</a>
+</li>
+<li>
+<a href=https://rizin.re/organization/>
+<span>
+Organization
+</span>
+</a>
+</li>
+<li>
+<a href=https://rizin.re/community/>
+<span>
+Community
+</span>
+</a>
+</li>
+<li>
+<a href=https://rizin.re/gsoc/>
+<span>
+GSoC
+</span>
+</a>
+</li>
+<li>
+<a href=https://cutter.re>
+<span>
+Cutter
+</span>
+</a>
+</li></ul>
+</nav>
+</header>
+<main class=main>
+<article class=post-single>
+<header class=post-header>
+<div class=breadcrumbs>
+<a href=https://rizin.re/>Home</a>&nbsp;»&nbsp;<a href=https://rizin.re/posts/>Posts</a>
+</div>
+<h1 class=post-title>
+Google Summer of Code 2021 Summary
+</h1>
+<div class=post-meta>
+September 6, 2021&nbsp;·&nbsp;9 min&nbsp;·&nbsp;xvilka
+</div>
+</header>
+<div class=toc>
+<details>
+<summary accesskey=c title="(Alt + C)">
+<div class=details>Table of Contents</div>
+</summary>
+<div class=inner><ul><li>
+<a href=#google-summer-of-code-2021-summary aria-label="Google Summer of Code 2021 Summary">Google Summer of Code 2021 Summary</a><ul>
+<li>
+<a href=#08a-refactoring-elf-binaries-loading aria-label="08A: Refactoring ELF binaries loading">08A: Refactoring ELF binaries loading</a></li><li>
+<a href=#pulak-heap-viewer-for-cutter aria-label="Pulak: Heap viewer for Cutter">Pulak: Heap viewer for Cutter</a></li><li>
+<a href=#aswin-support-for-cpu-and-platform-profiles aria-label="Aswin: Support for CPU and platform profiles">Aswin: Support for CPU and platform profiles</a></li></ul>
+</li></ul>
+</div>
+</details>
+</div>
+<div class=post-content>
+<h1 id=google-summer-of-code-2021-summary>Google Summer of Code 2021 Summary<a hidden class=anchor aria-hidden=true href=#google-summer-of-code-2021-summary>#</a></h1>
+<p><a href=https://rizin.re/gsoc/2021>GSoC 2021</a> is officially finished and we are happy to congratulate all 3 participants for passing the program and completing the most important parts of their tasks.
+It brought us some long-needed code cleanup and user-visible changes in the analysis and binary/heap parsing. See what students wrote themselves:</p>
+<h2 id=08a-refactoring-elf-binaries-loading>08A: Refactoring ELF binaries loading<a hidden class=anchor aria-hidden=true href=#08a-refactoring-elf-binaries-loading>#</a></h2>
+<p>This summer I have been doing the GSoC for Rizin. The subject of the GSoC was to refactor and improve how elf binaries are loaded by Rizin.</p>
+<p>I have added support for the <a href=https://www.gabriel.urdhr.fr/2015/09/28/elf-file-format/#hash-tables>elf hash table and gnu hash table</a>. Those 2 data structures are used to deduct the number of dynamic symbols in the file, which replaced the old way of doing it (assuming that the data is a symbol until there is an error).</p>
+<p>Moreover, I have changed the source of trust used to load symbols' versions (from sections information to dynamic section&rsquo;s information). So Rizin is now able to read symbols' versions even if there is no section.</p>
+<pre tabindex=0><code>&gt; rz-bin -V bins/elf/analysis/clark
+WARNING: Invalid section header (check array failed).
+Version symbols has 9 entries:
+ Addr: 0x080482c2  Offset: 0x000002c2
+  0x00000000: 0 (*local*)
+  0x00000001: 2 (GLIBC_2.0)
+  0x00000002: 2 (GLIBC_2.0)
+  0x00000003: 0 (*local*)
+  0x00000004: 2 (GLIBC_2.0)
+  0x00000005: 2 (GLIBC_2.0)
+  0x00000006: 2 (GLIBC_2.0)
+  0x00000007: 2 (GLIBC_2.0)
+  0x00000008: 1 (*global*)
+
+
+Version need has 1 entries:
+ Addr: 0x080482d4  Offset: 0x000002d4
+  0x000002d4: Version: 1  File: libc.so.6  Cnt: 1
+  0x000002e4:   Name: GLIBC_2.0  Flags: none Version: 2
+</code></pre><p>There was a hard-coded maximum length for all string found in any elf string table. This limitation was removed and some small check of the string table integrity were added.</p>
+<pre tabindex=0><code>&gt; rizin bins/elf/long-symbol.elf
+WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols...
+WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols...
+WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols...
+ -- Add custom Have you setup your ~/.rizinrc today?
+[0x00001040]&gt; is~AAA
+28  0x00001139 0x00001139 GLOBAL FUNC   15       AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</code></pre><p>The main problem with how symbols and imports were loaded, was their mutual dependency during the loading phase. So both processes was split and heavily refactored. As a side effect, an old bug on the symbols loading was fixed.</p>
+<p>The call to the function system is correctly identified:</p>
+<pre tabindex=0><code>&gt; rizin bins/elf/analysis/phdr-override
+WARNING: The segment 3 at 0x774 seems to be invalid.
+WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols...
+WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols...
+WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols...
+ -- Change your fortune types with 'e cfg.fortunes.file=fun,tips' in your ~/.rizinrc
+[0x004003f0]&gt; s main
+[0x004004e6]&gt; af
+[0x004004e6]&gt; pdf
+┌ int main (int argc, char **argv, char **envp);
+│           ; var int64_t var_10h @ rbp-0x10
+│           ; var int64_t var_4h @ rbp-0x4
+│           ; arg int argc @ rdi
+│           ; arg char **argv @ rsi
+│           0x004004e6      push  rbp
+│           0x004004e7      mov   rbp, rsp
+│          0x004004ea      sub   rsp, 0x10
+│           0x004004ee      mov   dword [var_4h], edi                  ; argc
+│           0x004004f1      mov   qword [var_10h], rsi                 ; argv
+│           0x004004f5      mov   rax, qword [var_10h]
+│           0x004004f9      add   rax, 8
+│           0x004004fd      mov   rax, qword [rax]
+│           0x00400500      mov   rdi, rax
+│           0x00400503      mov   eax, 0
+│           0x00400508      call  sym.imp.system                       ; int system(const char *string)
+│           0x0040050d      mov   eax, 0
+│           0x00400512      leave
+└           0x00400513      ret
+</code></pre><p>During the loading phase, sections and segment information checks have been added to verify the integrity of the data. Those checks are stricter than the elf loader. So 3 configurations variable were implemented to allow the user to customize how segments and sections are loaded.</p>
+<pre tabindex=0><code>&gt; rizin bins/elf/analysis/phdr-override
+WARNING: The segment 3 at 0x774 seems to be invalid.
+WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols...
+WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols...
+WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols...
+ -- Press 'C' in visual mode to toggle colors
+[0x004003f0]&gt;
+
+&gt; rizin -e elf.checks.segments=false bins/elf/analysis/phdr-override
+WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols...
+WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols...
+WARNING: Neither hash nor gnu_hash exist. Falling back to heuristics for deducing the number of dynamic symbols...
+ -- Add colors to your screen with 'e scr.color=X' where 1 is 16 colors, 2 is 256 colors and 3 is 16M colors
+[0x004003f0]&gt;
+</code></pre><p>There is still a lot of work to do, specially on the elf plugin interface. If you want to follow the update on this, you can use this link: <a href=https://github.com/rizinorg/rizin/pull/1478>Refactoring the elf plugin interface</a></p>
+<p>In conclusion, the GSoC was an incredible source of motivation to contribute to the Open Source community. And it helped me improve my knowledge of elf internals. I would like to thank my mentors Anton Kochkov and Florian Märkl for their help during the GSoC.</p>
+<h2 id=pulak-heap-viewer-for-cutter>Pulak: Heap viewer for Cutter<a hidden class=anchor aria-hidden=true href=#pulak-heap-viewer-for-cutter>#</a></h2>
+<p>Hi, I am Pulak Malhotra. Over the past few months, I participated in GSoC with the Rizin organization. My main contributions revolve around the heap parsing code for Rizin and the GUI implementation of heap viewer for Cutter.
+The initial work started with improving the output format of the <code>dmh</code> family of commands. I made them much more readable, taking inspiration from <code>gdb gef</code>. I added a new command, <code>dmhd</code>, which prints concise information about different bins of a given arena. I also refactored and rewrote a significant part of the Glibc heap codebase, making it more modular and maintainable, including porting it to the new shell.
+<img src=heap-parsing-rizin-output-dmh.png alt></p>
+<p>I added new Rizin API calls and used them in Cutter to implement the GUI version of the heap viewer. Heap viewer in Cutter has many features, like getting a list of heap chunks in an arena, editing the heap chunks, getting information about bins in the arena, and visualizations for linked lists of the bins. I encourage everyone to give it a try in their next heap exploitation hack!
+<img src=heap-arena-chunks-graph-cutter.png alt></p>
+<p>After Glibc heap, I made some contributions towards the windows heap and windows heap widget. Some of the changes have been merged, like the Rizin API and the new shell port. I&rsquo;ll try my best to ship the other modifications to production soon.</p>
+<p>GSoC was one of my first experiences working on a real-world project, and I learned and grew a lot. I want to give special thanks to my mentors Yossizap and Megabeets, and the Rizin community members XVilka, Ret2libc, Wargio, Gustavolcr, and Thestr4ng3r, who were always there to answer my questions and review and give feedback for my PRs.</p>
+<h2 id=aswin-support-for-cpu-and-platform-profiles>Aswin: Support for CPU and platform profiles<a hidden class=anchor aria-hidden=true href=#aswin-support-for-cpu-and-platform-profiles>#</a></h2>
+<p>Hello everybody!</p>
+<p>I&rsquo;m Aswin and this is a brief summary about the work I did on the summer of 2021 with Rizin on
+adding support for CPU and platform profiles. Rizin previously relied upon manually writing code
+for adding a new CPU or an IO port and it was a bit tedious to handle them all and it was not
+user friendly. Providing a level of abstraction in handling this entropy in embedded systems by
+adding support for editable CPU and platform profiles was the goal of this project.</p>
+<p>After getting accepted, the first thing I did was to remove the existing implementation of
+<code>RzSyscallPorts</code> - the module which took care of the architecture and CPU specefic system
+registers. Here, I made two new modules: <code>RzSysregsDB</code> and <code>RzSysregItem</code> to make this happen.
+<code>RzSysregsDB</code> just housed a hashtable which paired the address of the port and an <code>RzSysregItem</code>
+which contained the comment, type and all the other information related it.</p>
+<p>Then, I started working on CPU profiles. The whole idea of CPU profiles is to store all the CPU specefics in one file, parse it and use it
+at places like analysis, emulation and wherever it&rsquo;s needed. Inside CPU profiles,
+we store information like size of the ROM, size of the RAM CPU and other things and they
+are parsed and stored into various data structures inside <code>RzArchProfile</code>, where <code>RzArchTarget</code>
+houses the name of the CPU and architecture and a pointer to <code>RzArchProfile</code>. Information about
+the CPU IO registers and Extended IO registers can also be added in CPU profiles. During the
+analysis loop, they are added as flags (labels) at their corresponding offsets. A feature to map the ROM as sections (<code>iS</code>) were also added with it.</p>
+<p>This is how the IO and extended IO registers are defined in the SDB files:</p>
+<pre tabindex=0><code>SPH=reg
+SPH.address=0x3e
+SPH.comment=Stack higher bits SP8 SP10
+</code></pre><p>After that, I added support for platform profiles. Platform profiles were introduced to handle the platform specefic differences. These files
+contains the name, offset and a short description of each port or register, which are parsed and
+added as flags and comments. Support for one platforms like BCM2835, which one of the Raspberry Pi
+runs on, BCM2711 and OMAP 3430 were added along with the x86 IO ports were added subsequently.</p>
+<p>A new configuration variable <code>asm.platform</code> was also added
+to choose the platform profile. This will let the user choose the name of the profile they want to load and Rizin will load the
+profile based upon the CPU and the architecture that the user have previously set. For that, I added a new variable <code>platforms</code>
+to <code>RzAsmPlugin</code> which will hold the list of all supported platforms of that architecture.</p>
+<p>Platform Profiles also follow a format similar to the CPU profiles that you saw earlier.
+Here&rsquo;s an excerpt BCM 2835&rsquo;s platform profile:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml>AUX_MU_IER_REG=name
+AUX_MU_IER_REG.address=0x7e215044
+AUX_MU_IER_REG.comment=Mini UART Interrupt Enable
+
+AUX_MU_IIR_REG=name
+AUX_MU_IIR_REG.address=0x7e215048
+AUX_MU_IIR_REG.comment=Mini UART Interrupt Identify
+</code></pre></div><p>Then, I worked on porting <a href=https://github.com/binarly-io/uefi_r2>uefi_r2</a> - a tool used to analyze UEFI modules to Rizin.
+This tool works by analyzing the firmware using Rizin&rsquo;s <code>RzAnalysis</code> utilities and inspecting its functions,
+strings and all (For example, while searching for the UEFI guilds). Here, the tool is a Python package
+and all the interaction with <code>rizin</code> is done through <code>rz-pipe</code>&rsquo;s Python module. Overall, this was not particularly challenging
+but it was indeed very informative. UEFI is insanely complex!</p>
+<p>Later, I continued to work on improving the SVD parser plugin I had started making during the microtask.
+SVD files are files containing information about a device&rsquo;s peripherals, MMIO registers and other particulars. They are usually
+made by the manufacturer. This plugin would load the data from SVD file to Rizin mainly the registers' name, size, base address and its offset and adds them as flags and comments.</p>
+<p>I would like to thank my mentors <a href=https://github.com/xvilka>xvilka</a> and <a href=https://github.com/wargio>wargio</a> for their guidance.
+I was regularly in touch with them and they were constantly trying make sure that everything was going smooth.</p>
+<p>Also kudos to all the folks at <code>#Rizin-dev</code>, <code>#gsoc-2021</code> and the other channels where my questions were answered.</p>
+</div>
+<footer class=post-footer>
+<ul class=post-tags>
+<li><a href=https://rizin.re/tags/rizin/>rizin</a></li>
+<li><a href=https://rizin.re/tags/cutter/>cutter</a></li>
+<li><a href=https://rizin.re/tags/gsoc/>gsoc</a></li>
+</ul>
+<div class=share-buttons>
+<a target=_blank rel="noopener noreferrer" aria-label="share Google Summer of Code 2021 Summary on twitter" href="https://twitter.com/intent/tweet/?text=Google%20Summer%20of%20Code%202021%20Summary&url=https%3a%2f%2frizin.re%2fposts%2fgsoc-2021-summary%2f&hashtags=rizin%2ccutter%2cgsoc"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM195.519 424.544c135.939.0 210.268-112.643 210.268-210.268.0-3.218.0-6.437-.153-9.502 14.406-10.421 26.973-23.448 36.935-38.314-13.18 5.824-27.433 9.809-42.452 11.648 15.326-9.196 26.973-23.602 32.49-40.92-14.252 8.429-30.038 14.56-46.896 17.931-13.487-14.406-32.644-23.295-53.946-23.295-40.767.0-73.87 33.104-73.87 73.87.0 5.824.613 11.494 1.992 16.858-61.456-3.065-115.862-32.49-152.337-77.241-6.284 10.881-9.962 23.601-9.962 37.088.0 25.594 13.027 48.276 32.95 61.456-12.107-.307-23.448-3.678-33.41-9.196v.92c0 35.862 25.441 65.594 59.311 72.49-6.13 1.686-12.72 2.606-19.464 2.606-4.751.0-9.348-.46-13.946-1.38 9.349 29.426 36.628 50.728 68.965 51.341-25.287 19.771-57.164 31.571-91.8 31.571-5.977.0-11.801-.306-17.625-1.073 32.337 21.15 71.264 33.41 112.95 33.41z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Google Summer of Code 2021 Summary on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2frizin.re%2fposts%2fgsoc-2021-summary%2f&title=Google%20Summer%20of%20Code%202021%20Summary&summary=Google%20Summer%20of%20Code%202021%20Summary&source=https%3a%2f%2frizin.re%2fposts%2fgsoc-2021-summary%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.278V197.561h-75.04v225.717h75.04zm270.539.0V293.839c0-69.333-37.018-101.586-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 21.181.0 225.717.0 225.717h75.02V297.222c0-6.748.486-13.492 2.474-18.315 5.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.037v120.768H431zM123.448 88.722C97.774 88.722 81 105.601 81 127.724c0 21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.002-.485-22.092-16.241-38.954-41.943-39.002z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Google Summer of Code 2021 Summary on reddit" href="https://reddit.com/submit?url=https%3a%2f%2frizin.re%2fposts%2fgsoc-2021-summary%2f&title=Google%20Summer%20of%20Code%202021%20Summary"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM446 265.638c0-22.964-18.616-41.58-41.58-41.58-11.211.0-21.361 4.457-28.841 11.666-28.424-20.508-67.586-33.757-111.204-35.278l18.941-89.121 61.884 13.157c.756 15.734 13.642 28.29 29.56 28.29 16.407.0 29.706-13.299 29.706-29.701.0-16.403-13.299-29.702-29.706-29.702-11.666.0-21.657 6.792-26.515 16.578l-69.105-14.69c-1.922-.418-3.939-.042-5.585 1.036-1.658 1.073-2.811 2.761-3.224 4.686l-21.152 99.438c-44.258 1.228-84.046 14.494-112.837 35.232-7.468-7.164-17.589-11.591-28.757-11.591-22.965.0-41.585 18.616-41.585 41.58.0 16.896 10.095 31.41 24.568 37.918-.639 4.135-.99 8.328-.99 12.576.0 63.977 74.469 115.836 166.33 115.836s166.334-51.859 166.334-115.836c0-4.218-.347-8.387-.977-12.493 14.564-6.47 24.735-21.034 24.735-38.001zM326.526 373.831c-20.27 20.241-59.115 21.816-70.534 21.816-11.428.0-50.277-1.575-70.522-21.82-3.007-3.008-3.007-7.882.0-10.889 3.003-2.999 7.882-3.003 10.885.0 12.777 12.781 40.11 17.317 59.637 17.317 19.522.0 46.86-4.536 59.657-17.321 3.016-2.999 7.886-2.995 10.885.008 3.008 3.011 3.003 7.882-.008 10.889zm-5.23-48.781c-16.373.0-29.701-13.324-29.701-29.698.0-16.381 13.328-29.714 29.701-29.714 16.378.0 29.706 13.333 29.706 29.714.0 16.374-13.328 29.698-29.706 29.698zM160.91 295.348c0-16.381 13.328-29.71 29.714-29.71 16.369.0 29.689 13.329 29.689 29.71.0 16.373-13.32 29.693-29.689 29.693-16.386.0-29.714-13.32-29.714-29.693z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Google Summer of Code 2021 Summary on facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2frizin.re%2fposts%2fgsoc-2021-summary%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H342.978V319.085h66.6l12.672-82.621h-79.272v-53.617c0-22.603 11.073-44.636 46.58-44.636H425.6v-70.34s-32.71-5.582-63.982-5.582c-65.288.0-107.96 39.569-107.96 111.204v62.971h-72.573v82.621h72.573V512h-191.104c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Google Summer of Code 2021 Summary on whatsapp" href="https://api.whatsapp.com/send?text=Google%20Summer%20of%20Code%202021%20Summary%20-%20https%3a%2f%2frizin.re%2fposts%2fgsoc-2021-summary%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zm-58.673 127.703c-33.842-33.881-78.847-52.548-126.798-52.568-98.799.0-179.21 80.405-179.249 179.234-.013 31.593 8.241 62.428 23.927 89.612l-25.429 92.884 95.021-24.925c26.181 14.28 55.659 21.807 85.658 21.816h.074c98.789.0 179.206-80.413 179.247-179.243.018-47.895-18.61-92.93-52.451-126.81zM263.976 403.485h-.06c-26.734-.01-52.954-7.193-75.828-20.767l-5.441-3.229-56.386 14.792 15.05-54.977-3.542-5.637c-14.913-23.72-22.791-51.136-22.779-79.287.033-82.142 66.867-148.971 149.046-148.971 39.793.014 77.199 15.531 105.329 43.692 28.128 28.16 43.609 65.592 43.594 105.4-.034 82.149-66.866 148.983-148.983 148.984zm81.721-111.581c-4.479-2.242-26.499-13.075-30.604-14.571-4.105-1.495-7.091-2.241-10.077 2.241-2.986 4.483-11.569 14.572-14.182 17.562-2.612 2.988-5.225 3.364-9.703 1.12-4.479-2.241-18.91-6.97-36.017-22.23C231.8 264.15 222.81 249.484 220.198 245s-.279-6.908 1.963-9.14c2.016-2.007 4.48-5.232 6.719-7.847 2.24-2.615 2.986-4.484 4.479-7.472 1.493-2.99.747-5.604-.374-7.846-1.119-2.241-10.077-24.288-13.809-33.256-3.635-8.733-7.327-7.55-10.077-7.688-2.609-.13-5.598-.158-8.583-.158-2.986.0-7.839 1.121-11.944 5.604-4.105 4.484-15.675 15.32-15.675 37.364.0 22.046 16.048 43.342 18.287 46.332 2.24 2.99 31.582 48.227 76.511 67.627 10.685 4.615 19.028 7.371 25.533 9.434 10.728 3.41 20.492 2.929 28.209 1.775 8.605-1.285 26.499-10.833 30.231-21.295 3.732-10.464 3.732-19.431 2.612-21.298-1.119-1.869-4.105-2.99-8.583-5.232z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share Google Summer of Code 2021 Summary on telegram" href="https://telegram.me/share/url?text=Google%20Summer%20of%20Code%202021%20Summary&url=https%3a%2f%2frizin.re%2fposts%2fgsoc-2021-summary%2f"><svg viewBox="2 2 28 28"><path d="M26.49 29.86H5.5a3.37 3.37.0 01-2.47-1 3.35 3.35.0 01-1-2.47V5.48A3.36 3.36.0 013 3 3.37 3.37.0 015.5 2h21A3.38 3.38.0 0129 3a3.36 3.36.0 011 2.46V26.37a3.35 3.35.0 01-1 2.47 3.38 3.38.0 01-2.51 1.02zm-5.38-6.71a.79.79.0 00.85-.66L24.73 9.24a.55.55.0 00-.18-.46.62.62.0 00-.41-.17q-.08.0-16.53 6.11a.59.59.0 00-.41.59.57.57.0 00.43.52l4 1.24 1.61 4.83a.62.62.0 00.63.43.56.56.0 00.4-.17L16.54 20l4.09 3A.9.9.0 0021.11 23.15zM13.8 20.71l-1.21-4q8.72-5.55 8.78-5.55c.15.0.23.0.23.16a.18.18.0 010 .06s-2.51 2.3-7.52 6.8z"/></svg>
+</a>
+</div>
+</footer>
+</article>
+</main><footer class=footer>
+<span>&copy; 2021 <a href=https://rizin.re/>Rizin</a></span>
+<span>&#183;</span>
+<span>Powered by <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a></span>
+<span>&#183;</span>
+<span>Theme <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span>
+</footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)">
+<button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</button>
+</a>
+<script defer src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
+<script>window.onload=function(){localStorage.getItem("menu-scroll-position")&&(document.getElementById('menu').scrollLeft=localStorage.getItem("menu-scroll-position"))},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})});var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")};function menu_on_scroll(){localStorage.setItem("menu-scroll-position",document.getElementById('menu').scrollLeft)}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
+</body>
+</html>
