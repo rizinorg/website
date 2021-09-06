@@ -182,9 +182,9 @@ AUX_MU_IIR_REG.comment=Mini UART Interrupt Identify
 ```
 Then, I worked on porting [uefi_r2](https://github.com/binarly-io/uefi_r2) - a tool used to analyze UEFI modules to Rizin.
 This tool works by analyzing the firmware using Rizin's `RzAnalysis` utilities and inspecting its functions,
-strings and all (For example, while searching for the UEFI guilds). Here, the tool is a Python package
-and all the interaction with `rizin` is done through `rz-pipe`'s Python module. Overall, this was not particularly challenging
-but it was indeed very informative. UEFI is insanely complex!
+strings and other particulars - for example, while searching for the UEFI GUIDs inside the analyzed strings.
+Here, the tool is a Python package and all the interaction with `rizin` is done through `rz-pipe`'s Python module.
+Overall, this was not particularly challenging but it was indeed very informative. UEFI is insanely complex!
 
 Later, I continued to work on improving the SVD parser plugin I had started making during the microtask.
 SVD files are files containing information about a device's peripherals, MMIO registers and other particulars. They are usually
