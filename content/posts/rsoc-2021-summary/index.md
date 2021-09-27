@@ -11,7 +11,7 @@ weight: 2
 
 # Rizin Summer of Code 2021 Summary
 
-[RSoC 2021](https://rizin.re/posts/rsoc-2021-announcement/) is officially finished and we are happy to congratulate both participants for passing the program and completing the most important parts of their tasks.
+[RSoC 2021](https://rizin.re/posts/rsoc-2021-announcement/) is [officially finished](https://keenlab.tencent.com/zh/2021/08/24/2021-rsoc-summary/) and we are happy to congratulate both participants for passing the program and completing the most important parts of their tasks.
 
 # Basstorm: Types analysis
 
