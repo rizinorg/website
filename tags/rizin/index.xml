@@ -5,7 +5,18 @@
     <link>https://rizin.re/tags/rizin/</link>
     <description>Recent content in rizin on Rizin</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 06 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/rizin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/rizin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rizin Summer of Code 2021 Summary</title>
+      <link>https://rizin.re/posts/rsoc-2021-summary/</link>
+      <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/posts/rsoc-2021-summary/</guid>
+      <description>Rizin Summer of Code 2021 Summary RSoC 2021 is officially finished and we are happy to congratulate both participants for passing the program and completing the most important parts of their tasks.
+Basstorm: Types analysis Hello, I am Basstorm. Over the past two months, I had a fulfilling summer as one of the participants of RSoC. The main subject of RSoC was to improve the Type module.
+At first, I fixed several bugs in the new tree-sitter based type parser.</description>
+    </item>
+    
     <item>
       <title>Google Summer of Code 2021 Summary</title>
       <link>https://rizin.re/posts/gsoc-2021-summary/</link>
