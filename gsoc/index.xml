@@ -16,5 +16,16 @@ Introduction Each year since 2015, we have participated in Google Summer of Code
 Mentors Members of the Rizin and Cutter core teams have volunteered to guide students for GSoC’21. They were already guiding the students for the GSoC and RSoC in past years as part of the Radare2 project.</description>
     </item>
     
+    <item>
+      <title>GSoC 2022</title>
+      <link>https://rizin.re/gsoc/2022/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/gsoc/2022/</guid>
+      <description>TL;DR Jump to the Ideas list.
+Introduction This year is the second time we participate as a fork - Rizin, effectively continuing the tradition since the year 2015 (as the radare2 project).
+Mentors Members of the Rizin and Cutter core teams have volunteered to guide participants for GSoC’22. They were already guiding the participants for the GSoC and RSoC in past years. Please feel free to reach out to any of them in case you need any help in selecting a project.</description>
+    </item>
+    
   </channel>
 </rss>
