@@ -9,14 +9,12 @@ TocOpen: false
 weight: 2
 ---
 
-# GSoC 2022 Announcement
-
 [Google Summer of Code 2022](https://rizin.re/gsoc/2022) is here and we are excited to participate! 🎉.  This is the 2nd year we participate in GSoC as a Rizin organization.
 
 We received many applications, and we are happy that there is a substantial interest in the project. We thank every participant and wish them luck in their future endeavors. We also thank Google for providing us the platform for
 attracting new contributors. Many of the past participants stayed with the project after previous GSoC and RSoC programs, and we sincerely hope it will continue in the future.
 
-This summer, the accepted projects aim to improve the quality of analysis of Rizin by employing our next generation intermediate language - [RZIL](https://github.com/rizinorg/rizin/blob/dev/doc/rzil.md), along with making the scripting and automation easier with Rizin and Cutter by improving the API, especially the Python one.
+This summer, the [accepted projects](https://summerofcode.withgoogle.com/programs/2022/organizations/rizin) aim to improve the quality of analysis of Rizin by employing our next generation intermediate language - [RzIL](https://github.com/rizinorg/rizin/blob/dev/doc/rzil.md), along with making the scripting and automation easier with Rizin and Cutter by improving the API, especially the Python one.
 
 
 # Dhruv: RzIL uplifting migration
