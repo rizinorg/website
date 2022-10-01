@@ -42,7 +42,7 @@ rz_analysis.add_prefixed_funcs("rz_analysis_")
 ## Generation
 Rz-bindgen is designed to support multiple backends to generate bindings for a variety of languages. A backend takes the `Class` objects created in the transformation step and generates output. There are, at the time of writing, a [SWIG](https://www.swig.org/) backend and a [Sphinx](https://www.sphinx-doc.org/) backend.
 
-The SWIG backend is currently only used for Python bindings, but SWIG targets other languages, such as Java and OCaml. Supporting them in rz-bindgen should be relatively simple.
+The SWIG backend is currently only used for Python bindings, but SWIG targets other languages too, such as Java and OCaml. Supporting them in rz-bindgen should be relatively simple.
 The Sphinx backend generates documentation for the Python bindings and can be viewed [here](https://wingdeans.github.io/rz-bindgen/classes/RzAnalysis.html).
 
 ## Generics
