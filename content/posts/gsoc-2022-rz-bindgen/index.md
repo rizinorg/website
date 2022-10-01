@@ -77,7 +77,7 @@ core.register_group("u", "A custom group for user-defined commands")
 core.register_command("uf", print_function_info)
 ```
 
-The [Rizin plugin](https://github.com/rizinorg/rz-bindgen/blob/9ccbc56cefaf043b95666793dd1bc156480bbe6c/plugin) registers Python as an `RzLang`, allowing users to load Python scripts on the fly. It also adds add a `core` variable to the `rizin` Python module, allowing scripts that import it to access Rizin's own `RzCore`.
+The [Rizin plugin](https://github.com/rizinorg/rz-bindgen/blob/9ccbc56cefaf043b95666793dd1bc156480bbe6c/plugin) registers Python as an `RzLang`, allowing users to load Python scripts on the fly. It also adds a `core` variable to the `rizin` Python module, allowing scripts that import it to access Rizin's own `RzCore`.
 
 # Reflections
 The coverage of the bindings is currently lacking - it is not yet possible to use every bit of the C API. I hope this will change as I get more eyes on the project.
