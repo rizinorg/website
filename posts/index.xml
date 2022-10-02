@@ -5,7 +5,16 @@
     <link>https://rizin.re/posts/</link>
     <description>Recent content in Posts on Rizin</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 23 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GSoC 2022 - rz-bindgen</title>
+      <link>https://rizin.re/posts/gsoc-2022-rz-bindgen/</link>
+      <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/posts/gsoc-2022-rz-bindgen/</guid>
+      <description>An overview of rz-bindgen&amp;rsquo;s design, implementation, features, and future.</description>
+    </item>
+    
     <item>
       <title>Google Summer of Code 2022 Announcement</title>
       <link>https://rizin.re/posts/gsoc-2022-announcement/</link>
