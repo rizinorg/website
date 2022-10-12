@@ -29,6 +29,10 @@ menu:
       - name: Cutter
         url: https://cutter.re
         weight: 25
+      - name: Source
+        url: https://github.com/rizinorg/rizin
+        pre: <i class="lni lni-github-original"></i>
+        weight: 30
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
