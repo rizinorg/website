@@ -41,12 +41,15 @@ extracted anywhere on your system and Cutter can be executed from there.
 
 ## MacOS
 
-Rizin can be installed through [Homebrew](https://brew.sh/)
+You can install both Rizin and Cutter through [Homebrew](https://brew.sh/)
 ```
 $ brew install rizin
+$ brew install --cask cutter
 ```
 
-Cutter can be installed through the .dmg file provided in the [latest release](https://github.com/rizinorg/cutter/releases/latest).
+Alternatively, you can find Pkg/DMG files for both
+[Rizin](https://github.com/rizinorg/rizin/releases/latest) and
+[Cutter](https://github.com/rizinorg/cutter/releases/latest).
 
 ## OpenBSD
 
