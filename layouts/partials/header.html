@@ -38,6 +38,7 @@
         .top-link {
             display: none;
         }
+
     </style>
 </noscript>
 <header class="header">
@@ -107,11 +108,13 @@
             {{- $menu_item_url := .URL | relLangURL }}
             {{- $page_url:= $currentPage.RelPermalink | relLangURL }}
             <li>
-                <a href="{{ .URL | absLangURL }}">
-                    <span {{- if eq $menu_item_url $page_url }}
-                        {{- /* the menu item links to the current page (with relLangURL) */}} class="active" {{- end }}>
+                <a href="{{ .URL | absLangURL }}" target="{{ if (eq (.URL | absLangURL) (.URL)) }}_blank{{ end }}">
+                    {{ .Pre }}
+                    <span {{- if eq $menu_item_url $page_url }} {{- /* the menu item links to the current page (with
+                        relLangURL) */}} class="active" {{- end }}>
                         {{ .Name }}
                     </span>
+                    {{ .Post }}
                 </a>
             </li>
             {{- end -}}
@@ -133,13 +136,14 @@
         {{- end}}
         {{- end}}
         <div class="hero-section__buttons">
-            <a class="site-button btn-primary" href="https://github.com/rizinorg/rizin" target="_blank"><i class="lni lni-github-original"></i>Source</a>
-            <a class="site-button" href="https://book.rizin.re" target="_blank"><i class="lni lni-book"></i><span>Documentation</span></a>
+            <a class="site-button btn-primary" href="install"><i class="lni lni-package"></i>Install</a>
+            <a class="site-button" href="https://book.rizin.re" target="_blank"><i
+                    class="lni lni-book"></i><span>Documentation</span></a>
         </div>
     </div>
     <div class="hero-section__separator">
         Why did we fork? — Read our answers to your <a href="/posts/faq/">frequently asked questions.</a>
     </div>
     {{ end }}
-    
+
 </header>
