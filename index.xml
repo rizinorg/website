@@ -16,6 +16,15 @@
     </item>
     
     <item>
+      <title>Install</title>
+      <link>https://rizin.re/install/</link>
+      <pubDate>Wed, 17 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/install/</guid>
+      <description>How to install Rizin and Cutter</description>
+    </item>
+    
+    <item>
       <title>Google Summer of Code 2022 Announcement</title>
       <link>https://rizin.re/posts/gsoc-2022-announcement/</link>
       <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
