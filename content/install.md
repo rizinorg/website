@@ -22,8 +22,7 @@ are currently aware of the following Linux distributions shipping an up-to-date 
 If your distribution is not in the list above, but it does ship Rizin/Cutter,
 please let us know and we will fix it! If you cannot find Rizin/Cutter in the
 official repositories, we provide install instructions for some other
-distributions through [OBS](https://openbuildservice.org/). Follow the
-instructions
+distributions through OBS. Follow the instructions
 [here](https://software.opensuse.org/download/package?package=rizin&project=home%3ARizinOrg).
 
 ## Windows
