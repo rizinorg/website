@@ -55,3 +55,9 @@
    └── hugo-PaperMod
 
 ```
+
+## Demo GIF
+
+When showing Rizin demos the GIF are generated with
+[Terminalizer](https://www.terminalizer.com/) by using this [config
+file](https://github.com/rizinorg/website/blob/main/.terminalizer-config).
