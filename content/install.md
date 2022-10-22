@@ -60,6 +60,21 @@ Rizin and Cutter are available in stable releases starting with OpenBSD-7.3.
 # pkg_add rizin cutter
 ```
 
+## Android
+
+Statically compiled binaries for some common architectures where Android runs
+are compiled and attached to all releases. We currently support aarch64, armv7,
+and x86_64. You can find the artifacts for Android on the [latest Rizin
+release](https://github.com/rizinorg/rizin/releases/latest).
+
+Those files are named as `rizin-<version>-android-<architecture>.tar.gz`. Files
+within the archive can be extracted anywhere on your Android device because
+Rizin is compiled in a "portable" way, allowing moving the whole directory
+anywhere.
+
+We do not currently have a package on Termux, but if you would like to add one
+we will be happy to help you with any issue you may encounter.
+
 ## Building from source
 
 Source code for Rizin and Cutter can be downloaded from Github:
