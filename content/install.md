@@ -17,6 +17,7 @@ are currently aware of the following Linux distributions shipping an up-to-date 
 
 - Arch Linux
 - Fedora
+- Gentoo
 
 If your distribution is not in the list above, but it does ship Rizin/Cutter,
 please let us know and we will fix it! If you cannot find Rizin/Cutter in the
