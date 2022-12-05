@@ -5,7 +5,16 @@
     <link>https://rizin.re/tags/rizin/</link>
     <description>Recent content in rizin on Rizin</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 01 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/rizin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/rizin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GSoC 2022 - x86 ISA lifting for RzIL</title>
+      <link>https://rizin.re/posts/gsoc-2022-x86-il/</link>
+      <pubDate>Sun, 04 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/posts/gsoc-2022-x86-il/</guid>
+      <description>A summary of all the work done on RzIL lifting for x86 ISA, and how you can use it.</description>
+    </item>
+    
     <item>
       <title>GSoC 2022 - rz-bindgen</title>
       <link>https://rizin.re/posts/gsoc-2022-rz-bindgen/</link>
