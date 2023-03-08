@@ -87,8 +87,9 @@ Build instructions can be found in the `README.md` files.
 
 # Install Rizin plugins
 
-To install Rizin plugins you can use our package manager that will compile and
-install the package for you in the right locations.
+To install Rizin plugins you can use our package manager,
+[rz-pm](https://github.com/rizinorg/rz-pm), that will compile and install
+packages for you in the right locations.
 
 Get the latest version for your system
 [here](https://github.com/rizinorg/rz-pm/releases/latest), make the file
