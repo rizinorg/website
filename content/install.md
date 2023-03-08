@@ -84,3 +84,15 @@ Source code for Rizin and Cutter can be downloaded from Github:
 Build instructions can be found in the `README.md` files.
 
 ---
+
+# Install Rizin plugins
+
+To install Rizin plugins you can use our package manager that will compile and
+install the package for you in the right locations.
+
+Get the latest version for your system
+[here](https://github.com/rizinorg/rz-pm/releases/latest), make the file
+executable and you are good to go!
+
+The list of currently supported plugins is available in the [rz-pm-db
+repository](https://github.com/rizinorg/rz-pm-db).
