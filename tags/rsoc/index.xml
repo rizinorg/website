@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>rsoc on Rizin</title>
     <link>https://rizin.re/tags/rsoc/</link>
     <description>Recent content in rsoc on Rizin</description>
+    <image>
+      <title>Rizin</title>
+      <url>https://rizin.re/images/rizin_preview.png</url>
+      <link>https://rizin.re/images/rizin_preview.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 27 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/rsoc/index.xml" rel="self" type="application/rss+xml" />
     <item>

@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Rizin</title>
     <link>https://rizin.re/</link>
     <description>Recent content on Rizin</description>
+    <image>
+      <title>Rizin</title>
+      <url>https://rizin.re/images/rizin_preview.png</url>
+      <link>https://rizin.re/images/rizin_preview.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 04 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -126,14 +131,6 @@ At first, I fixed several bugs in the new tree-sitter based type parser.</descri
       <description>Who are you? Why did you fork radare2? What will happen to Cutter now? Our answers to your frequently asked questions.</description>
     </item>
     
-    <item>
-      <title>Archive</title>
-      <link>https://rizin.re/archives/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rizin.re/archives/</guid>
-      <description>archives</description>
-    </item>
     
     <item>
       <title>Code Of Conduct</title>
@@ -258,14 +255,6 @@ Mentors Members of the Rizin and Cutter core teams have volunteered to guide par
       <description></description>
     </item>
     
-    <item>
-      <title>Search</title>
-      <link>https://rizin.re/search/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rizin.re/search/</guid>
-      <description>search</description>
-    </item>
     
     <item>
       <title>Security Team</title>

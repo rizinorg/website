@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Teams on Rizin</title>
     <link>https://rizin.re/teams/</link>
     <description>Recent content in Teams on Rizin</description>
+    <image>
+      <title>Rizin</title>
+      <url>https://rizin.re/images/rizin_preview.png</url>
+      <link>https://rizin.re/images/rizin_preview.png</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://rizin.re/teams/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Community Team</title>
