@@ -10,7 +10,16 @@
       <link>https://rizin.re/images/rizin_preview.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 04 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/rizin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/rizin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Summer of Code 2023 Announcement</title>
+      <link>https://rizin.re/posts/gsoc-2023-announcement/</link>
+      <pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/posts/gsoc-2023-announcement/</guid>
+      <description>An announcement of the Google Summer of Code 2023. Two accepted candidates.</description>
+    </item>
+    
     <item>
       <title>GSoC 2022 - x86 ISA lifting for RzIL</title>
       <link>https://rizin.re/posts/gsoc-2022-x86-il/</link>

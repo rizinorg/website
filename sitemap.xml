@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://rizin.re/posts/gsoc-2023-announcement/</loc>
+    <lastmod>2023-05-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://rizin.re/posts/gsoc-2022-x86-il/</loc>
     <lastmod>2022-12-04T00:00:00+00:00</lastmod>
   </url><url>
@@ -42,19 +45,19 @@
     <lastmod>2020-12-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/tags/gsoc/</loc>
-    <lastmod>2022-12-04T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/posts/</loc>
-    <lastmod>2022-12-04T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/tags/rizin/</loc>
-    <lastmod>2022-12-04T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/</loc>
-    <lastmod>2022-12-04T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/tags/</loc>
-    <lastmod>2022-12-04T00:00:00+00:00</lastmod>
+    <lastmod>2023-05-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/tags/cutter/</loc>
     <lastmod>2022-10-01T00:00:00+00:00</lastmod>
