@@ -10,7 +10,16 @@
       <link>https://rizin.re/images/rizin_preview.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 05 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GSoC 2023 - Enhancing DWARF Support</title>
+      <link>https://rizin.re/posts/gsoc-2023-dwarf/</link>
+      <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/posts/gsoc-2023-dwarf/</guid>
+      <description>In this article, I discuss my experience enhancing DWARF support in Rizin for Google Summer of Code 2023.</description>
+    </item>
+    
     <item>
       <title>Google Summer of Code 2023 Announcement</title>
       <link>https://rizin.re/posts/gsoc-2023-announcement/</link>
