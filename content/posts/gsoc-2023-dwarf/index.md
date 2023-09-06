@@ -10,7 +10,7 @@ weight: 2
 
 Hi! I'm [Billow](https://github.com/imbillow), and I had the privilege of participating in GSoC 2023, working on improving DWARF support for the Rizin project. In this blog post, I'm excited to share my journey, the challenges I faced, and my future plans for this project. Let's dive right in!
 
-Over the past few months, my primary focus has been on enhancing DWARF support within Rizin. DWARF (Debugging With Arbitrary Record Formats) is a crucial standard for debugging information in binary files. My work brings significant improvements, including the introduction of exprloc, compressed debug sections and composite variable storage.
+Over the past few months, my primary focus has been on enhancing the Debugging With Arbitrary Record Formats (DWARF) support within Rizin. DWARF is a crucial standard for debugging information in binary files. My work brings significant improvements, including the introduction of `exprloc`, compressed debug sections and composite variable storage.
 
 To showcase some of my achievements, I'm comparing the disassembly output obtained using the `pdf` command for the `write_fmt<Write>` function in the ELF file [dwarf_rust_bubble ↗](https://github.com/rizinorg/rizin-testbins/raw/master/elf/dwarf_rust_bubble) before and after my DWARF contributions were integrated. The enhanced output demonstrates Rizin's improved ability to parse DWARF debugging information and precisely locate variables.
 
