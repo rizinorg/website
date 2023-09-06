@@ -74,10 +74,10 @@ However, through dedication and guidance from my mentors, I was able to overcome
 
 [^1]: [Unify code of source information access for DWARF, PDB, dSYM](https://github.com/rizinorg/rizin/issues/907)
 
-[^2] [Load function types and arguments from DWARF when CFA and CFI information is used](https://github.com/rizinorg/rizin/issues/3539)
+[^2]: [Load function types and arguments from DWARF when CFA and CFI information is used](https://github.com/rizinorg/rizin/issues/3539)
 
-[^3] [ARMv7 failure to load register arguments when subroutine uses CFA](https://github.com/rizinorg/rizin/issues/3562)
+[^3]: [ARMv7 failure to load register arguments when subroutine uses CFA](https://github.com/rizinorg/rizin/issues/3562)
 
-[^4] [Stack unwinding](https://maskray.me/blog/2020-11-08-stack-unwinding)
+[^4]: [Stack unwinding](https://maskray.me/blog/2020-11-08-stack-unwinding)
 
 In conclusion, participating in GSoC 2023 has been an invaluable learning experience. I've expanded my skills, contributed to the Rizin project, and become part of a vibrant open-source community. There is still work to be done, but I'm excited about the future and making reverse engineering more efficient for everyone through enhancements like unified debuginfo support. Thank you to the Rizin community and my mentors for making this journey possible!
