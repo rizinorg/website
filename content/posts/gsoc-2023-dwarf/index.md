@@ -35,7 +35,7 @@ To showcase some of my achievements, I'm comparing the disassembly output obtain
 ...
 ```
 
-Another example, I'm comparing the disassembly output obtained using the `pdf` command for the `iterPreorder` function in the ELF file [dwarf_go_tree ↗](https://github.com/rizinorg/rizin-testbins/raw/master/elf/dwarf_go_tree). The `iterPreorder` function shows arguments and local variables precisely located on the stack. Most notably, the tree argument is represented as a composite variable spread across multiple stack locations. This new composite storage capability handles complex DWARF types. Overall, the improved output matches the original DWARF debugging data much more closely, rather than using generic `unknown` types. This showcases Rizin’s significantly upgraded DWARF parsing including features like composite variables and the immense value delivered to reverse engineers through my work.
+Another example, the `iterPreorder` function in the ELF file [dwarf_go_tree ↗](https://github.com/rizinorg/rizin-testbins/raw/master/elf/dwarf_go_tree) shows arguments and local variables precisely located on the stack. Most notably, the tree argument is represented as a composite variable spread across multiple stack locations. This new composite storage capability handles complex DWARF types. Overall, the improved output matches the original DWARF debugging data much more closely, rather than using generic `unknown` types. This showcases Rizin’s significantly upgraded DWARF parsing including features like composite variables and the immense value delivered to reverse engineers through my work.
 
 ```
 [0x0045d5a0]> pdf @ dbg.main.tree.iterPreorder
@@ -68,6 +68,16 @@ However, through dedication and guidance from my mentors, I was able to overcome
 
 - **Performance Optimization**: There is always room for performance optimization. I will explore ways to make Rizin even more efficient when dealing with DWARF information. The main idea is that we can make DWARF load only when needed, instead of loading all DWARF directly.
 
-- **Unifying Debug Information**: As the reverse engineering landscape continues to evolve, the need for unified support of various debuginfo formats like DWARF, PDB, and others becomes increasingly evident. In the spirit of unification, I am excited to take on the challenge of integrating and harmonizing these diverse debuginfo standards within Rizin. This ambitious endeavor aims to provide a seamless experience for developers and analysts working with different binary formats, making Rizin an even more versatile and indispensable tool in the field of reverse engineering. Stay tuned for updates on this exciting journey towards unified debuginfo support!
+- **Unifying Debug Information** [^1]: As the reverse engineering landscape continues to evolve, the need for unified support of various debuginfo formats like DWARF, PDB, and others becomes increasingly evident. In the spirit of unification, I am excited to take on the challenge of integrating and harmonizing these diverse debuginfo standards within Rizin. This ambitious endeavor aims to provide a seamless experience for developers and analysts working with different binary formats, making Rizin an even more versatile and indispensable tool in the field of reverse engineering. Stay tuned for updates on this exciting journey towards unified debuginfo support!
+
+- **DWARF Call Frame Information**: To utilize Call Frame Information (CFI) and Canonical Frame Address (CFA) data to accurately locate variables and function arguments on the stack. This will build on my previous work enhancing DWARF parsing as described in issues [^2] and [^3]. Additional background on implementing stack unwinding with CFI and CFA can be found in this blog post [^4]. ↗ The goal is to leverage the debugging information already present in DWARF to reconstruct calling conventions and provide users more precise variable information during disassembly and analysis.
+
+[^1]: [Unify code of source information access for DWARF, PDB, dSYM](https://github.com/rizinorg/rizin/issues/907)
+
+[^2] [Load function types and arguments from DWARF when CFA and CFI information is used](https://github.com/rizinorg/rizin/issues/3539)
+
+[^3] [ARMv7 failure to load register arguments when subroutine uses CFA](https://github.com/rizinorg/rizin/issues/3562)
+
+[^4] [Stack unwinding](https://maskray.me/blog/2020-11-08-stack-unwinding)
 
 In conclusion, participating in GSoC 2023 has been an invaluable learning experience. I've expanded my skills, contributed to the Rizin project, and become part of a vibrant open-source community. There is still work to be done, but I'm excited about the future and making reverse engineering more efficient for everyone through enhancements like unified debuginfo support. Thank you to the Rizin community and my mentors for making this journey possible!
