@@ -10,7 +10,8 @@
         "Giovanni Grazioli",
         "Riccardo Schirone",
         "Anton Kochkov",
-        "Khairul Kasmiran"
+        "Khairul Kasmiran",
+        "Rot127"
       ]
     },
     "cutter-core": {
@@ -125,6 +126,9 @@
     "Aswin C": {
       "Github": "officialcjunior",
       "Website": "https://officialcjunior.github.io"
+    },
+    "Rot127": {
+      "Github": "Rot127"
     }
   }
 }
