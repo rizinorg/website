@@ -287,10 +287,6 @@
   margin: auto;
 }
 
-.preview-section__feature .preview-section__feature__description.right {
-  text-align: center;
-}
-
 .preview-section__feature__visual {
   width: 100%;
   object-fit: cover;
