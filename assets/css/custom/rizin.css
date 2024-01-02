@@ -288,7 +288,7 @@
 }
 
 .preview-section__feature .preview-section__feature__description.right {
-  text-align: right;
+  text-align: center;
 }
 
 .preview-section__feature__visual {
@@ -460,12 +460,13 @@
     grid-template-rows: 1fr;
   }
 
-  .preview-section__feature .preview-section__feature__description,
-  .preview-section__feature .preview-section__feature__description.right {
+  .preview-section__feature .preview-section__feature__description {
     grid-row-start: 1;
     text-align: initial;
   }
-
+  .preview-section__feature .preview-section__feature__description.right {
+    text-align: right;
+  }
   .preview-section__feature:nth-child(even)
     .preview-section__feature__description {
     grid-row-start: 1;
