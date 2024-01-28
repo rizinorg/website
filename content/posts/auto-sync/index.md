@@ -17,50 +17,51 @@ There are several capabilities which would be nice to have.
 
 It should:
 
-- Be correct. And if it isn't, it should be easy test and spot the error.
+- Be correct. And if it isn't, it should be easy to test and spot the error (in our case we want to compare the output directly to `llvm-objdump`).
 - Provide a single API for multiple architectures.
 - Support niche architectures or be relatively easy to extend.
-- Enrich the assembly with additional information about the operands and other meta-data.
+- Apart from the text disassembly, provide additional information about the operands and other meta-data.
 - Be easy to update when new processor extensions come out.
 - Relatively lightweight.
+- Written in C or any other language that is easy to integrate into C/C++ software (Specific to Rizin/Cutter)
 
 One of the first disassembler engines which was capable of some of those points was Capstone.
 Quynh Nguyen Anh, the author of Capstone, figured that all the information we need, is basically
 already there in compiler projects like LLVM.
 
-Obviously for compilation, you need the same and much more information you would need for disassembling.
+Obviously, for compilation you need the same and much more information you would need for disassembling.
 And you need them in a well-defined and machine-readable way.
 
 So, what Capstone did, was reimplementing the LLVM disassembler logic in C, 
 add meta-data for each instruction from the architecture definitions (also given in the LLVM-project)
 and add a single API to interact with it.
 
-The catch is, that Capstone is in the end:
+To summarize, Capstone is in the end:
 - A more lightweight API than LLVM because it re-implements only the necessary code for disassembly from LLVM.
 - Can support as many architectures as LLVM supports (if someone ports them to Capstone).
 - Provides more information than simple `llvm-mc --arch=<arch> <some-bytes>`
 - Relies on a well maintained and large project, which will (likely) be there even in 10+ years and is managed by people who know more about the architectures.
 
 The big problem with Capstone was though, that it hadn't a working update mechanism.
-There were a bunch of Python scripts and very little documentation. So not easy to use.
+There were a bunch of Python scripts and very little documentation. Definitely an unsustainable solution.
 
 Due to this, Capstone became outdated over the years and most disassembler modules
 didn't support modern processor extensions.
 
-What can be done?
+## What can be done?
 
 Besides LLVM we attempted once to generate a disassembler module for the Hexagon architecture (a DSP architecture from Qualcomm). But instead of LLVM, we used the ISA PDF for our first try.
 We parsed it and generated the decoding tables for the instructions.
 This worked, but was a little messy. Parsing PDF files is not fun and as soon as the PDF file changes somehow, stuff is broken again.
 Also, it is hard to test if you actually extracted the encoding information from the PDF correctly. Because it is hard to check. Comparing every instruction to the PDF is not really a fun task.
 
-Our second module use LLVM. LLVM provides a tool to get the definitions of an architecture in json format. This one has all the details about instructions you can wish for.
+Our second attempt uses LLVM. LLVM provides a way to get the definitions of an architecture in JSON format (`llvm-tblgen --dump-json`). The JSON dump has all the details about instructions you can wish for.
 Opcodes, operand types, read/write info and more. Pretty much anything you could wish for.
 With this experience we decided that LLVM proved to be a good source for disassembler generation.
 
-Now, with this we turned to our "Capstone misses and updater" problem and decided to implement it.
+Now, with this experience we decided we could extend Capstone with a proper updater.
 The alternative, implementing something Capstone like from scratch in a new project, did not really seem a good idea.
-Capstone has already a large user base, and we would need to migrate as well.
+Capstone has already a large user base, and we would need to migrate to the new tool as well.
 The last point is maybe annoying but doable. Getting a user base again is a way harder task.
 
 So over the last two years we added an updater to Capstone.
@@ -72,8 +73,13 @@ disassemblers.
 
 # How LLVM generates its disassemblers
 
-Let's start with LLVM. Since it is our source of information. LLVM defines its various architectures (targets) in a language, specifically designed for this purpose.
-Each targets instructions, instruction operands, scheduling information and more is written in the table gen language. **What is actually the name of it? This is never mentioned I think**
+Let's start with [LLVM](https://github.com/llvm/llvm-project/tree/main/).
+Since it is our source of information. LLVM defines its various supported architectures in a language, specifically designed for this purpose.
+Each target's instructions, instruction operands, scheduling information and more is written in the TableGen language.
+The definitions can be found in `llvm/lib/Target/<TARGET-NAME>/*.td`.
+
+> Please note, that from now on we use "target" and "architecture" are interchangeable terms.
+> In the LLVM realm we speak about a target. In Capstone context about an architecture.
 
 Since each target is defined in the same way, LLVM can apply the same procedures on them to generate C++ code with it.
 This is way better than implementing every target directly in C++.
@@ -82,7 +88,7 @@ But why should each target implement this on its own?
 Every instruction is already well-defined in the `td` files. So, LLVM uses a universal method to generate a decoder for each of them.
 
 To use the content of the `td` files in a programmable way, `llvm-tblegen` parses them and converts its content into C++ classes and saves them in a RecordKeeper.
-The RecordKeeper is TableGens internal representation of the `td` files content. Which can now be used to generate arbitrary code.
+The RecordKeeper is TableGen's internal representation of the `td` files content. Which can now be used to generate arbitrary code.
 These classes basically hold all the `td` file information in a uniform and programmable way.
 The C++ classes belong logically to the so called `CodeGen` layer. Which, as the name already says, are used to generate code.
 
@@ -141,20 +147,20 @@ SETEND {	// InstructionEncoding Instruction InstTemplate Encoding InstARM XI AXI
 }
 ```
 
-Note that the C++ class above has the same structure for each target. Hence, LLVM's code generation, can reason on them without the need to know specific target details.
+Note, that the C++ class above has the same structure for each target. Hence, LLVM's code generation, can reason on them without the need to know specific target details.
 
 Now, what code is actually generated? This depends on what you need. TableGen has several backends.
 Each of them uses the RecordKeepers content to generate different files.
-For example, the RegisterInfo backend generates several tables with information about the targets registers.
-As mentioned above, the RegisterInfo backend doesn't need to know details about a target's specific registers.
-It just implements methods to generate let's say, an enum with all register names. Or it generates tables which map registers to their alias, or lookup tables which map bits to a register ID.
+For example, the [RegisterInfo](https://github.com/llvm/llvm-project/blob/main/llvm/utils/TableGen/RegisterInfoEmitter.cpp) backend generates several tables with information about target registers.
+As mentioned above, the RegisterInfo backend doesn't need to know details about targets specific registers.
+It just implements methods to generate, an enumeration with all register names. Or it generates tables which map registers to their alias, or lookup tables which map bits to a register ID.
 
-Generating enums are nice, but more complex C++ code is of cause also generated.
-For us very relevant is the decoding logic, which decodes a byte sequence to a Machine Code instruction.
+Generating enumerations is nice, but more complex C++ code is, of course, also generated.
+For us very relevant is the decoding logic, which decodes a byte sequence into a Machine Code instruction.
 A Machine Code instruction (`MCInst`) is the class which represents a target's decoded instruction.
-It holds the ID of the instruction, its operands, some flags (`isBranch` etc.) and some more.
+It holds the ID of the instruction, its operands, some flags (`isBranch` etc.), and some more.
 
-The decoding procedures from bytes to `MCInst` is the same for each target (except x86, because historical reasons I guess).
+Decoding procedures from bytes to `MCInst` are the same for each target (except x86, because _historical reasons_ I guess).
 In the CodeGen layer we still know the encoding of each instruction of a target. The `DecoderEmitter` backend (which generates the decoder),
 builds a state machine over these encodings. The generated state machine simply checks certain bits and transitions into another states.
 
@@ -162,7 +168,7 @@ Doing this for several bits in a given byte sequence it reaches a state-state. T
 After the instruction ID is decoded, a big switch case is walked over to call the different decoder methods of the instruction's operands.
 
 The key is, that the state machine table and the big switch case can be generated independently of the target.
-Each target still needs to implement the decoders the operands, because those are unique for each target, but this is essentially it.
+Each target still needs to implement the operand decoders, because those are unique for each target, but this is essentially it.
 It saves quite some work, compared to implementing the decoding logic every time again for each target.
 
 **Excerpt from state machine**
@@ -226,9 +232,9 @@ So lets look at how to make them usable for us.
 ### Let TableGen generate C code
 
 We already described the generation procedure of the `.inc` files above in detail.
-Though what we have not mentioned is the way the actual code is emitted. The problem with the TableGen backends is, that they do not separated the generation of their data from the actual printing of the code.
+Though what we have not mentioned is the way the actual code is emitted. The problem with the TableGen backends is, that they do not separate the generation of their data from the actual printing of the code.
 
-For example, the backend which generates the `AsmWriter` (the module which prints an asm string of an instruction) mixes it table generation with emitting code.
+For example, the backend which generates the [`AsmWriter`](https://github.com/capstone-engine/llvm-capstone/blob/auto-sync/llvm/utils/TableGen/AsmWriterEmitter.cpp) (the module which prints an asm string of an instruction) mixes it's table generation with emitting code.
 There is no clear separation between generating abstract objects, like state machines and tables, and printing them into code. It is all intermingled.
 
 This goes so far that it is even allowed to specify custom code in the `td` files for operands or instructions.
@@ -237,8 +243,9 @@ So, if we want TableGen backends emit C, we either need to redesign and rewrite 
 Designing it from scratch is a rather complex task. And needs a lot of thought ([see discussion](https://reviews.llvm.org/D138323)) to have a well maintainable design.
 Simply because of time constraints and because we couldn't know if such an effort had been merged, we sided with patching.
 
-Our patched TableGen backends work pretty straight forward. We add two new classes which only emit code. `PrinterLLVM` and `PrinterCapstone`.
-The `PrinterLLVM` emits the standard C++ code from LLVM. PrinterCapstone emits our C code.
+Our [patched TableGen](https://github.com/capstone-engine/llvm-capstone) backends work pretty straight forward. We add two new classes which only emit code.
+[`PrinterLLVM`](https://github.com/capstone-engine/llvm-capstone/blob/auto-sync/llvm/utils/TableGen/PrinterLLVM.cpp) and [`PrinterCapstone`](https://github.com/capstone-engine/llvm-capstone/blob/auto-sync/llvm/utils/TableGen/PrinterCapstone.cpp).
+The `PrinterLLVM` emits the standard C++ code from LLVM. `PrinterCapstone` emits our C code.
 Each backend gets one of those printer classes assigned. And whenever it emits code, it calls the corresponding method of the printer.
 In practice, we simply moved the emitting code from the backend to the printer classes.
 
@@ -269,21 +276,21 @@ And if we add a new architecture module from LLVM to Capstone, we would need to
 translate multiple thousand lines of C++ to C.
 
 This of cause is not particular fun and hinders people to do it at all.
-Hence, we have a bunch of scripts which do at least most of the annoying work.
+Hence, we have a bunch of scripts which do most of the annoying work.
 
 The translation process follows a simple procedure. We have a bunch of patches defined. Each patch replaces certain syntax in an C++ file with its C equivalent.
 
-To find the patterns we want to replace we use tree-sitter. It allows us to query for specific syntax in the abstract syntax tree (AST) of the file.
+To find the patterns we want to replace we use [tree-sitter](https://tree-sitter.github.io/tree-sitter/). It allows us to query for specific syntax in the abstract syntax tree (AST) of the file.
 And since we translate source code, it is way easier to search in an AST, instead in the file content itself.
 
-To control the patching, we have a controller called `CppTranslator`. It simply:
+To control the patching, we have a controller called [`CppTranslator`](https://github.com/capstone-engine/capstone/tree/next/suite/auto-sync/Updater/CppTranslator). It simply:
 
 - Opens each source file
 - Reads and parses the file with tree-sitter into an AST
-- for each Patch:
-  - Match the patch's tree-sitter query in the AST.
-  - If it found something, get the equivalent C code from the patch.
-  - Replace the C++ code with the C patch.
+- for each `Patch`:
+  - Match the `Patch`'s [tree-sitter query](https://tree-sitter.github.io/tree-sitter/using-parsers#pattern-matching-with-queries) in the AST.
+  - If it found something, get the equivalent C code from the `Patch`.
+  - Replace the C++ code with the C equivalent.
 
 Example:
 
@@ -302,10 +309,10 @@ The `Patch` for this has a tree-sitter query which searches this specific patter
 ) @cast
 ```
 
-If the `CppTranslator` finds a substring matching the pattern, it passes it as a `capture` to the Patch.
-A `capsture` is just a dictionary with the named sub-strings found. In our example it contains `cast: "int(10)"`, `cast_type: "int"` and `cast_target: "(10)"`.
+If the `CppTranslator` finds a substring matching the pattern, it passes it as a `capture` to the `Patch`.
+A `capture` is just a dictionary with the named sub-strings found. In our example it contains `cast: "int(10)"`, `cast_type: "int"` and `cast_target: "(10)"`.
 
-With this it is trivial to concatenate the sub-strings to `(int)(10)` and return it.
+With this it is trivial to concatenate sub-strings to `(int)(10)` and return it.
 The `CppTranslator` now replaces `int(10)` in the source file with `(int)(10)`.
 
 The result:
@@ -320,6 +327,7 @@ But the end-result is a source file which has very little C++ syntax left.
 ## Diffing
 
 Though, translating C++ files only gets so good. After all patches were applied to the file, it will likely not compile. Some syntax issues are just too difficult to fix automatically.
+Interestingly, this specific task would fit a large language model pretty well. But this would be a different project.
 
 But fixing a handful of issues by hand again and again, is a tedious task. Especially, if you need to run the whole translation procedure multiple times.
 We can hardly ask users to do the fixes by hand again every time they ran the translator.
@@ -368,7 +376,7 @@ void decodeOperandA(MCInst *MI, unsigned OpNum, unsigned Val) {
 Because Capstone's `MCInst MI` struct doesn't have a callback member `isPredicable()`.
 Instead, we need to replace it with the function call `MCInst_isPredicable(MI)`.
 
-For whatever reason no patch was added, and we now have to fix it by hand.
+For whatever reason no `Patch` was added, and we now have to fix it by hand.
 Note though that the old file already has the correct function implementation.
 So instead of fixing it again by hand, we diff the previous function to the newly translated code and let the user decide what to do.
 
@@ -422,11 +430,43 @@ Generally though it gives us a standardized way of doing it. And if you know one
 The only thing one needs, is the LLVM support of the architecture or a fork which has it implemented.
 
 In fact, we added two niche architectures this way. TriCore was only implemented in a fork and never upstreamed.
-And the Alpha architecture support was dropped in an earlier LLVM version.
+And the [DEC Alpha](https://en.wikipedia.org/wiki/DEC_Alpha) architecture support was dropped in an earlier LLVM version.
+
+## Last overview
+
+To give you a last overview what components were updated and how they interact in Capstone, take a look at this diagram:
+
+```
+                                                                 ARCH_LLVM_getInstr(
+                                     ARCH_getInstr(bytes)   ┌───┐   bytes)           ┌─────────┐            ┌──────────┐
+                                    ┌──────────────────────►│ A ├──────────────────► │         ├───────────►│          ├────┐
+                                    │                       │ R │                    │ LLVM    │            │ LLVM     │    │ Decode
+                                    │                       │ C │                    │         │            │          │    │ Instr.
+                                    │                       │ H │                    │         │decode(Op0) │          │◄───┘
+┌────────┐ disasm(bytes) ┌──────────┴──┐                    │   │                    │ Disass- │ ◄──────────┤ Decoder  │
+│CS Core ├──────────────►│ ARCH Module │                    │   │                    │ embler  ├──────────► │ State    │
+└────────┘               └─────────────┘                    │ M │                    │         │            │ Machine  │
+                                    ▲                       │ A │                    │         │decode(Op1) │          │
+                                    │                       │ P │                    │         │ ◄──────────┤          │
+                                    │                       │ P │                    │         ├──────────► │          │
+                                    │                       │ I │                    │         │            │          │
+                                    │                       │ N │                    │         │            │          │
+                                    └───────────────────────┤ G │◄───────────────────┤         │◄───────────┤          │
+                                                            └───┘                    └─────────┘            └──────────┘
+```
+
+The `Capstone Core`, `Arch Module` and `Arch_Mapping` provide the API to the LLVM disassembler logic.
+We have not spoken about those because they are irrelevant for the topic of generating disassemblers.
+
+The two boxes on the right, are the code copies from LLVM, which do the actual decoding work.
+The `LLVM Disassembler` component decodes single operands and handles special cases. This one was translated by the `CppTranslator`.
+While the `LLVM Decoder State Machine` was generated by our patched LLVM backends.
+
+The same structure applies to the printing of the asm text. Though we have only scratched this here for the sake of brevity.
 
 ## Wrap up
 
-If one looks at all of it, it is still a rather complicated number of steps to take. But the result is worth it.
+If one looks at the update whole procedure, it is still a rather complicated number of steps to take. But the result is worth it.
 The amount of time someone has to spend for updating an architecture module in Capstone went down from "no one did it" to roughly 4-19 hours.
 To update the ARM architecture module to LLVM 16 for example, the times were:
 
@@ -444,5 +484,28 @@ Here is the whole process in action:
 
 (don't worry about the `.sh` script. This was replaced with a proper Python script with some convenient options.)
 
-If you want to update now an already present Capstone module or add a support for a new one, feel free to drop a message in [issue #2015](https://github.com/capstone-engine/capstone/issues/2015).
-We will guide you than through the process.
+## Future plans
+
+We have a list of features and architectures which will come.
+
+In the very near future we will extend the details in Capstone, to provide the encoding details of each instruction.
+It will give you the exact bit locations of each operand in the given bytes.
+
+Additionally, we have plans for HPPA (PARISC) and MIPS (and nanoMIPS after the first update) support.
+And besides those, LoongArch is currently in development.
+
+While working on the updater we found many shortcomings or flaws in the target definitions in LLVM.
+Those will be upstreamed to LLVM.
+
+In the very long run we would like to participate with the LLVM folks in redesign the TableGen backends.
+It would be nice to have the problems solved, which we mentioned above.
+
+And of course, if you want to update now an already present Capstone module or add support for a new one, feel free to drop a message in [issue #2015](https://github.com/capstone-engine/capstone/issues/2015).
+We are happy to hear about it and will guide you through the process.
+
+## References
+
+- [Auto-Sync progress issue](https://github.com/capstone-engine/capstone/issues/2015)
+- [Auto-Sync documentation](https://github.com/capstone-engine/capstone/blob/next/docs/AutoSync.md)
+- [TableGen documentation](https://llvm.org/docs/TableGen/)
+- [Capstone's LLVM fork](https://github.com/capstone-engine/llvm-capstone)
