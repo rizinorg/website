@@ -10,7 +10,16 @@
       <link>https://rizin.re/images/rizin_preview.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 06 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Auto-Sync - Generating disassembler plugins</title>
+      <link>https://rizin.re/posts/auto-sync/</link>
+      <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/posts/auto-sync/</guid>
+      <description>Auto-Sync</description>
+    </item>
+    
     <item>
       <title>GSoC 2023 - Enhancing DWARF Support</title>
       <link>https://rizin.re/posts/gsoc-2023-dwarf/</link>
