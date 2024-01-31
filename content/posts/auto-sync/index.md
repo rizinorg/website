@@ -8,8 +8,6 @@ ShowToc: false
 weight: 2
 ---
 
-# Auto-Sync - Generating disassembler plugins
-
 A disassembler is obviously a must-have tool to do any reversing task.
 But using just any disassembler, especially for frameworks like Rizin, doesn't really do it.
 
