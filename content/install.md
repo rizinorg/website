@@ -72,8 +72,10 @@ within the archive can be extracted anywhere on your Android device because
 Rizin is compiled in a "portable" way, allowing moving the whole directory
 anywhere.
 
-We do not currently have a package on Termux, but if you would like to add one
-we will be happy to help you with any issue you may encounter.
+rizin also have a package on Termux, and can be installed using Termux package manager i.e, `pkg`:
+```shell
+pkg install rizin
+```
 
 ## Building from source
 
