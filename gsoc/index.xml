@@ -50,8 +50,9 @@ Mentors Members of the Rizin and Cutter core teams have volunteered to guide par
       
       <guid>https://rizin.re/gsoc/2024/</guid>
       <description>TL;DR Jump to the Ideas list.
-Introduction This year we participate again, effectively continuing the tradition since the year 2015.
-Mentors Members of the Rizin and Cutter core teams have volunteered to guide participants for GSoC’23. They were already guiding the participants for the GSoC and RSoC in past years. Please feel free to reach out to any of them in case you need any help in selecting a project.</description>
+Introduction This year, we participate again, effectively continuing the tradition since 2015.
+Mentors Members of the Rizin and Cutter core teams have volunteered to guide participants for GSoC’24. They have already been guiding the participants for the GSoC and RSoC in past years. Please feel free to reach out to any of them if you need any help in selecting a project.
+Anton Kochkov Mattermost: xvilka &amp;ndash; @akochkov Riccardo Schirone Mattermost: ret2libc @RickySkiro Florian Märkl Mattermost/Telegram: @thestr4ng3r &amp;ndash; @thestr4ng3r Itay Cohen Mattermost/Telegram: @Megabeets @Megabeets_ Giovanni Dante Grazioli Mattermost/Telegram: @deroad @der0ad And many others Development methodology Currently, all repositories are hosted on GitHub main organization account and bugs are tracked on GitHub issues too.</description>
     </item>
     
   </channel>
