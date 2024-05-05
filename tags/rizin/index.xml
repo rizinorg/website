@@ -10,7 +10,16 @@
       <link>https://rizin.re/images/rizin_preview.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 27 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/rizin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/rizin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Summer of Code 2024 Announcement</title>
+      <link>https://rizin.re/posts/gsoc-2024-announcement/</link>
+      <pubDate>Sun, 05 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/posts/gsoc-2024-announcement/</guid>
+      <description>An announcement of the Google Summer of Code 2024. Two accepted candidates.</description>
+    </item>
+    
     <item>
       <title>Auto-Sync - Generating disassembler plugins</title>
       <link>https://rizin.re/posts/auto-sync/</link>
