@@ -8,6 +8,8 @@ ShowToc: false
 weight: 2
 ---
 
+_Updated on 2024.10.01_
+
 A disassembler is obviously a must-have tool to do any reversing task.
 But using just any disassembler, especially for frameworks like Rizin, doesn't really do it.
 
@@ -17,11 +19,11 @@ It should:
 
 - Be correct. And if it isn't, it should be easy to test and spot the error (in our case we want to compare the output directly to `llvm-objdump`).
 - Provide a single API for multiple architectures.
-- Support niche architectures or be relatively easy to extend with them.
+- Support niche architectures or make it relatively easy to add them.
 - Apart from the text disassembly, provide additional information about the operands and other meta-data.
 - Be easy to update when new processor extensions come out.
 - Relatively lightweight.
-- Written in C or any other language that is easy to integrate into C/C++ software (specific needed by Rizin/Cutter)
+- Written in C or any other language that is easy to integrate into C/C++ software (specifically needed by Rizin/Cutter)
 
 One of the first disassembler engines which was capable of some of those points was Capstone.
 Quynh Nguyen Anh, the author of Capstone, figured that all the information we need, is basically
@@ -63,7 +65,7 @@ Capstone has already a large user base, and we would need to migrate to the new 
 The last point is maybe annoying but doable. Getting a user base again is a way harder task.
 
 So over the last two years we added an updater to Capstone.
-With it, we updated some core modules (`ARM`, `AArch64`, `PPC`, `SystemZ`, `Mips`) and added new ones (`Alpha`, `TriCore`, `Xtensa`, `HPPA`).
+With it, we updated some core modules (`ARM`, `AArch64`, `PPC` + `Paired Single`, `SystemZ`, `Mips` + `NanoMips`) and added new ones (`Alpha`, `TriCore`, `Xtensa`, `HPPA`).
 And to our delight [jiegec](https://github.com/jiegec) and [FurryAcetylCoA](https://github.com/FurryAcetylCoA) added support for LoongArch.
 
 In the following blog post we'll not just explain the update procedure in detail,
@@ -228,7 +230,7 @@ Because we do not want to build LLVM just to build Capstone (LLVM is a huge depe
 
 ### C++ and C
 
-For Capstone we need the C++ files in C. We need the generated `*.inc` files. And the handwritten disassembler components (`<ARCH>Disassembler.cpp` and `<ARCH>AsmWriter.cpp` from above).
+For Capstone we need the C++ files in C. We also need the generated `*.inc` files, as well as handwritten disassembler components (`<ARCH>Disassembler.cpp` and `<ARCH>AsmWriter.cpp` from above).
 
 Lets see how to get them in C.
 
@@ -244,7 +246,7 @@ This goes so far that it is even allowed to specify custom code in the `td` file
 
 So, if we want TableGen backends emit C, we either need to redesign and rewrite them from scratch or patch them.
 Designing it from scratch is a rather complex task. And needs a lot of thought ([see this discussion](https://reviews.llvm.org/D138323)).
-Simply because of time constraints and because we don't know if it is merged, we sided with patching.
+Simply because of time constraints and because we don't know if it will be merged, we sided with patching.
 
 Our [patched TableGen](https://github.com/capstone-engine/llvm-capstone) backends work pretty straight forward. We add two new classes which only emit code.
 [`PrinterLLVM`](https://github.com/capstone-engine/llvm-capstone/blob/auto-sync/llvm/utils/TableGen/PrinterLLVM.cpp) and [`PrinterCapstone`](https://github.com/capstone-engine/llvm-capstone/blob/auto-sync/llvm/utils/TableGen/PrinterCapstone.cpp).
@@ -280,7 +282,7 @@ And if we add a new architecture module from LLVM to Capstone, we would need to
 translate multiple thousand lines of C++ to C.
 
 This of cause is not particular fun and hinders people to do it at all.
-Hence, we built Auto-Sync to do most of the annoying work.
+Hence, we built the Auto-Sync framework to do most of the annoying work.
 
 The translation process follows a simple procedure. We have a bunch of patches defined. Each patch replaces certain syntax in an C++ file with its C equivalent.
 
@@ -434,7 +436,7 @@ Generally though it gives us a standardized way of doing it. And if you know one
 If LLVM doesn't support your architecture you maybe find a fork which does (this is the case for TriCore or EVM).
 
 In fact, we added two niche architectures this way. TriCore was only implemented in a fork and never upstreamed.
-And the [DEC Alpha](https://en.wikipedia.org/wiki/DEC_Alpha) architecture support was dropped in an earlier LLVM version.
+And the [DEC Alpha](https://en.wikipedia.org/wiki/DEC_Alpha) architecture support was dropped in LLVM 4.
 We just added the `td` files again, and here we go, we have support for Alpha in Capstone.
 
 ## Last overview
