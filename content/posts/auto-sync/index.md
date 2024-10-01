@@ -488,6 +488,10 @@ To update the ARM architecture module to LLVM 16 for example, the times were:
 
 The lower estimates are for small changes on the LLVM side, the upper for many changes (spanning multiple LLVM releases).
 
+Here is process described above in action:
+
+[![asciicast](https://asciinema.org/a/Vy0xmYku4qK4CL8kNvgDl3Lfn.svg)](https://asciinema.org/a/Vy0xmYku4qK4CL8kNvgDl3Lfn)
+
 ## Future plans
 
 We have a list of features and architectures which will come.
