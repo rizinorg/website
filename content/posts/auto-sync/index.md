@@ -490,7 +490,7 @@ The lower estimates are for small changes on the LLVM side, the upper for many c
 
 Here is process described above in action:
 
-[![asciicast](https://asciinema.org/a/Vy0xmYku4qK4CL8kNvgDl3Lfn.svg)](https://asciinema.org/a/Vy0xmYku4qK4CL8kNvgDl3Lfn)
+[![asciicast](https://asciinema.org/a/kwoEWhkWMQ4xBvh9o6WZ9632r.svg)](https://asciinema.org/a/kwoEWhkWMQ4xBvh9o6WZ9632r)
 
 ## Future plans
 
