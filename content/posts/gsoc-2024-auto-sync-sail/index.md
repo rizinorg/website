@@ -36,8 +36,10 @@ The good news is that Rizin already has a RISC-V decoder/disassembler, since it 
 
 The bad news? Those disassemblers are often incomplete and out of date. 
 
-You won't catch those disassemblers missing a variant of an ADD or a SUB, not even the MULs or the DIVs, but you ***can*** catch them missing an [sfence.vma](https://riscv-software-src.github.io/riscv-unified-db/manual/html/isa/20240411/insts/sfence.vma.html), for example. Capstone's current RISC-V [disassembler](https://github.com/capstone-engine/capstone/blob/9907b22d33693f3beb4b8b7ba261fbdd219afee3/include/capstone/riscv.h#L371) only includes FENCE, FENCE_I, FENCE_TSO, all related but different from the missing SFENCE_VMA. It's besides the point to argue whether those instructions are "Useful" or "Common" in real software: They're part of RISC-V, and any up-to-date RISC-V tool must be aware of them.
+You won't catch those disassemblers missing a variant of an ADD or a SUB, not even MULs or DIVs, but you ***can*** catch them missing a [zba, clz, or xnor](https://www.ece.lsu.edu/ee4720/doc/riscv-bitmanip-1.0.0.pdf) instructions, for example. Those, respectively, accelerate array indexing, count leading zeros, or perform an exclusive NOR. Capstone's current RISC-V [disassembler](https://github.com/capstone-engine/capstone/blob/9907b22d33693f3beb4b8b7ba261fbdd219afee3/include/capstone/riscv.h) includes none of those instructions. we could argue whether those instructions are "Useful" or "Common" in real software: but at the end of the day they're part of RISC-V, and any compliant RISC-V tool must be aware of them. Capstone sometimes also chokes on quite [basic](https://github.com/capstone-engine/capstone/issues/2278) instructions, like LOAD.
 
+
+>> RISC-V has a somewhat unusual approach to ISA evolution: it embraces extensions openly in its standard. Most architectures define new "versions" or "editions" whenever they change, RISC-V instead defines self-contained "modules" of behaviour and ISA state, even opening the door to vendors (companies selling SoCs and products with RISC-V cores) to make their own vedor-defined extensions that co-exist with the rest of the architecture and its standard extensions. Each extension as well as the base architecture could all evolve through versions indepedently from other extensions. The RISC-V architecture is thus more of a family of architectures specified together rather than a single one.
 
 Capstone was originally written based on codegen logic from LLVM. It’s essentially a port of LLVM disassembly logic from C++ to C (along with much simplification and cleaning up). Unfortunately, LLVM keeps updating that logic to reflect the fast-moving development and evolution of the architectures; those updates are not magically reflected back into Capstone! To make matters even worse, even LLVM proper can’t completely keep up with all the updates that happen to all the architectures it supports, it lags.
 
@@ -45,11 +47,11 @@ The Capstone project maintains an [update tool](https://rizin.re/posts/auto-sync
 
 
 # To Sail the high seas and RISC it all
-The problem of describing Instruction Set Architectures (ISAs) accurately so that we can do plenty of useful things to them (assembly, disassembly, emulation, codegen, etc…) faces many projects, so much so that some smart people have developed an enitrely new special language for it, Sail. Sail is a language designed specifically to address the problem of describing all aspects of ISAs: how the instructions are encoded into binary, how they execute, etc…
+The problem of describing Instruction Set Architectures (ISAs) accurately so that we can do plenty of useful things to them (assembly, disassembly, emulation, codegen, etc…) faces many projects, so much so that some smart people have developed an entirely new special language for it, Sail. Sail is a language designed specifically to address the problem of describing all aspects of ISAs: how the instructions are encoded into binary, how they execute, etc…
 
-Now, if only there was a project that used Sail to describe RISC-V… wait, there is! It’s called Sail-RISCV. It’s such a complete and up-to-date description of RISC-V that the RISC-V foundation adopted it as the official source of truth for the architecture, this means that whatever the Sail code behaves, is - by definition - how RISC-V should behave.
+Now, if only there was a project that used Sail to describe RISC-V… wait, there is! It’s called Sail-RISCV. It’s such a complete and up-to-date description of RISC-V that the RISC-V foundation adopted it as the official source of truth for the architecture, this means that however the Sail code behaves, is - by definition - how RISC-V should behave.
 
->> Other architectures modelled in Sail are several versions of [ARM](https://github.com/rems-project/sail-arm/tree/master), a considerable part of [x86](https://github.com/rems-project/sail-x86-from-acl2), and a research version of MIPS called [CHERI-MIPS](https://github.com/CTSRD-CHERI/sail-cheri-mips). The ARM and x86 models are auto-generated from other descriptions, and the 3 models are much less active than RISC-V's.
+>> Other architectures modelled in Sail are several versions of [ARM](https://github.com/rems-project/sail-arm/tree/master), a considerable part of [x86](https://github.com/rems-project/sail-x86-from-acl2), and a research version of MIPS called [CHERI-MIPS](https://github.com/CTSRD-CHERI/sail-cheri-mips), which includes hardware extensions to assist and accelerate memory safe pointers. The ARM and x86 models are auto-generated from other descriptions, and all 3 models are much less active than RISC-V's.
 
 Let’s see a snippet of what Sail looks like in practice, here’s the definition of RISC-V IType (immediate) instructions:
 ![IMAGE__SAIL_SNIPPET_ITYPE_ENCDEC](https://hackmd.io/_uploads/ryhunMMBkg.png)
@@ -79,8 +81,46 @@ So this is what my GSoC project this year was all about:
  
 That is, the code I wrote transformed the rule above into the following C code:
 
-![IMAGE__C_SNIPPET_ITYPE_ENCDEC](https://hackmd.io/_uploads/HyBsrQMByg.png)
-
+```c
+// ---------------------------ITYPE-------------------------------
+  {
+    if (((binary_stream & 0x000000000000007F) == 0x13)) {
+      uint64_t op = 0xFFFFFFFFFFFFFFFF;
+      switch ((binary_stream & 0x0000000000007000) >> 12) {
+      case 0x7:
+        op = RISCV_ANDI;
+        break;
+      case 0x3:
+        op = RISCV_SLTIU;
+        break;
+      case 0x2:
+        op = RISCV_SLTI;
+        break;
+      case 0x6:
+        op = RISCV_ORI;
+        break;
+      case 0x4:
+        op = RISCV_XORI;
+        break;
+      case 0x0:
+        op = RISCV_ADDI;
+        break;
+      }
+      if (op != 0xFFFFFFFFFFFFFFFF) {
+        uint64_t rd = (binary_stream & 0x0000000000000F80) >> 7;
+        uint64_t rs1 = (binary_stream & 0x00000000000F8000) >> 15;
+        uint64_t imm = (binary_stream & 0x00000000FFF00000) >> 20;
+        tree->ast_node_type = RISCV_ITYPE;
+        tree->ast_node.itype.imm = imm;
+        tree->ast_node.itype.rs1 = rs1;
+        tree->ast_node.itype.rd = rd;
+        tree->ast_node.itype.op = op;
+        return;
+      }
+    }
+  }
+  //------------------------------------------------------------
+```
 
 This low-level soup of shifts and masks performs the exact logic described in the Sail snippet earlier, just in C. It continues on like that for 9K lines of generated code (`#include`ing approximately 2K lines of generated AST definition).
 
@@ -98,14 +138,14 @@ Finally, we haven’t addressed the original problem yet! I hope to eventually a
 
 Let’s summarize this rollercoaster journey:
 
-We just wanted to write a binary lifter for RISC-V instructions into RzIL, Rizin’s intermediate language
-But in order to do that, we first have to have an up-to-date RISC-V decoder/disassembler
-Rizin depends on Capstone for RISC-V disassembly, but Capstone RISC-V disassembly logic is ported from old LLVM logic that is not up-to-date
-Even modern LLVM is not completely up-to-date with RISC-V
-But Sail-RISCV is
-And thus, we can generate a Capstone disassembler module from Sail-RISCV
+1. We just wanted to write a binary lifter for RISC-V instructions into RzIL, Rizin’s intermediate language
+1. But in order to do that, we first have to have an up-to-date RISC-V decoder/disassembler
+1. Rizin depends on Capstone for RISC-V disassembly, but Capstone RISC-V disassembly logic is ported from old LLVM logic that is not up-to-date
+1. Even modern LLVM is not completely up-to-date with RISC-V
+1. But Sail-RISCV is, and it's adopted by the RISC-V foundation as the most authoritative model of the RISC-V architecture
+1. And thus, we can generate a Capstone disassembler module from Sail-RISCV, by depending on the Sail compiler as a library
 
-It was fun. Frustrating and long-winded at times, but what kind of programming isn’t frustrating and long-winded? That’s part of the thrill anyway!
+It was fun. Frustrating and long-winded at times, but what kind of programming isn’t? That’s part of the thrill anyway!
 
 That's all and Happy Christmas! Keep coding through the wind and the snow. 
 
