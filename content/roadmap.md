@@ -16,6 +16,7 @@ Full milestone is at https://github.com/rizinorg/rizin/milestone/21
 
 # 1.0
 
+* Add KB (Knowledge Base) support for storing metainformation in logic fact-based form
 * Stable and documented API
 * Refactor and merge various visual modes
 * Refactor native debugger
