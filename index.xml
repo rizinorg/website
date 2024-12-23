@@ -167,6 +167,16 @@ At first, I fixed several bugs in the new tree-sitter based type parser.</descri
       <description>Who are you? Why did you fork radare2? What will happen to Cutter now? Our answers to your frequently asked questions.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://rizin.re/posts/gsoc-2024-auto-sync-sail/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/posts/gsoc-2024-auto-sync-sail/</guid>
+      <description>Hello, I’m Mostafa. I graduated with Excellence from Cairo University’s Faculty of Engineering, Computer Engineering Department, class of 2023. I write C++ for a living. I love systems programming, metaprogramming &amp;amp; DSLs, as well as Compilers &amp;amp; VMs. You can find me @Github, and @Linkedin.
+I was honored to participate again as a contributor in the 2024 GSoC with the Rizin Organization. The original project was implementing binary lifting techniques for RISC-V instructions onto Rizin&amp;rsquo;s custom internal representation, called RzIL.</description>
+    </item>
+    
     
     <item>
       <title>Code Of Conduct</title>
