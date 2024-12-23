@@ -10,7 +10,16 @@
       <link>https://rizin.re/images/rizin_preview.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 05 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GSoC 2024 - RISC-V Capstone auto-sync and RzIL uplifting</title>
+      <link>https://rizin.re/posts/gsoc-2024-auto-sync-sail/</link>
+      <pubDate>Mon, 23 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/posts/gsoc-2024-auto-sync-sail/</guid>
+      <description>A description of the original GSoC 2024 task plans of updating RISC-V disassembler in Capstone, updating it in Rizin, and implementing RzIL uplifting and the actual progress</description>
+    </item>
+    
     <item>
       <title>Google Summer of Code 2024 Announcement</title>
       <link>https://rizin.re/posts/gsoc-2024-announcement/</link>
@@ -165,16 +174,6 @@ At first, I fixed several bugs in the new tree-sitter based type parser.</descri
       
       <guid>https://rizin.re/posts/faq/</guid>
       <description>Who are you? Why did you fork radare2? What will happen to Cutter now? Our answers to your frequently asked questions.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://rizin.re/posts/gsoc-2024-auto-sync-sail/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rizin.re/posts/gsoc-2024-auto-sync-sail/</guid>
-      <description>Hello, I’m Mostafa. I graduated with Excellence from Cairo University’s Faculty of Engineering, Computer Engineering Department, class of 2023. I write C++ for a living. I love systems programming, metaprogramming &amp;amp; DSLs, as well as Compilers &amp;amp; VMs. You can find me @Github, and @Linkedin.
-I was honored to participate again as a contributor in the 2024 GSoC with the Rizin Organization. The original project was implementing binary lifting techniques for RISC-V instructions onto Rizin&amp;rsquo;s custom internal representation, called RzIL.</description>
     </item>
     
     

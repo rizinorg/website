@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>capstone on Rizin</title>
-    <link>https://rizin.re/tags/capstone/</link>
-    <description>Recent content in capstone on Rizin</description>
+    <title>rzil on Rizin</title>
+    <link>https://rizin.re/tags/rzil/</link>
+    <description>Recent content in rzil on Rizin</description>
     <image>
       <title>Rizin</title>
       <url>https://rizin.re/images/rizin_preview.png</url>
       <link>https://rizin.re/images/rizin_preview.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 23 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/capstone/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/rzil/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GSoC 2024 - RISC-V Capstone auto-sync and RzIL uplifting</title>
       <link>https://rizin.re/posts/gsoc-2024-auto-sync-sail/</link>
@@ -18,15 +18,6 @@
       
       <guid>https://rizin.re/posts/gsoc-2024-auto-sync-sail/</guid>
       <description>A description of the original GSoC 2024 task plans of updating RISC-V disassembler in Capstone, updating it in Rizin, and implementing RzIL uplifting and the actual progress</description>
-    </item>
-    
-    <item>
-      <title>Auto-Sync - Generating disassembler plugins</title>
-      <link>https://rizin.re/posts/auto-sync/</link>
-      <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://rizin.re/posts/auto-sync/</guid>
-      <description>Auto-Sync</description>
     </item>
     
   </channel>
