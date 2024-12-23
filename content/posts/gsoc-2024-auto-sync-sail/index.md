@@ -1,3 +1,13 @@
+---
+author: "Mostafa"
+title: "GSoC 2024 - RISC-V Capstone auto-sync and RzIL uplifting"
+date: "2024-12-23"
+summary: "A description of the original GSoC 2024 task plans of updating RISC-V disassembler in Capstone, updating it in Rizin, and implementing RzIL uplifting and the actual progress"
+tags: ["rizin", "capstone", "gsoc", "rzil"]
+ShowToc: false
+weight: 2
+---
+
 Hello, I’m Mostafa. I graduated with Excellence from Cairo University’s Faculty of Engineering, Computer Engineering Department, class of 2023. I write C++ for a living. I love systems programming, metaprogramming & DSLs, as well as Compilers & VMs. You can find me @[Github](https://github.com/moste00), and @[Linkedin](www.linkedin.com/in/mostafa-m-kamal-b015691b1).
 
 I was honored to participate again as a contributor in the 2024 GSoC with the Rizin Organization. The original project was implementing binary lifting techniques for RISC-V instructions onto Rizin's custom internal representation, called RzIL. However, updating the RISC-V Capstone disassembler (originally a small task in the project preamble) turned out to need much more work than expected, and blocked the rest of the project.
