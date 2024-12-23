@@ -147,5 +147,5 @@ Let’s summarize this rollercoaster journey:
 
 It was fun. Frustrating and long-winded at times, but what kind of programming isn’t? That’s part of the thrill anyway!
 
-That's all and Happy Christmas! Keep coding through the wind and the snow. 
+That's all and Happy Holidays! Keep coding through the wind and the snow. 
 
