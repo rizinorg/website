@@ -80,14 +80,29 @@
     <loc>https://rizin.re/tags/dev/</loc>
     <lastmod>2024-01-27T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://rizin.re/gsoc/2024/</loc>
+    <lastmod>2024-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rizin.re/gsoc/</loc>
+    <lastmod>2024-01-23T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://rizin.re/tags/dwarf/</loc>
     <lastmod>2023-09-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rizin.re/gsoc/2023/</loc>
+    <lastmod>2023-01-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/tags/cutter/</loc>
     <lastmod>2022-10-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://rizin.re/gsoc/2022/</loc>
+    <lastmod>2022-02-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://rizin.re/tags/rsoc/</loc>
     <lastmod>2021-09-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rizin.re/gsoc/2021/</loc>
+    <lastmod>2021-02-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/tags/projects/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
@@ -110,21 +125,11 @@
   </url><url>
     <loc>https://rizin.re/teams/documentation/</loc>
   </url><url>
-    <loc>https://rizin.re/gsoc/2021/</loc>
-  </url><url>
-    <loc>https://rizin.re/gsoc/2022/</loc>
-  </url><url>
-    <loc>https://rizin.re/gsoc/2023/</loc>
-  </url><url>
-    <loc>https://rizin.re/gsoc/2024/</loc>
-  </url><url>
     <loc>https://rizin.re/teams/infrastructure/</loc>
   </url><url>
     <loc>https://rizin.re/organization/</loc>
   </url><url>
     <loc>https://rizin.re/teams/package-manager-and-plugins/</loc>
-  </url><url>
-    <loc>https://rizin.re/gsoc/</loc>
   </url><url>
     <loc>https://rizin.re/search/</loc>
   </url><url>

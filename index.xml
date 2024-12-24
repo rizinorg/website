@@ -176,6 +176,51 @@ At first, I fixed several bugs in the new tree-sitter based type parser.</descri
       <description>Who are you? Why did you fork radare2? What will happen to Cutter now? Our answers to your frequently asked questions.</description>
     </item>
     
+    <item>
+      <title>GSoC 2024</title>
+      <link>https://rizin.re/gsoc/2024/</link>
+      <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/gsoc/2024/</guid>
+      <description>TL;DR Jump to the Ideas list.
+Introduction This year, we participate again, effectively continuing the tradition since 2015.
+Mentors Members of the Rizin and Cutter core teams have volunteered to guide participants for GSoC’24. They have already been guiding the participants for the GSoC and RSoC in past years. Please feel free to reach out to any of them if you need any help in selecting a project.
+Anton Kochkov Mattermost: xvilka &amp;ndash; @akochkov Riccardo Schirone Mattermost: ret2libc @RickySkiro Florian Märkl Mattermost/Telegram: @thestr4ng3r &amp;ndash; @thestr4ng3r Itay Cohen Mattermost/Telegram: @Megabeets @Megabeets_ Giovanni Dante Grazioli Mattermost/Telegram: @deroad @der0ad And many others Development methodology Currently, all repositories are hosted on GitHub main organization account and bugs are tracked on GitHub issues too.</description>
+    </item>
+    
+    <item>
+      <title>GSoC 2023</title>
+      <link>https://rizin.re/gsoc/2023/</link>
+      <pubDate>Tue, 24 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/gsoc/2023/</guid>
+      <description>TL;DR Jump to the Ideas list.
+Introduction This year is the third time we participate as Rizin, effectively continuing the tradition since the year 2015.
+Mentors Members of the Rizin and Cutter core teams have volunteered to guide participants for GSoC’23. They were already guiding the participants for the GSoC and RSoC in past years. Please feel free to reach out to any of them in case you need any help in selecting a project.</description>
+    </item>
+    
+    <item>
+      <title>GSoC 2022</title>
+      <link>https://rizin.re/gsoc/2022/</link>
+      <pubDate>Fri, 11 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/gsoc/2022/</guid>
+      <description>TL;DR Jump to the Ideas list.
+Introduction This year is the second time we participate as a fork - Rizin, effectively continuing the tradition since the year 2015 (as the radare2 project).
+Mentors Members of the Rizin and Cutter core teams have volunteered to guide participants for GSoC’22. They were already guiding the participants for the GSoC and RSoC in past years. Please feel free to reach out to any of them in case you need any help in selecting a project.</description>
+    </item>
+    
+    <item>
+      <title>GSoC 2021</title>
+      <link>https://rizin.re/gsoc/2021/</link>
+      <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/gsoc/2021/</guid>
+      <description>TL;DR Jump to the Ideas list.
+Introduction Each year since 2015, we have participated in Google Summer of Code as the Radare2 project and accomplished many goals. This year we participate as a fork - Rizin, but effectively continuing the same process and the same mentors.
+Mentors Members of the Rizin and Cutter core teams have volunteered to guide students for GSoC’21. They were already guiding the students for the GSoC and RSoC in past years as part of the Radare2 project.</description>
+    </item>
+    
     
     <item>
       <title>Code Of Conduct</title>
@@ -238,51 +283,6 @@ At first, I fixed several bugs in the new tree-sitter based type parser.</descri
       
       <guid>https://rizin.re/teams/documentation/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>GSoC 2021</title>
-      <link>https://rizin.re/gsoc/2021/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rizin.re/gsoc/2021/</guid>
-      <description>TL;DR Jump to the Ideas list.
-Introduction Each year since 2015, we have participated in Google Summer of Code as the Radare2 project and accomplished many goals. This year we participate as a fork - Rizin, but effectively continuing the same process and the same mentors.
-Mentors Members of the Rizin and Cutter core teams have volunteered to guide students for GSoC’21. They were already guiding the students for the GSoC and RSoC in past years as part of the Radare2 project.</description>
-    </item>
-    
-    <item>
-      <title>GSoC 2022</title>
-      <link>https://rizin.re/gsoc/2022/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rizin.re/gsoc/2022/</guid>
-      <description>TL;DR Jump to the Ideas list.
-Introduction This year is the second time we participate as a fork - Rizin, effectively continuing the tradition since the year 2015 (as the radare2 project).
-Mentors Members of the Rizin and Cutter core teams have volunteered to guide participants for GSoC’22. They were already guiding the participants for the GSoC and RSoC in past years. Please feel free to reach out to any of them in case you need any help in selecting a project.</description>
-    </item>
-    
-    <item>
-      <title>GSoC 2023</title>
-      <link>https://rizin.re/gsoc/2023/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rizin.re/gsoc/2023/</guid>
-      <description>TL;DR Jump to the Ideas list.
-Introduction This year is the third time we participate as Rizin, effectively continuing the tradition since the year 2015.
-Mentors Members of the Rizin and Cutter core teams have volunteered to guide participants for GSoC’23. They were already guiding the participants for the GSoC and RSoC in past years. Please feel free to reach out to any of them in case you need any help in selecting a project.</description>
-    </item>
-    
-    <item>
-      <title>GSoC 2024</title>
-      <link>https://rizin.re/gsoc/2024/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rizin.re/gsoc/2024/</guid>
-      <description>TL;DR Jump to the Ideas list.
-Introduction This year, we participate again, effectively continuing the tradition since 2015.
-Mentors Members of the Rizin and Cutter core teams have volunteered to guide participants for GSoC’24. They have already been guiding the participants for the GSoC and RSoC in past years. Please feel free to reach out to any of them if you need any help in selecting a project.
-Anton Kochkov Mattermost: xvilka &amp;ndash; @akochkov Riccardo Schirone Mattermost: ret2libc @RickySkiro Florian Märkl Mattermost/Telegram: @thestr4ng3r &amp;ndash; @thestr4ng3r Itay Cohen Mattermost/Telegram: @Megabeets @Megabeets_ Giovanni Dante Grazioli Mattermost/Telegram: @deroad @der0ad And many others Development methodology Currently, all repositories are hosted on GitHub main organization account and bugs are tracked on GitHub issues too.</description>
     </item>
     
     <item>
