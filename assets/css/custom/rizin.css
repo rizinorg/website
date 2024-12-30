@@ -36,6 +36,10 @@
   --alternate-strong: #fad000;
 }
 
+.theme-toggle:hover{
+  cursor: pointer;
+}
+
 .list {
   background: var(--theme);
 }
