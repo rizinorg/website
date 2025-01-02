@@ -221,6 +221,16 @@ Introduction Each year since 2015, we have participated in Google Summer of Code
 Mentors Members of the Rizin and Cutter core teams have volunteered to guide students for GSoC’21. They were already guiding the students for the GSoC and RSoC in past years as part of the Radare2 project.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://rizin.re/roadmap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/roadmap/</guid>
+      <description>Concrete high-level feature areas and changes.
+0.9 Add support for missing members of H8 MCU family, and implement RzIL uplifting of them Complete migration from ESIL to RzIL for all supported architectures and features Improve FreeBSD, NetBSD, and OpenBSD debugging Improve ARM64 and PowerPC debugging Migrate from Capstone to Zydis for x86 architecture to address long-standing problems with unsupported x86 instructions Support STABS (pre-DWARF) debug information loading Add support for proper preprocessor in the type parser Refactor types to introduce type scope Rewrite RzNum to support proper formulas, bitvectors, floats, and so on Remove concept of the &amp;ldquo;block&amp;rdquo; in favor of direct transparent IO access Full milestone is at https://github.</description>
+    </item>
+    
     
     <item>
       <title>Code Of Conduct</title>
