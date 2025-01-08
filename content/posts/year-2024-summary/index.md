@@ -1,7 +1,7 @@
 ---
 author: "xvilka"
 title: "2024 Year Summary"
-date: "2025-02-02"
+date: "2025-01-02"
 summary: "An overview of the work done in 2024"
 tags: ["rizin", "cutter", "capstone", "rzil"]
 ShowToc: false
