@@ -23,11 +23,12 @@ By doing this, Rizin’s developers can write generic analysis algorithms that i
 
 In a nutshell, RzIL is the universal “Lingua Franca” for Rizin, like English is for Software Engineering.
 
-
 ![](world-without-rzil.png)
+
 Figure 1: Without RzIL, there is no smarter way to perform N operations for M assembly languages other than doing an NxM amount of work, implementing the N operations over and over again per each language/architecture.
 
 ![](world-with-rzil.png)
+
 Figure 2: With RzIL, the amount of work to support N operations for M architectures is N+M, the N operations are written exactly once for the intermediate language, then M transformers are written to lift each of the M architectures to the intermediate language.
 
 # For want of a disassembler
@@ -35,9 +36,13 @@ Figure 2: With RzIL, the amount of work to support N operations for M architectu
 So the original plan was to write the grey arrow in the figure above: a lifter from RISC-V machine code into RzIL. However, the first step in doing that is to “parse” RISC-V instructions from their binary form into a convenient data structure. We call that “parsing” step disassembly, or, more accurately, decoding.
 
 >> Side Note:  lots of people, when “disassembly” and “assembly” are mentioned, will probably think of the following diagram:
+
 ![](asm-disasm.png)
+
 This is not wrong for most purposes. However, in the context of this writeup it’s better to have the following and more detailed picture in mind:
+
 ![](asm-disasm-enc-dec.png)
+
 In this writeup I’m more interested in the left-to-right flow: decoding from a binary to a structured (e.g. C struct) representation of the instruction, then assembling the structured representation of the instruction into a string form. Confusingly, sometimes “Disassembly” is used to include both Disassembly **and** Decoding, for example in Capstone the structured representation includes as a member its own `toString` serialization. It will often be clear from context what step is meant, and decoding is often far more important than disassembly. 
 
 Where were we? Ah yes, we were supposed to “parse” (i.e. decode) an instruction from its binary form into a convenient data structure, so that we can write elegant code that easily and robustly lifts it into RzIL. 
@@ -64,6 +69,7 @@ Now, if only there was a project that used Sail to describe RISC-V… wait, ther
 >> Other architectures modelled in Sail are several versions of [ARM](https://github.com/rems-project/sail-arm/tree/master), a considerable part of [x86](https://github.com/rems-project/sail-x86-from-acl2), and a research version of MIPS called [CHERI-MIPS](https://github.com/CTSRD-CHERI/sail-cheri-mips), which includes hardware extensions to assist and accelerate memory safe pointers. The ARM and x86 models are auto-generated from other descriptions, and all 3 models are much less active than RISC-V's.
 
 Let’s see a snippet of what Sail looks like in practice, here’s the definition of RISC-V IType (immediate) instructions:
+
 ![](sail-itype-def.png)
 
 The rule might be as cryptic as latin if you’re not used to pattern-matching constructs from functional languages, but what it’s saying is simply the following:

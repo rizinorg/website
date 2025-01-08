@@ -8,8 +8,6 @@ ShowToc: false
 weight: 2
 ---
 
-# 2024 year summary
-
 This year we focused mainly on the "backbone" of the Rizin framework and all related tools, including Cutter. This will become a foundation of the future work we plan to finish in 2025. The major goal is to release 0.8.0 in upcoming months. As for the longer term you can see [our roadmap](https://rizin.re/roadmap/) for details.
 
 ## Releases
