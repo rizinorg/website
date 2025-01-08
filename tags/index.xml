@@ -10,13 +10,40 @@
       <link>https://rizin.re/images/rizin_preview.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 23 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>capstone</title>
       <link>https://rizin.re/tags/capstone/</link>
-      <pubDate>Mon, 23 Dec 2024 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
       
       <guid>https://rizin.re/tags/capstone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cutter</title>
+      <link>https://rizin.re/tags/cutter/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/tags/cutter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rizin</title>
+      <link>https://rizin.re/tags/rizin/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/tags/rizin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rzil</title>
+      <link>https://rizin.re/tags/rzil/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/tags/rzil/</guid>
       <description></description>
     </item>
     
@@ -26,24 +53,6 @@
       <pubDate>Mon, 23 Dec 2024 00:00:00 +0000</pubDate>
       
       <guid>https://rizin.re/tags/gsoc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rizin</title>
-      <link>https://rizin.re/tags/rizin/</link>
-      <pubDate>Mon, 23 Dec 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://rizin.re/tags/rizin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rzil</title>
-      <link>https://rizin.re/tags/rzil/</link>
-      <pubDate>Mon, 23 Dec 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://rizin.re/tags/rzil/</guid>
       <description></description>
     </item>
     
@@ -62,15 +71,6 @@
       <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://rizin.re/tags/dwarf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cutter</title>
-      <link>https://rizin.re/tags/cutter/</link>
-      <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://rizin.re/tags/cutter/</guid>
       <description></description>
     </item>
     

@@ -10,7 +10,16 @@
       <link>https://rizin.re/images/rizin_preview.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 23 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/capstone/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/capstone/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2024 Year Summary</title>
+      <link>https://rizin.re/posts/year-2024-summary/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/posts/year-2024-summary/</guid>
+      <description>An overview of the work done in 2024</description>
+    </item>
+    
     <item>
       <title>GSoC 2024 - RISC-V Capstone auto-sync and RzIL uplifting</title>
       <link>https://rizin.re/posts/gsoc-2024-auto-sync-sail/</link>

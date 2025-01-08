@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://rizin.re/posts/year-2024-summary/</loc>
+    <lastmod>2025-01-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://rizin.re/posts/gsoc-2024-auto-sync-sail/</loc>
     <lastmod>2024-12-23T00:00:00+00:00</lastmod>
   </url><url>
@@ -57,24 +60,27 @@
     <lastmod>2020-12-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/tags/capstone/</loc>
-    <lastmod>2024-12-23T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rizin.re/tags/gsoc/</loc>
-    <lastmod>2024-12-23T00:00:00+00:00</lastmod>
+    <loc>https://rizin.re/tags/cutter/</loc>
+    <lastmod>2025-01-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/posts/</loc>
-    <lastmod>2024-12-23T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/tags/rizin/</loc>
-    <lastmod>2024-12-23T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/</loc>
-    <lastmod>2024-12-23T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/tags/rzil/</loc>
-    <lastmod>2024-12-23T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/tags/</loc>
+    <lastmod>2025-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rizin.re/tags/gsoc/</loc>
     <lastmod>2024-12-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/tags/dev/</loc>
@@ -91,9 +97,6 @@
   </url><url>
     <loc>https://rizin.re/gsoc/2023/</loc>
     <lastmod>2023-01-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rizin.re/tags/cutter/</loc>
-    <lastmod>2022-10-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/gsoc/2022/</loc>
     <lastmod>2022-02-11T00:00:00+00:00</lastmod>
