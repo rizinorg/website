@@ -10,7 +10,19 @@
       <link>https://rizin.re/images/rizin_preview.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 23 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/gsoc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/gsoc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GSoC 2025</title>
+      <link>https://rizin.re/gsoc/2025/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/gsoc/2025/</guid>
+      <description>TL;DR Jump to the Ideas list.
+Introduction This year, we participate again, effectively continuing the tradition since 2015.
+Mentors Members of the Rizin and Cutter core teams have volunteered to guide participants for GSoC’25. They have already been guiding the participants for the GSoC and RSoC in past years. Please feel free to reach out to any of them if you need any help in selecting a project.
+Anton Kochkov Mattermost: xvilka &amp;ndash; @akochkov Florian Märkl Mattermost/Telegram: @thestr4ng3r &amp;ndash; @thestr4ng3r Giovanni Dante Grazioli Mattermost/Telegram: @deroad @der0ad And many others Development methodology Currently, all repositories are hosted on GitHub main organization account and bugs are tracked on GitHub issues too.</description>
+    </item>
+    
     <item>
       <title>GSoC 2024</title>
       <link>https://rizin.re/gsoc/2024/</link>
