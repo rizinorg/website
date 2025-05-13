@@ -10,7 +10,16 @@
       <link>https://rizin.re/images/rizin_preview.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 02 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/rizin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/rizin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Summer of Code 2025 Announcement</title>
+      <link>https://rizin.re/posts/gsoc-2025-announcement/</link>
+      <pubDate>Tue, 13 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/posts/gsoc-2025-announcement/</guid>
+      <description>An announcement of the Google Summer of Code 2025. Three accepted candidates.</description>
+    </item>
+    
     <item>
       <title>2024 Year Summary</title>
       <link>https://rizin.re/posts/year-2024-summary/</link>

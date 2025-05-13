@@ -10,7 +10,25 @@
       <link>https://rizin.re/images/rizin_preview.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 02 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gsoc</title>
+      <link>https://rizin.re/tags/gsoc/</link>
+      <pubDate>Tue, 13 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/tags/gsoc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rizin</title>
+      <link>https://rizin.re/tags/rizin/</link>
+      <pubDate>Tue, 13 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/tags/rizin/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>capstone</title>
       <link>https://rizin.re/tags/capstone/</link>
@@ -30,29 +48,11 @@
     </item>
     
     <item>
-      <title>rizin</title>
-      <link>https://rizin.re/tags/rizin/</link>
-      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://rizin.re/tags/rizin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>rzil</title>
       <link>https://rizin.re/tags/rzil/</link>
       <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
       
       <guid>https://rizin.re/tags/rzil/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>gsoc</title>
-      <link>https://rizin.re/tags/gsoc/</link>
-      <pubDate>Mon, 23 Dec 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://rizin.re/tags/gsoc/</guid>
       <description></description>
     </item>
     
