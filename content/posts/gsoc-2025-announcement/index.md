@@ -55,7 +55,7 @@ The project will mainly focus on five languages. A verbose version of the projec
 **Analysis of Java :**
 
 - Keep track of `astore_<n>` in bytecode
-- Add class heirarchy information
+- Add class hierarchy information
 
 
 I look forward to working with the Rizin team and my mentors over the summer to improve the analysis of these languages which makes Rizin and Cutter better reverse engineering tools and helps users worldwide.
