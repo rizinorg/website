@@ -11,7 +11,7 @@ weight: 2
 
 # Google Summer of Code 2025 Summary
 
-Two-thirds of GSoC 2024 have officially concluded, and we are pleased to congratulate two participants who successfully passed the program and completed the most important parts of their projects. One participant is [continuing work on object-oriented (C++, Objective-C, Swift, etc.) analysis](https://rizin.re/posts/gsoc-2025-announcement/#tushar-jain) due to the extended timeline of the task.
+Two-thirds of GSoC 2025 have officially concluded, and we are pleased to congratulate two participants who successfully passed the program and completed the most important parts of their projects. One participant is [continuing work on object-oriented (C++, Objective-C, Swift, etc.) analysis](https://rizin.re/posts/gsoc-2025-announcement/#tushar-jain) due to the extended timeline of the task.
 
 ## Taksh: Refactoring Rizin's Native Debug Plugin – My GSoC 2025 Journey
 
