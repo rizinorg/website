@@ -81,7 +81,6 @@ Key documentation that aided my work included [ptrace](https://man7.org/linux/ma
 I worked with these systems using QEMU and running Rizin on virtual machines.
 
 Some work still in progress includes:
-- [Refactoring the entire native plugin](https://github.com/rizinorg/rizin/pull/5295) – improving code readability and maintainability
 - [Adding support for Linux s390x system](https://github.com/rizinorg/rizin/pull/5267)
 
 ### Challenges Faced and Solutions
