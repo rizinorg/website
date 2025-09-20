@@ -174,7 +174,7 @@ Static and global variables were deeply embedded across multiple layers. Refacto
 Since Rizin supports Linux, macOS, FreeBSD, OpenBSD, QNX, and Windows, every refactor required validation across multiple environments. Windows presented unique challenges due to platform-specific behaviors and API differences.
 
 #### Updating libmagic
-One of the most challenging tasks was updating libmagic. Rizin relied on an outdated file implementation from OpenBSD (2009), lacking modern improvements. Updating to the 2015 implementation required carefully merging years of upstream changes while ensuring compatibility with Rizin's existing codebase. This wasn't a straightforward replacement – I had to resolve API differences, adapt Rizin's integration to the new structure, and verify consistent behavior across all supported platforms. The process demanded extensive testing and debugging but ultimately removed static dependencies, improved maintainability, and aligned Rizin with a more modern and secure upstream library.
+One of the most challenging tasks was updating libmagic. Rizin relied on an outdated file implementation from OpenBSD (2009), lacking modern improvements. Updating to the 2015 implementation required carefully merging years of upstream changes while ensuring compatibility with Rizin's existing codebase. This wasn't a straightforward replacement, I had to resolve API differences, adapt Rizin's integration to the new structure, and verify consistent behavior across all supported platforms. The process demanded extensive testing and debugging but ultimately removed static dependencies, improved maintainability, and aligned Rizin with a more modern and secure upstream library.
 
 ### Outcome
 
