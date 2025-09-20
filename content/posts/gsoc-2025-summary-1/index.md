@@ -184,6 +184,6 @@ As a result of this project, the vast majority of Rizin's codebase is now thread
 
 Moving forward, the remaining parts of the codebase should be discussed with the Rizin community to determine whether they should be removed, redesigned, or refactored. This collaboration will help push Rizin closer to becoming 100% thread-safe.
 
-I deeply appreciate the Rizin community – it's unique, supportive, and filled with talented people. I'm proud to be part of it and plan to continue contributing to the Rizin codebase and infrastructure beyond GSoC. Many exciting changes in the Rizin ecosystem are expected in the near future, and I'll do my best to be part of them.
+I deeply appreciate the Rizin community, it's unique, supportive, and filled with talented people. I'm proud to be part of it and plan to continue contributing to the Rizin codebase and infrastructure beyond GSoC. Many exciting changes in the Rizin ecosystem are expected in the near future, and I'll do my best to be part of them.
 
 Thanks to [@deroad](https://github.com/wargio), [@xvilka](https://github.com/notxvilka), [@Rot127](https://github.com/Rot127), and the entire community.
