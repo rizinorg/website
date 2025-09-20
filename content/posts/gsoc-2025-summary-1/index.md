@@ -117,7 +117,7 @@ The journey continues – there's always more to learn!
 
 ## Ahmed Kamal: Thread Safety Improvement
 
-Hi, I'm Ahmed Kamal, a GSoC 2024 contributor at Rizin. I'm a Computer Engineering student at Cairo University and a part-time DevOps engineer. You can find me on [GitHub](https://www.github.com/ahmed-kamal2004) and [LinkedIn](https://www.linkedin.com/in/ahmed-kamal-649b4a231).
+Hi, I'm Ahmed Kamal, a GSoC 2025 contributor at Rizin. I'm a Computer Engineering student at Cairo University and a part-time DevOps engineer. You can find me on [GitHub](https://www.github.com/ahmed-kamal2004) and [LinkedIn](https://www.linkedin.com/in/ahmed-kamal-649b4a231).
 
 I'm passionate about open source and enjoy contributing to projects while leaving my mark in the open source community. Through GSoC and Rizin, I've worked on a crucial project: **Thread Safety Improvement**.
 
