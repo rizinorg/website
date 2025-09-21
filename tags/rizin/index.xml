@@ -10,7 +10,17 @@
       <link>https://rizin.re/images/rizin_preview.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 13 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/rizin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/rizin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Summer of Code 2025 Summary - Part 1</title>
+      <link>https://rizin.re/posts/gsoc-2025-summary-1/</link>
+      <pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/posts/gsoc-2025-summary-1/</guid>
+      <description>Google Summer of Code 2025 Summary Two-thirds of GSoC 2025 have officially concluded, and we are pleased to congratulate two participants who successfully passed the program and completed the most important parts of their projects. One participant is continuing work on object-oriented (C++, Objective-C, Swift, etc.) analysis due to the extended timeline of the task.
+Taksh: Refactoring Rizin&amp;rsquo;s Native Debug Plugin – My GSoC 2025 Journey Hello, I&amp;rsquo;m Taksh (aka well-mannered-goat), a junior student at IIIT Gwalior.</description>
+    </item>
+    
     <item>
       <title>Google Summer of Code 2025 Announcement</title>
       <link>https://rizin.re/posts/gsoc-2025-announcement/</link>
