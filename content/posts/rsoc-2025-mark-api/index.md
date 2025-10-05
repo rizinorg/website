@@ -9,7 +9,7 @@ TocOpen: false
 weight: 2
 ---
 
-Greetings! I'm Emad Sohail (aka PremadeS), a 2nd year Computer Science student at Information Technology University - Lahore. I'm passionate about contributing to open source projects mainly geared towards cybersecurity. You can find me on [Github](https://github.com/PremadeS) and [LinkedIn](https://www.linkedin.com/in/emad-sohail-130b3b265/).
+Greetings! I'm Emad Sohail (aka PremadeS), a 2nd-year Computer Science student at Information Technology University - Lahore. I'm passionate about contributing to open source projects mainly geared toward cybersecurity. You can find me on [Github](https://github.com/PremadeS) and [LinkedIn](https://www.linkedin.com/in/emad-sohail-130b3b265/).
 
 In this project I introduced a new **Mark** API to support address-range annotations (marks) in Rizin, particularly for visual feedback in hexdump views. It can be thought of as an enhancement to the existing flag system. You can now mark entire ranges of addresses instead of tagging just one offset.
 
@@ -29,13 +29,13 @@ this is another mark
 
 You can explore the visual implementation of Marks in Cutter [here](https://cutter.re/integrating-the-rizin-mark-api-rsoc)
 
-## **What are Marks**
+## What are Marks
 
 A mark represents a user-defined range of addresses in the binary. Each mark can have:
 
 * `From/To`: the starting and ending address (inclusive).
 * `Name`: a unique identifier (escaped internally to avoid shell issues).
-* `Real Name`: the original name of mark as provided by the user.
+* `Real Name`: the original name of the mark as provided by the user.
 * `Comment`: an optional note attached to the mark.
 * `Color`: a color tag for visual identification in Cutter.
 
@@ -52,13 +52,13 @@ typedef struct rz_mark_item_t {
 } RzMarkItem;
 ```
 
-## **How Marks Work**
+## How Marks Work
 
-The idea is simple: let users mark a range of addresses instead of  a single offset. Each mark has a unique name and can also include a comment for extra context.
+The idea is simple: let users mark a range of addresses instead of a single offset. Each mark has a unique name and can also include a comment for extra context.
 
-Marks are saved and loaded with the `.rzdb` project files so they are preserved just like flags
+Marks are saved and loaded with the `.rzdb` project files so they are preserved just like flags.
 
-Currently Marks are only shown in hexdump view.
+Currently Marks are only shown in the hexdump view.
 
 ```
 [0x00006760]> pxc
@@ -81,33 +81,33 @@ Currently Marks are only shown in hexdump view.
 0x00006850  0000 0066 2e0f 1f84 0000 0000 0066 2e0f  ...f.........f..
 ```
 
-## **Why This Feature Is Useful**
+## Why This Feature Is Useful
 
 Sometimes you want to visually mark the start and end of a function, loop, or data structure in memory. A single flag isn’t enough to represent the whole span.
 
-When analyzing malware or packed binaries, it’s useful to mark the section of memory that was unpacked or injected for quick reference
+When analyzing malware or packed binaries, it’s useful to mark the section of memory that was unpacked or injected for quick reference.
 
 Having a separate abstraction (Mark) helps decouple “range annotations” from “single-address flags” and avoids overloading one system with too many concerns.
 
-It also lays foundation to visually show the highlighted address regions in **Cutter**. [PR #3510](https://github.com/rizinorg/cutter/pull/3510/) 
+It also lays the foundation to visually show the highlighted address regions in **Cutter**.
 
-## **Implementation**
+## Implementation
 
-### **Core modules & structure** 
+### Core modules & structure 
 
-`rz_mark.h` defines the public API: structures (`RzMarkItem`, `RzMark`, etc.), and function signatures for creating, querying, editing, removing, iterating, and serializing marks. 
+`rz_mark.h` defines the public API: structures (`RzMarkItem`, `RzMark`, etc.) and function signatures for creating, querying, editing, removing, iterating, and serializing marks. 
 
 `mark.c` is where the bulk of logic lives: implementing the functions from the header, maintaining internal data structures, and integrating with command-line printing. 
 
 `serialize_mark.c` handles serialization and deserialization of marks via `Sdb` (Rizin’s internal database), so marks persist across sessions.
 
-`cmd_mark.c` and `cmark.c` handle the command line functionality of marks
+`cmd_mark.c` and `cmark.c` handle the command-line functionality of marks.
 
-`db/cmd/cmd_mark` contains **inetgration** tests while `unit/test_marks.c` and `unit/test_serialize_marks.c` contains **unit** tests
+`db/cmd/cmd_mark` contains **integration** tests, while `unit/test_marks.c` and `unit/test_serialize_marks.c` contain **unit** tests.
 
-### **Data structures & internal storage**
+### Data structures & internal storage
 
-At its core, a mark is represented by the `RzMarkItem` structure (explained above)
+At its core, a mark is represented by the `RzMarkItem` structure (explained above).
 
 The container for all marks is the `RzMark` structure. It maintains:
 
@@ -123,66 +123,57 @@ typedef struct rz_mark_t {
 } RzMark;
 ```
 
-`RzMarksAtOffset`
+### Behavior & API implementation
 
-```c
-typedef struct rz_marks_at_offset_t {
-	ut64 off;
-	RzList /*<RzMarkItem *>*/ *marks;
-} RzMarksAtOffset;
-```
+#### Creation & Deletion
 
-### **Behavior & API implementation** 
+`rz_mark_new()` creates a new mark container.
+`rz_mark_free()` frees the mark container.
 
-#### **Creation & Deletion**
+#### Adding & Querying Marks
 
-`rz_mark_new()` create a new mark container
-`rz_mark_free()` free the mark container
+- `rz_mark_set()` defines a new mark within a given address range.
+- `rz_mark_get()` looks up marks by name.
+- `rz_mark_get_start()` gets a mark starting at a specific address.
+- `rz_mark_get_end()` gets a mark ending at a specific address.
+- `rz_mark_get_at()` gets a mark covering a specific address.
+- `rz_mark_all_list()` retrieves all marks in the container.
+- `rz_mark_get_all_off()` retrieves all marks at a specific offset.
 
-#### **Adding & Querying Marks**
+#### Editing
+- `rz_mark_rename()` renames individual marks.
+- `rz_mark_item_set_comment()` annotates individual marks with comments.
+- `rz_mark_item_set_realname()` sets the real name.
+- `rz_mark_item_set_color()` visually tags with colors (for Cutter).
 
-- `rz_mark_set()` define a new mark within a given address range 
-- `rz_mark_get()` look up marks by name 
-- `rz_mark_get_start()` get a mark starting at a specific address 
-- `rz_mark_get_end()` get a mark ending at a specific address 
-- `rz_mark_get_at()` get a mark covering a specific address 
-- `rz_mark_all_list()` retrieve all marks in the container 
-- `rz_mark_get_all_off()` retrieve all marks at a specific offset
+#### Removal
+- `rz_mark_unset()` deletes individual marks.
+- `rz_mark_unset_all_off()` clears all marks at a specific offset.
+- `rz_mark_unset_glob()` removes marks in bulk using glob patterns.
+- `rz_mark_unset_all()` removes all marks.
 
-#### **Editing**
-- `rz_mark_rename()` rename individual marks 
-- `rz_mark_item_set_comment()` annotate individual marks with comments
-- `rz_mark_item_set_realname()` set real name
-- `rz_mark_item_set_color()`  visually tag with colors (For Cutter)
+#### Iteration
+- `rz_mark_foreach()` iterates through all marks.
+- `rz_mark_foreach_glob()` iterates through marks filtered by glob patterns.
 
-#### **Removal**
-- `rz_mark_unset()` delete individual marks 
-- `rz_mark_unset_all_off()` clear all marks at a specific offset 
-- `rz_mark_unset_glob()` remove marks in bulk using glob patterns
-- `rz_mark_unset_all()` remove all marks 
-
-#### **Iteration**
-- `rz_mark_foreach()` iterate through all marks 
-- `rz_mark_foreach_glob()` iterate through marks filtered by glob patterns 
-
-#### **Saving/Loading**
-- `rz_serialize_mark_save()` save marks to the Rizin database (`Sdb`) 
-- `rz_serialize_mark_load()` restore marks from the Rizin database (`Sdb`)
+#### Saving/Loading
+- `rz_serialize_mark_save()` saves marks to the Rizin database (`Sdb`).
+- `rz_serialize_mark_load()` restores marks from the Rizin database (`Sdb`).
 
 ---
 
 By exposing this API, Rizin ensures that marks are no longer limited to a single widget but can instead serve as a general-purpose annotation mechanism. This makes them accessible to plugins, scripts, and future Cutter features.
 
-Refer to [PR #5313](https://github.com/rizinorg/rizin/pull/5313) for more details about the implementation of **Marks**
+Refer to [PR #5313](https://github.com/rizinorg/rizin/pull/5313) for more details about the implementation of **Marks**.
 
-## **Work Done**
+## Work Done
 
 Here is a brief overview of the work.
 
-Added `rz_mark.h` / `rz_mark.c` with APIs for creating, querying, serializing marks.
+Added `rz_mark.h` / `rz_mark.c` with APIs for creating, querying, and serializing marks.
 
-Implemented command `cmd_mark` to allow users to create/list marks
-Below is a lost of supported commands for marks, that can be brought up inside Rizin using the `m?` command:
+Implemented `m` commands to allow users to create and list marks.
+Below is a list of supported commands for marks that can be brought up inside Rizin with `m?`:
 
 ```
 [0x00006760]> m?
@@ -197,22 +188,22 @@ Usage: m[?]   # Manage marks
 │mC <name> [<comment>]   # Set a comment for the given mark. If no comment is given, it shows the current one for the mark.
 │mr <old> <new>          # Rename mark.
 │mN <name> [<realname>]  # Show the realname of the mark / Set the realname of the mark.
-│mm <name> <new_start> <new_end> # Move a mark to new a location.
+│mm <name> <new_start> <new_end> # Move a mark to a new location.
 │mf <regex_pattern>      # Distance in bytes to reach the starting of mark from the current offset.
 │md[jt]                  # Describe mark.
 │mi[j*qt] [<size>]       # Show marks in the current block or in the next <size> bytes.
 ```
-Augmented hexdump output to render start/end markers in comments section (e.g. `[s] name`, `[e] name`) .
+Show start/end markers in comments section of hexdump (e.g. `[s] name`, `[e] name`).
 
 Added tests under `test/db/cmd/cmd_mark` to validate command behavior.
 
-Added `serialize_mark.c` to save and load marks with Rizin project file
+Added `serialize_mark.c` to save and load marks with Rizin project files.
 
-## **Challenges**
+## Challenges
 
-Although the process was relatively straight forward, the one major decision that had to be made was how distinct marks should be relative to existing flags. Some reviewers suggested combining the new API with flags, others argued for separation. The resolution leaned toward separation in the end. [PR #5313](https://github.com/rizinorg/rizin/pull/5313)
+Although the process was relatively straightforward, the one major decision that had to be made was how distinct marks should be relative to existing flags. Some reviewers suggested combining the new API with flags; others argued for separation. The resolution leaned toward separation in the end.
 
-## **Future Work**
+## Future Work
 
 Currently, marks are displayed in the hexdump using simple `[s] name` and `[e] name` tags to indicate the start and end of a range. While this works, it’s not always easy to see the full extent of a marked region at a glance. A future improvement would be to introduce visual bracket-style markers that span across lines, making ranges more obvious. *(See example below)*
 
@@ -237,8 +228,8 @@ Currently, marks are displayed in the hexdump using simple `[s] name` and `[e] n
 
 Extend the mark rendering to other views (e.g. disassembly, graph views) beyond hexdump.
 
-## **Conclusion**
+## Conclusion
 
-At the end I would like say that this RSoC has been a great learning experience. From not knowing anything about the Rizin codebase to adding an actual useful feature was definitely a great journey.
+At the end, I would like to say that this RSoC has been a great learning experience. From not knowing anything about the Rizin codebase to adding an actual useful feature was definitely a great journey.
 
-Special thanks to [@xvilka](https://github.com/notxvilka) for this amazing oppurtunity and also [@deroad](https://github.com/wargio), [@Rot127](https://github.com/Rot127) for the help and guidance.
+Special thanks to [@xvilka](https://github.com/notxvilka) for this amazing opportunity and also [@deroad](https://github.com/wargio), [@Rot127](https://github.com/Rot127) for the help and guidance.
