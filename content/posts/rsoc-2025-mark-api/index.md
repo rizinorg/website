@@ -154,7 +154,7 @@ typedef struct rz_mark_t {
 
 #### Iteration
 - `rz_mark_foreach()` iterates through all marks.
-- `rz_mark_foreach_glob()` iterates through marks filtered by glob patterns.
+- `rz_mark_foreach_regex()` iterates through marks filtered by regex patterns.
 
 #### Saving/Loading
 - `rz_serialize_mark_save()` saves marks to the Rizin database (`Sdb`).
