@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>marks on Rizin</title>
+    <link>https://rizin.re/tags/marks/</link>
+    <description>Recent content in marks on Rizin</description>
+    <image>
+      <title>Rizin</title>
+      <url>https://rizin.re/images/rizin_preview.png</url>
+      <link>https://rizin.re/images/rizin_preview.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 04 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/marks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RSoC 2025 - Adding Mark API</title>
+      <link>https://rizin.re/posts/rsoc-2025-mark-api/</link>
+      <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/posts/rsoc-2025-mark-api/</guid>
+      <description>Greetings! I&amp;rsquo;m Emad Sohail (aka PremadeS), a 2nd-year Computer Science student at Information Technology University - Lahore. I&amp;rsquo;m passionate about contributing to open source projects mainly geared toward cybersecurity. You can find me on Github and LinkedIn.
+In this project I introduced a new Mark API to support address-range annotations (marks) in Rizin, particularly for visual feedback in hexdump views. It can be thought of as an enhancement to the existing flag system.</description>
+    </item>
+    
+  </channel>
+</rss>

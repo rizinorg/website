@@ -10,22 +10,40 @@
       <link>https://rizin.re/images/rizin_preview.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 21 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Oct 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://rizin.re/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>gsoc</title>
-      <link>https://rizin.re/tags/gsoc/</link>
-      <pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate>
+      <title>marks</title>
+      <link>https://rizin.re/tags/marks/</link>
+      <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://rizin.re/tags/gsoc/</guid>
+      <guid>https://rizin.re/tags/marks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>rizin</title>
       <link>https://rizin.re/tags/rizin/</link>
-      <pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate>
       
       <guid>https://rizin.re/tags/rizin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rsoc</title>
+      <link>https://rizin.re/tags/rsoc/</link>
+      <pubDate>Sat, 04 Oct 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/tags/rsoc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gsoc</title>
+      <link>https://rizin.re/tags/gsoc/</link>
+      <pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://rizin.re/tags/gsoc/</guid>
       <description></description>
     </item>
     
@@ -71,15 +89,6 @@
       <pubDate>Wed, 06 Sep 2023 00:00:00 +0000</pubDate>
       
       <guid>https://rizin.re/tags/dwarf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rsoc</title>
-      <link>https://rizin.re/tags/rsoc/</link>
-      <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://rizin.re/tags/rsoc/</guid>
       <description></description>
     </item>
     
