@@ -11,7 +11,8 @@
         "Riccardo Schirone",
         "Anton Kochkov",
         "Khairul Kasmiran",
-        "Rot127"
+        "Rot127",
+        "Billow"
       ]
     },
     "cutter-core": {
@@ -129,6 +130,9 @@
     },
     "Rot127": {
       "Github": "Rot127"
+    },
+    "Billow": {
+      "Github": "b1llow"
     }
   }
 }
