@@ -68,6 +68,15 @@
     <loc>https://rizin.re/posts/faq/</loc>
     <lastmod>2020-12-05T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://rizin.re/gsoc/2026/</loc>
+    <lastmod>2026-01-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rizin.re/</loc>
+    <lastmod>2026-01-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rizin.re/gsoc/</loc>
+    <lastmod>2026-01-18T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://rizin.re/tags/marks/</loc>
     <lastmod>2025-10-04T00:00:00+00:00</lastmod>
   </url><url>
@@ -75,9 +84,6 @@
     <lastmod>2025-10-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/tags/rizin/</loc>
-    <lastmod>2025-10-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rizin.re/</loc>
     <lastmod>2025-10-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/tags/rsoc/</loc>
@@ -90,9 +96,6 @@
     <lastmod>2025-09-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/gsoc/2025/</loc>
-    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rizin.re/gsoc/</loc>
     <lastmod>2025-01-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/tags/capstone/</loc>
