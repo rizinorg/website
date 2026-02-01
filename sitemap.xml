@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://rizin.re/posts/year-2025-summary/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://rizin.re/posts/rsoc-2025-mark-api/</loc>
     <lastmod>2025-10-04T00:00:00+00:00</lastmod>
   </url><url>
@@ -68,10 +71,28 @@
     <loc>https://rizin.re/posts/faq/</loc>
     <lastmod>2020-12-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rizin.re/gsoc/2026/</loc>
-    <lastmod>2026-01-18T00:00:00+00:00</lastmod>
+    <loc>https://rizin.re/tags/capstone/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rizin.re/tags/cutter/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rizin.re/posts/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rizin.re/tags/rizin/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rizin.re/tags/rzil/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rizin.re/tags/</loc>
+    <lastmod>2026-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rizin.re/gsoc/2026/</loc>
     <lastmod>2026-01-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/gsoc/</loc>
@@ -80,16 +101,7 @@
     <loc>https://rizin.re/tags/marks/</loc>
     <lastmod>2025-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://rizin.re/posts/</loc>
-    <lastmod>2025-10-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rizin.re/tags/rizin/</loc>
-    <lastmod>2025-10-04T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://rizin.re/tags/rsoc/</loc>
-    <lastmod>2025-10-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rizin.re/tags/</loc>
     <lastmod>2025-10-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/tags/gsoc/</loc>
@@ -97,15 +109,6 @@
   </url><url>
     <loc>https://rizin.re/gsoc/2025/</loc>
     <lastmod>2025-01-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rizin.re/tags/capstone/</loc>
-    <lastmod>2025-01-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rizin.re/tags/cutter/</loc>
-    <lastmod>2025-01-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rizin.re/tags/rzil/</loc>
-    <lastmod>2025-01-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rizin.re/tags/dev/</loc>
     <lastmod>2024-01-27T00:00:00+00:00</lastmod>
