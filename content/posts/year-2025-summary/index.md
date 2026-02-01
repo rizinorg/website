@@ -10,11 +10,11 @@ weight: 2
 
 # 2025 summary
 
-This year we focused on finishing the RzIL migration (the work still continues in 2026) and the backbone of the Rizin subsystem
+This year we focused on completing the RzIL migration of the most used architectures (the work still continues in 2026) and the backbone of the Rizin subsystem
 
 ## Team
 
-A new member joined the Rizin Core community - [billow](https://github.com/b1llow).
+A new member joined the Rizin Core team - [billow](https://github.com/b1llow).
 
 ## Releases
 
