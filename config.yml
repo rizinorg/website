@@ -20,6 +20,9 @@ menu:
       - name: Organization
         url: /organization/
         weight: 10
+      - name: Research
+        url: /research/
+        weight: 12
       - name: Community
         url: /community/
         weight: 15

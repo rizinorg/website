@@ -123,6 +123,11 @@
   padding: 0 12.5vw 2vw;
 }
 
+.blog-single {
+  background: var(--main);
+  margin: 0 auto; /* Center */
+}
+
 /* Override */
 .header {
   padding-top: 10px;
@@ -442,6 +447,11 @@
 /* MEDIA */
 
 @media (min-width: 768px) {
+  /* Limit width of blog postes to make long text more readable. */
+  .blog-single {
+    width: 60%;
+  }
+
   .hero-section__top {
     flex-direction: row;
   }
@@ -560,3 +570,72 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+.bib-items {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.bib-items__item {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2rem;
+  background: var(--entry);
+  margin: 10px 10px 10px 0;
+  padding: 5px;
+  flex-direction: column;
+}
+
+.bib-items__item__link {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 20px;
+}
+
+.bib-items__item__isbn {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 20px;
+}
+
+.bib-items__item__abstract {
+  display: flex;
+  width: 90%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--main);
+  flex-direction: column;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.bib-items_item h3 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+:target {
+  animation: highlight 2s ease-out;
+}
+
+/* Force reflow by changing something that doesn't affect appearance */
+:target::after {
+  content: "";
+}
+
+@keyframes highlight {
+  0% {
+    background-color: yellow;
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.5);
+  }
+  100% {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+

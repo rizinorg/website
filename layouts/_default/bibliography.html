@@ -1,0 +1,60 @@
+{{- define "main" }} {{ $bib := (index .Site.Data.bibliography) }}
+
+<header class="page-header">
+  <h1>Bibliography</h1>
+  <div class="underline"></div>
+</header>
+
+<div class="bib-items">
+  {{ range $bib }}
+  <div class="bib-items__item">
+    <div class="bib-items__item", id="{{ .id }}">
+      {{- if .title }}
+      <h3>{{ .title }}</h3>
+      {{- else }}
+      <h3>{{ .id }}</h3>
+      {{- end }}
+
+      {{- if .author }}
+      <p class="bib-items__item__authors">
+        {{- range $i, $a := .author }}
+          {{- if $i }}, {{ end }}
+          {{- $a.given }} {{ $a.family }}
+        {{- end }}
+      {{- if .issued }}
+        - {{ range $i, $p := index .issued "date-parts" 0 }}{{ if $i }}-{{ end }}{{ $p }}{{ end }}
+      {{- end }}
+      </p>
+      {{- end }}
+
+      {{- if .abstract }}
+        <div class="bib-items__item__abstract">
+        <details>
+        <summary>Abstract</summary>
+          <p>
+          {{ .abstract }}
+          </p>
+        </details>
+        </div>
+      {{- end}}
+
+      {{- if .URL }}
+        <a class="bib-item__item__link" href="{{ .URL }}">
+          <p>URL: {{ .URL }}</p>
+        </a>
+      {{- end}}
+
+      {{- if .DOI }}
+        <a class="bib-item__item__doi" href="https://doi.org/{{ .DOI }}">
+          <p>DOI: https://doi.org/{{ .DOI }}</p>
+        </a>
+      {{- end}}
+
+      {{- if .ISBN }}
+        <p>ISBN: {{ .ISBN }}</p>
+      {{- end}}
+    </div>
+  </div>
+  {{- end }}
+</div>
+{{ end }}

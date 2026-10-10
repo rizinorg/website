@@ -1,0 +1,20 @@
+{{ $hdr := .Get 0 }}
+{{ $map := .Page.Store.Get "footnotes" }}
+
+{{ if $map }}
+  {{ if gt (len $map) 0 }}
+    <hr>
+    <div>
+      <div><h2>{{ $hdr }}</h2></div>
+
+      {{ range $ftext, $id := $map }}
+        <div id="f{{ $id }}">
+          f{{ $id }}: {{ $ftext }}
+        </div>
+      {{ end }}
+    </div>
+
+    {{ .Page.Store.Delete "footnotes" }}
+  {{ end }}
+{{ end }}
+

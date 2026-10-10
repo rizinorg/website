@@ -1,0 +1,27 @@
+{{ $hdr := .Get 0 }}
+{{ $list := .Page.Store.Get "citations" }}
+{{ $separator := " - " }}
+
+{{ if $list }}
+  {{ if gt (len $list) 0 }}
+    <hr>
+    <div>
+      <div><h2>{{ $hdr }}</h2></div>
+
+      {{ range $key, $num := $list }}
+        {{ $pair := split $key $separator }}
+        {{ $citation_id := index $pair 0 }}
+        {{ $comment := index $pair 1 }}
+
+        <div id="{{ $citation_id }}">
+          c{{ $num }}: <a href="/research/bibliography#{{ $citation_id }}">{{ $citation_id }}</a>
+          {{ if ne (len $pair) 1 }}
+            - {{ $comment }}
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+
+    {{ .Page.Store.Delete "citations" }}
+  {{ end }}
+{{ end }}
