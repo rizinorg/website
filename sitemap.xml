@@ -137,7 +137,13 @@
     <loc>https://rizin.re/roadmap/</loc>
     <priority>0</priority>
   </url><url>
+    <loc>https://rizin.re/tags/ai/</loc>
+  </url><url>
     <loc>https://rizin.re/archives/</loc>
+  </url><url>
+    <loc>https://rizin.re/research/bibliography/</loc>
+  </url><url>
+    <loc>https://rizin.re/tags/binary-analysis/</loc>
   </url><url>
     <loc>https://rizin.re/categories/</loc>
   </url><url>
@@ -155,11 +161,21 @@
   </url><url>
     <loc>https://rizin.re/teams/documentation/</loc>
   </url><url>
+    <loc>https://rizin.re/research/epistemology/</loc>
+  </url><url>
     <loc>https://rizin.re/teams/infrastructure/</loc>
+  </url><url>
+    <loc>https://rizin.re/research/language/</loc>
   </url><url>
     <loc>https://rizin.re/organization/</loc>
   </url><url>
     <loc>https://rizin.re/teams/package-manager-and-plugins/</loc>
+  </url><url>
+    <loc>https://rizin.re/tags/research/</loc>
+  </url><url>
+    <loc>https://rizin.re/research/</loc>
+  </url><url>
+    <loc>https://rizin.re/tags/reverse-engineering/</loc>
   </url><url>
     <loc>https://rizin.re/search/</loc>
   </url><url>
